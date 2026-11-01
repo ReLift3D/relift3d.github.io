@@ -1,0 +1,869 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "db6ecdea393ae410e85bbb019fc3ab2247f14ffb",
+  "browser": "Chrome via connected browser",
+  "method": "Fresh foreground tab; local byte-range HTTP server with Cache-Control:no-store; first sample approximately 5 seconds after DOMContentLoaded. Resource Timing totals exclude HTML and include only completed resource entries; no network throttling. Automation and instrumentation affect main-thread timing.",
+  "before": {
+    "time": 5230.199999809265,
+    "viewport": [
+      1920,
+      902
+    ],
+    "requests": 72,
+    "transferBytes": 70153691,
+    "draws": 560,
+    "rafCallbacks": 140,
+    "longTasks": [
+      {
+        "start": 300.90000009536743,
+        "duration": 377
+      },
+      {
+        "start": 937.9000000953674,
+        "duration": 221
+      },
+      {
+        "start": 1232.8000001907349,
+        "duration": 51
+      },
+      {
+        "start": 1445,
+        "duration": 86
+      },
+      {
+        "start": 4577.199999809265,
+        "duration": 196
+      }
+    ],
+    "errors": [],
+    "sections": [
+      {
+        "name": "ReLift:  Dense 3D Tracking as Lifted Trajectory Repair",
+        "top": 0,
+        "height": 307
+      },
+      {
+        "top": 307,
+        "height": 373
+      },
+      {
+        "name": "Abstract",
+        "top": 719,
+        "height": 563
+      },
+      {
+        "name": "Interactive Demo",
+        "top": 1322,
+        "height": 1112
+      },
+      {
+        "name": "More Results",
+        "top": 2474,
+        "height": 2187
+      },
+      {
+        "name": "Method",
+        "top": 4701,
+        "height": 1028
+      },
+      {
+        "name": "3D Tracking Comparison",
+        "top": 5769,
+        "height": 1581
+      },
+      {
+        "name": "Correcting the Lift",
+        "top": 7390,
+        "height": 542
+      },
+      {
+        "name": "BibTeX",
+        "top": 7972,
+        "height": 379
+      }
+    ],
+    "playing_videos": 55,
+    "resources": [
+      {
+        "name": "/css",
+        "bytes": 0,
+        "encoded": 2411,
+        "duration": 28.5
+      },
+      {
+        "name": "/__measure.js",
+        "bytes": 2691,
+        "encoded": 2391,
+        "duration": 29
+      },
+      {
+        "name": "/static/css/index.css",
+        "bytes": 0,
+        "encoded": 3394,
+        "duration": 26.399999618530273
+      },
+      {
+        "name": "/static/images/method_poster.jpg",
+        "bytes": 0,
+        "encoded": 111795,
+        "duration": 29
+      },
+      {
+        "name": "/static/css/bulma.min.css",
+        "bytes": 0,
+        "encoded": 204030,
+        "duration": 30.199999809265137
+      },
+      {
+        "name": "/static/js/three.min.js",
+        "bytes": 0,
+        "encoded": 607784,
+        "duration": 30.799999713897705
+      },
+      {
+        "name": "/static/js/OrbitControls.js",
+        "bytes": 0,
+        "encoded": 26660,
+        "duration": 71.19999980926514
+      },
+      {
+        "name": "/static/data/cartwheel.js",
+        "bytes": 0,
+        "encoded": 7525013,
+        "duration": 82.89999961853027
+      },
+      {
+        "name": "/static/videos/teaser_input.mp4",
+        "bytes": 3680421,
+        "encoded": 3680121,
+        "duration": 72.09999990463257
+      },
+      {
+        "name": "/static/videos/teaser_tracks.mp4",
+        "bytes": 2906280,
+        "encoded": 2905980,
+        "duration": 63.30000019073486
+      },
+      {
+        "name": "/static/videos/more_kangaroo_with_occlusion_short_input.mp4",
+        "bytes": 1194298,
+        "encoded": 1193998,
+        "duration": 28.200000286102295
+      },
+      {
+        "name": "/static/videos/more_kangaroo_with_occlusion_short_ours.mp4",
+        "bytes": 373113,
+        "encoded": 372813,
+        "duration": 29.40000009536743
+      },
+      {
+        "name": "/static/videos/more_kangaroo_input.mp4",
+        "bytes": 1086209,
+        "encoded": 1085909,
+        "duration": 32
+      },
+      {
+        "name": "/static/videos/more_kangaroo_ours.mp4",
+        "bytes": 418470,
+        "encoded": 418170,
+        "duration": 33.10000038146973
+      },
+      {
+        "name": "/static/videos/more_horsejump-high_input.mp4",
+        "bytes": 812179,
+        "encoded": 811879,
+        "duration": 41.60000038146973
+      },
+      {
+        "name": "/static/videos/more_horsejump-high_ours.mp4",
+        "bytes": 708806,
+        "encoded": 708506,
+        "duration": 41.19999980926514
+      },
+      {
+        "name": "/static/videos/more_swing-tire_ours.mp4",
+        "bytes": 1025351,
+        "encoded": 1025051,
+        "duration": 44.19999980926514
+      },
+      {
+        "name": "/static/videos/more_swing-tire_input.mp4",
+        "bytes": 1845432,
+        "encoded": 1845132,
+        "duration": 45.69999980926514
+      },
+      {
+        "name": "/static/videos/more_camel_input.mp4",
+        "bytes": 1220853,
+        "encoded": 1220553,
+        "duration": 52.19999980926514
+      },
+      {
+        "name": "/static/videos/more_schoolgirls_input.mp4",
+        "bytes": 780637,
+        "encoded": 780337,
+        "duration": 54.200000286102295
+      },
+      {
+        "name": "/static/videos/more_camel_ours.mp4",
+        "bytes": 1749776,
+        "encoded": 1749476,
+        "duration": 53.200000286102295
+      },
+      {
+        "name": "/static/videos/more_schoolgirls_ours.mp4",
+        "bytes": 1582791,
+        "encoded": 1582491,
+        "duration": 54.799999713897705
+      },
+      {
+        "name": "/static/videos/more_motocross-bumps_input.mp4",
+        "bytes": 845215,
+        "encoded": 844915,
+        "duration": 57.5
+      },
+      {
+        "name": "/static/videos/more_motocross-bumps_ours.mp4",
+        "bytes": 163326,
+        "encoded": 163026,
+        "duration": 56.09999990463257
+      },
+      {
+        "name": "/static/videos/method_expanded.mp4",
+        "bytes": 300,
+        "encoded": 0,
+        "duration": 1426.2999997138977
+      },
+      {
+        "name": "/static/videos/cmp_lady-running_input.mp4",
+        "bytes": 945230,
+        "encoded": 944930,
+        "duration": 67.5
+      },
+      {
+        "name": "/static/videos/cmp_lady-running_tc3r_vggto.mp4",
+        "bytes": 1881501,
+        "encoded": 1881201,
+        "duration": 68.7000002861023
+      },
+      {
+        "name": "/static/videos/cmp_lady-running_vdpm.mp4",
+        "bytes": 1838644,
+        "encoded": 1838344,
+        "duration": 71
+      },
+      {
+        "name": "/static/videos/cmp_lady-running_4rc.mp4",
+        "bytes": 1936910,
+        "encoded": 1936610,
+        "duration": 87
+      },
+      {
+        "name": "/static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4",
+        "bytes": 1735536,
+        "encoded": 1735236,
+        "duration": 85.39999961853027
+      },
+      {
+        "name": "/static/videos/cmp_libby_input.mp4",
+        "bytes": 1082228,
+        "encoded": 1081928,
+        "duration": 84.09999990463257
+      },
+      {
+        "name": "/static/videos/cmp_libby_vdpm.mp4",
+        "bytes": 635404,
+        "encoded": 635104,
+        "duration": 86
+      },
+      {
+        "name": "/static/videos/cmp_libby_tc3r_vggto.mp4",
+        "bytes": 681093,
+        "encoded": 680793,
+        "duration": 85.80000019073486
+      },
+      {
+        "name": "/static/videos/cmp_libby_4rc.mp4",
+        "bytes": 575793,
+        "encoded": 575493,
+        "duration": 91.10000038146973
+      },
+      {
+        "name": "/static/videos/cmp_libby_ours_cowtracker_vggto.mp4",
+        "bytes": 539716,
+        "encoded": 539416,
+        "duration": 107.09999990463257
+      },
+      {
+        "name": "/static/videos/cmp_car-shadow_tc3r_vggto.mp4",
+        "bytes": 690769,
+        "encoded": 690469,
+        "duration": 102.40000009536743
+      },
+      {
+        "name": "/static/videos/cmp_car-shadow_input.mp4",
+        "bytes": 593831,
+        "encoded": 593531,
+        "duration": 107.40000009536743
+      },
+      {
+        "name": "/static/videos/cmp_car-shadow_vdpm.mp4",
+        "bytes": 591260,
+        "encoded": 590960,
+        "duration": 102.90000009536743
+      },
+      {
+        "name": "/static/videos/cmp_car-shadow_4rc.mp4",
+        "bytes": 570044,
+        "encoded": 569744,
+        "duration": 109.80000019073486
+      },
+      {
+        "name": "/static/videos/cmp_car-shadow_ours_cowtracker_vggto.mp4",
+        "bytes": 517168,
+        "encoded": 516868,
+        "duration": 112.5
+      },
+      {
+        "name": "/static/videos/cmp_bmx-trees_input.mp4",
+        "bytes": 1850275,
+        "encoded": 1849975,
+        "duration": 118.7999997138977
+      },
+      {
+        "name": "/static/videos/cmp_bmx-trees_tc3r_vggto.mp4",
+        "bytes": 1112277,
+        "encoded": 1111977,
+        "duration": 117.5
+      },
+      {
+        "name": "/static/videos/cmp_bmx-trees_vdpm.mp4",
+        "bytes": 695238,
+        "encoded": 694938,
+        "duration": 117.7000002861023
+      },
+      {
+        "name": "/static/videos/cmp_bmx-trees_4rc.mp4",
+        "bytes": 696349,
+        "encoded": 696049,
+        "duration": 118.19999980926514
+      },
+      {
+        "name": "/static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4",
+        "bytes": 734262,
+        "encoded": 733962,
+        "duration": 119.40000009536743
+      },
+      {
+        "name": "/static/videos/cmp_crossing_input.mp4",
+        "bytes": 519984,
+        "encoded": 519684,
+        "duration": 121.69999980926514
+      },
+      {
+        "name": "/static/videos/cmp_crossing_tc3r_vggto.mp4",
+        "bytes": 673423,
+        "encoded": 673123,
+        "duration": 123.09999990463257
+      },
+      {
+        "name": "/static/videos/cmp_crossing_vdpm.mp4",
+        "bytes": 530918,
+        "encoded": 530618,
+        "duration": 122
+      },
+      {
+        "name": "/static/videos/cmp_crossing_4rc.mp4",
+        "bytes": 699959,
+        "encoded": 699659,
+        "duration": 123
+      },
+      {
+        "name": "/static/videos/cmp_crossing_ours_cowtracker_vggto.mp4",
+        "bytes": 568564,
+        "encoded": 568264,
+        "duration": 123.2999997138977
+      },
+      {
+        "name": "/static/videos/cmp_motorbike_input.mp4",
+        "bytes": 722411,
+        "encoded": 722111,
+        "duration": 125.90000009536743
+      },
+      {
+        "name": "/static/videos/cmp_motorbike_tc3r_vggto.mp4",
+        "bytes": 438640,
+        "encoded": 438340,
+        "duration": 126.7000002861023
+      },
+      {
+        "name": "/static/videos/cmp_motorbike_vdpm.mp4",
+        "bytes": 309756,
+        "encoded": 309456,
+        "duration": 126.10000038146973
+      },
+      {
+        "name": "/static/videos/cmp_motorbike_4rc.mp4",
+        "bytes": 215502,
+        "encoded": 215202,
+        "duration": 126.89999961853027
+      },
+      {
+        "name": "/static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4",
+        "bytes": 255693,
+        "encoded": 255393,
+        "duration": 126.19999980926514
+      },
+      {
+        "name": "/static/videos/cmp_spin_tc3r_vggto.mp4",
+        "bytes": 2981554,
+        "encoded": 2981254,
+        "duration": 158.19999980926514
+      },
+      {
+        "name": "/static/videos/cmp_spin_input.mp4",
+        "bytes": 4125584,
+        "encoded": 4125284,
+        "duration": 165.80000019073486
+      },
+      {
+        "name": "/static/videos/cmp_spin_vdpm.mp4",
+        "bytes": 2603001,
+        "encoded": 2602701,
+        "duration": 158.39999961853027
+      },
+      {
+        "name": "/static/videos/cmp_spin_4rc.mp4",
+        "bytes": 3793483,
+        "encoded": 3793183,
+        "duration": 172.69999980926514
+      },
+      {
+        "name": "/static/videos/cmp_spin_ours_cowtracker_vggto.mp4",
+        "bytes": 3024812,
+        "encoded": 3024512,
+        "duration": 160.5
+      },
+      {
+        "name": "/static/videos/slider_basketball_3_input.mp4",
+        "bytes": 607599,
+        "encoded": 607299,
+        "duration": 164
+      },
+      {
+        "name": "/static/videos/slider_basketball_3_s3d_lift.mp4",
+        "bytes": 563532,
+        "encoded": 563232,
+        "duration": 163.80000019073486
+      },
+      {
+        "name": "/static/videos/slider_basketball_3_s3d_ours.mp4",
+        "bytes": 528356,
+        "encoded": 528056,
+        "duration": 163
+      },
+      {
+        "name": "/static/videos/demo_cartwheel.mp4",
+        "bytes": 539234,
+        "encoded": 538934,
+        "duration": 72.40000009536743
+      },
+      {
+        "name": "/static/videos/demo_running.mp4",
+        "bytes": 2320201,
+        "encoded": 2319901,
+        "duration": 88.30000019073486
+      },
+      {
+        "name": "/static/videos/demo_swing-tire.mp4",
+        "bytes": 1044787,
+        "encoded": 1044487,
+        "duration": 73.09999990463257
+      },
+      {
+        "name": "/static/videos/demo_swing.mp4",
+        "bytes": 701402,
+        "encoded": 701102,
+        "duration": 75.90000009536743
+      },
+      {
+        "name": "/static/videos/demo_spin.mp4",
+        "bytes": 529376,
+        "encoded": 529076,
+        "duration": 77.30000019073486
+      },
+      {
+        "name": "/static/videos/demo_tennis.mp4",
+        "bytes": 537251,
+        "encoded": 536951,
+        "duration": 80.59999990463257
+      },
+      {
+        "name": "/static/videos/demo_forest.mp4",
+        "bytes": 300,
+        "encoded": 0,
+        "duration": 1482.5
+      },
+      {
+        "name": "/static/videos/demo_motocross-bumps.mp4",
+        "bytes": 472964,
+        "encoded": 472664,
+        "duration": 82.5
+      },
+      {
+        "name": "/static/videos/demo_drift-turn.mp4",
+        "bytes": 545729,
+        "encoded": 545429,
+        "duration": 81.80000019073486
+      }
+    ]
+  },
+  "after": {
+    "time": 5101.699999809265,
+    "viewport": [
+      1920,
+      902
+    ],
+    "requests": 11,
+    "transferBytes": 8736921,
+    "draws": 0,
+    "rafCallbacks": 0,
+    "longTasks": [
+      {
+        "start": 132.40000009536743,
+        "duration": 384
+      },
+      {
+        "start": 602.7999997138977,
+        "duration": 144
+      }
+    ],
+    "errors": [],
+    "sections": [
+      {
+        "name": "ReLift:  Dense 3D Tracking as Lifted Trajectory Repair",
+        "top": 0,
+        "height": 307
+      },
+      {
+        "top": 307,
+        "height": 373
+      },
+      {
+        "name": "Abstract",
+        "top": 719,
+        "height": 563
+      },
+      {
+        "name": "Interactive Demo",
+        "top": 1322,
+        "height": 1112
+      },
+      {
+        "name": "More Results",
+        "top": 2474,
+        "height": 2187
+      },
+      {
+        "name": "Method",
+        "top": 4701,
+        "height": 1028
+      },
+      {
+        "name": "3D Tracking Comparison",
+        "top": 5769,
+        "height": 1581
+      },
+      {
+        "name": "Correcting the Lift",
+        "top": 7390,
+        "height": 542
+      },
+      {
+        "name": "BibTeX",
+        "top": 7972,
+        "height": 379
+      }
+    ],
+    "playing_videos": 1,
+    "resources": [
+      {
+        "name": "/__measure.js",
+        "bytes": 2691,
+        "encoded": 2391,
+        "duration": 18.5
+      },
+      {
+        "name": "/css",
+        "bytes": 0,
+        "encoded": 2411,
+        "duration": 17.40000009536743
+      },
+      {
+        "name": "/static/css/index.css",
+        "bytes": 3694,
+        "encoded": 3394,
+        "duration": 19.40000009536743
+      },
+      {
+        "name": "/static/css/media.css",
+        "bytes": 1152,
+        "encoded": 852,
+        "duration": 20.90000009536743
+      },
+      {
+        "name": "/static/css/bulma.min.css",
+        "bytes": 204330,
+        "encoded": 204030,
+        "duration": 21.699999809265137
+      },
+      {
+        "name": "/static/images/method_poster.jpg",
+        "bytes": 112095,
+        "encoded": 111795,
+        "duration": 21.40000009536743
+      },
+      {
+        "name": "/static/js/relift-viewer.js",
+        "bytes": 19291,
+        "encoded": 18991,
+        "duration": 50.40000009536743
+      },
+      {
+        "name": "/static/js/relift-media-loader.js",
+        "bytes": 12569,
+        "encoded": 12269,
+        "duration": 50.40000009536743
+      },
+      {
+        "name": "/static/images/posters/teaser_input.jpg",
+        "bytes": 47461,
+        "encoded": 47161,
+        "duration": 5.899999618530273
+      },
+      {
+        "name": "/static/images/posters/teaser_tracks.jpg",
+        "bytes": 20611,
+        "encoded": 20311,
+        "duration": 5.599999904632568
+      },
+      {
+        "name": "/static/videos/optimized/teaser.mp4",
+        "bytes": 8313027,
+        "encoded": 8312727,
+        "duration": 202.7000002861023
+      }
+    ]
+  },
+  "offscreen": {
+    "duration_ms": 26999.0,
+    "webgl_draws": 0,
+    "animation_callbacks": 0,
+    "frame_start": "frame 4 / 86",
+    "frame_end": "frame 4 / 86"
+  },
+  "groups": [
+    {
+      "frame": "688",
+      "mode": "composite",
+      "name": "teaser",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "2",
+      "mode": "composite",
+      "name": "more_kangaroo_with_occlusion_short",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "4",
+      "mode": "composite",
+      "name": "more_kangaroo",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "10",
+      "mode": "composite",
+      "name": "more_horsejump-high",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "3",
+      "mode": "composite",
+      "name": "more_swing-tire",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "188",
+      "mode": "composite",
+      "name": "more_camel",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "176",
+      "mode": "composite",
+      "name": "more_schoolgirls",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "12",
+      "mode": "composite",
+      "name": "more_motocross-bumps",
+      "panels": 2,
+      "videos": 1
+    },
+    {
+      "frame": "2",
+      "mode": "composite",
+      "name": "lady-running",
+      "panels": 5,
+      "videos": 1
+    },
+    {
+      "frame": "7",
+      "mode": "composite",
+      "name": "libby",
+      "panels": 5,
+      "videos": 1
+    },
+    {
+      "frame": "12",
+      "mode": "composite",
+      "name": "car-shadow",
+      "panels": 5,
+      "videos": 1
+    },
+    {
+      "frame": "11",
+      "mode": "composite",
+      "name": "bmx-trees",
+      "panels": 5,
+      "videos": 1
+    },
+    {
+      "frame": "10",
+      "mode": "composite",
+      "name": "crossing",
+      "panels": 5,
+      "videos": 1
+    },
+    {
+      "frame": "12",
+      "mode": "composite",
+      "name": "motorbike",
+      "panels": 5,
+      "videos": 1
+    },
+    {
+      "frame": "12",
+      "mode": "composite",
+      "name": "spin",
+      "panels": 5,
+      "videos": 1
+    }
+  ],
+  "viewer_scenes": [
+    {
+      "name": "cartwheel",
+      "frame": "frame 2 / 86",
+      "pressed": "true"
+    },
+    {
+      "name": "running",
+      "frame": "frame 1 / 206",
+      "pressed": "true"
+    },
+    {
+      "name": "swing-tire",
+      "frame": "frame 2 / 84",
+      "pressed": "true"
+    },
+    {
+      "name": "swing",
+      "frame": "frame 2 / 60",
+      "pressed": "true"
+    },
+    {
+      "name": "spin",
+      "frame": "frame 1 / 80",
+      "pressed": "true"
+    },
+    {
+      "name": "forest",
+      "frame": "frame 2 / 294",
+      "pressed": "true"
+    },
+    {
+      "name": "tennis",
+      "frame": "frame 1 / 70",
+      "pressed": "true"
+    },
+    {
+      "name": "motocross-bumps",
+      "frame": "frame 2 / 45",
+      "pressed": "true"
+    },
+    {
+      "name": "drift-turn",
+      "frame": "frame 2 / 54",
+      "pressed": "true"
+    }
+  ],
+  "mobile_grid": {
+    "viewport": [
+      390,
+      844
+    ],
+    "landscape": {
+      "columns": [
+        3,
+        2
+      ],
+      "width": 327,
+      "height": 221,
+      "cell": [
+        102,
+        82
+      ]
+    },
+    "portrait": {
+      "columns": [
+        3,
+        2
+      ],
+      "width": 327,
+      "height": 379,
+      "cell": [
+        102,
+        161
+      ]
+    },
+    "matches_original": true
+  },
+  "forced_composite_failure": {
+    "fallback_videos": 2,
+    "canvases": 0,
+    "both_playing": true
+  },
+  "checks": [
+    "All 15 atlases decoded and rendered all panels",
+    "All 9 viewer scenes loaded",
+    "Frame seek, pause/resume, reset, and full trails",
+    "Mobile lower row continues with hidden decoder above viewport",
+    "Correction wipe responds and three clocks within 0.001 seconds in observed sample",
+    "Method manual pause survives leaving/returning",
+    "BibTeX Copy reports Copied",
+    "64 original video hashes unchanged"
+  ],
+  "hidden_tab_validation": {
+    "lifecycle_tests": "passed",
+    "real_browser_transition": "not observed; automation kept document.hidden false while switching test tabs"
+  }
+}

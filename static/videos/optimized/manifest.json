@@ -1,0 +1,2721 @@
+{
+  "groups": {
+    "bmx-trees": {
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 1080,
+      "minimum_panel_ssim": 0.986648,
+      "output_bytes": 5263805,
+      "output_sha256": "84fcb31e4d0a816c3c042a78ab5807205d65a420e38e1c233f6a4ae5d2e10076",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_bmx-trees_input.jpg",
+          "source": "static/videos/cmp_bmx-trees_input.mp4",
+          "ssim": {
+            "all": 0.986648,
+            "luma": 0.985015,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_bmx-trees_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_bmx-trees_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.997365,
+            "luma": 0.998445,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_bmx-trees_vdpm.jpg",
+          "source": "static/videos/cmp_bmx-trees_vdpm.mp4",
+          "ssim": {
+            "all": 0.997491,
+            "luma": 0.998489,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 1920,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_bmx-trees_4rc.jpg",
+          "source": "static/videos/cmp_bmx-trees_4rc.mp4",
+          "ssim": {
+            "all": 0.995554,
+            "luma": 0.998229,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 540
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_bmx-trees_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.995312,
+            "luma": 0.99828,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_bmx-trees_4rc.mp4": "a5fdc090c284d8a4a8cefa0f6648a1bb0a9421dbd9f6a5ec2e87cfb34ea19c50",
+          "cmp_bmx-trees_input.mp4": "a0c603b82774c1a62f2201e016d5658d10d2895fc92476f0f20b631904def688",
+          "cmp_bmx-trees_ours_cowtracker_vggto.mp4": "5409992fbdfb549d7fa833848f83a690edf89046442e5a204c2c6e9b05b73081",
+          "cmp_bmx-trees_tc3r_vggto.mp4": "0a8b0e05503e14f6d810f00f91edf0dd998ea54470935c83ab8a60e5d3f1a62e",
+          "cmp_bmx-trees_vdpm.mp4": "229dd7ba0a34d98065b799ecd42299594e0a86eb3cdffd67b5011343901a6129"
+        }
+      },
+      "source_bytes": 5086901,
+      "src": "static/videos/optimized/bmx-trees.mp4",
+      "width": 2880
+    },
+    "car-shadow": {
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "height": 1080,
+      "minimum_panel_ssim": 0.988413,
+      "output_bytes": 3064504,
+      "output_sha256": "0c944adefa709721c2947d0700683271b5f8f05174c667f9b0aaa8199db30f45",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_car-shadow_input.jpg",
+          "source": "static/videos/cmp_car-shadow_input.mp4",
+          "ssim": {
+            "all": 0.988413,
+            "luma": 0.98598,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_car-shadow_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_car-shadow_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.996476,
+            "luma": 0.996159,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_car-shadow_vdpm.jpg",
+          "source": "static/videos/cmp_car-shadow_vdpm.mp4",
+          "ssim": {
+            "all": 0.996925,
+            "luma": 0.996719,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 1920,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_car-shadow_4rc.jpg",
+          "source": "static/videos/cmp_car-shadow_4rc.mp4",
+          "ssim": {
+            "all": 0.995843,
+            "luma": 0.996648,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 540
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_car-shadow_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_car-shadow_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.995675,
+            "luma": 0.996319,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_car-shadow_4rc.mp4": "3cb7481f01a74f22979f63978e41cb78a77d7ae9b7b50b25379d19b91695f4c0",
+          "cmp_car-shadow_input.mp4": "10d2e5bd0d551899218a7ecd076f972c7e83a754319a663d2e257eb3645d163f",
+          "cmp_car-shadow_ours_cowtracker_vggto.mp4": "58382876a6f95f31c5aacc1eb0df4b6d2935b69eea0185a325034b16596bcc09",
+          "cmp_car-shadow_tc3r_vggto.mp4": "d76412bdfb179b3f2eba9a01acef8dac6a5d43421912384800aeb152dfd443b0",
+          "cmp_car-shadow_vdpm.mp4": "b83b99b39eab7632590387892d223339536a82ba2867cb70762cbbcd4e4574aa"
+        }
+      },
+      "source_bytes": 2961572,
+      "src": "static/videos/optimized/car-shadow.mp4",
+      "width": 2880
+    },
+    "crossing": {
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "height": 1080,
+      "minimum_panel_ssim": 0.993233,
+      "output_bytes": 3093836,
+      "output_sha256": "01a8055ffac6ec02838da8b905cbd754efa83f48a27334907e6ea3d4faca521a",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_crossing_input.jpg",
+          "source": "static/videos/cmp_crossing_input.mp4",
+          "ssim": {
+            "all": 0.993233,
+            "luma": 0.992113,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_crossing_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_crossing_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.998294,
+            "luma": 0.998372,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_crossing_vdpm.jpg",
+          "source": "static/videos/cmp_crossing_vdpm.mp4",
+          "ssim": {
+            "all": 0.998705,
+            "luma": 0.998914,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 1920,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_crossing_4rc.jpg",
+          "source": "static/videos/cmp_crossing_4rc.mp4",
+          "ssim": {
+            "all": 0.997041,
+            "luma": 0.998459,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 540
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_crossing_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_crossing_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.996871,
+            "luma": 0.997885,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_crossing_4rc.mp4": "dcaac3beb85579b5e9d01c6252beb4a30994e21f67fb04936302aad8c7a08917",
+          "cmp_crossing_input.mp4": "5a5f98f03730ff93889693bd69c3ff942d2a3f624a3a82e47b1e76434fcce49b",
+          "cmp_crossing_ours_cowtracker_vggto.mp4": "dc596655696f03952642103e54fbc5fafb2dd669633803d07a7cf10a86130829",
+          "cmp_crossing_tc3r_vggto.mp4": "a2113817736698e1d66fda95c32e62edec30f66658c594755b42080d8b7ab7f9",
+          "cmp_crossing_vdpm.mp4": "c7ba82b4ddf1b42db54f74c740a9aced04dd1db8473c5e774b6d4c1a392c69fd"
+        }
+      },
+      "source_bytes": 2991348,
+      "src": "static/videos/optimized/crossing.mp4",
+      "width": 2880
+    },
+    "lady-running": {
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "height": 1080,
+      "minimum_panel_ssim": 0.989102,
+      "output_bytes": 8705096,
+      "output_sha256": "46b6a2e48e0f252460c59ea95ee7cd9466efcd78479ddf8e192b9803e52b3792",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_lady-running_input.jpg",
+          "source": "static/videos/cmp_lady-running_input.mp4",
+          "ssim": {
+            "all": 0.989102,
+            "luma": 0.988366,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_lady-running_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_lady-running_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.996096,
+            "luma": 0.997377,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_lady-running_vdpm.jpg",
+          "source": "static/videos/cmp_lady-running_vdpm.mp4",
+          "ssim": {
+            "all": 0.996514,
+            "luma": 0.998032,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 1920,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_lady-running_4rc.jpg",
+          "source": "static/videos/cmp_lady-running_4rc.mp4",
+          "ssim": {
+            "all": 0.992569,
+            "luma": 0.996686,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 540
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_lady-running_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.992637,
+            "luma": 0.996676,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_lady-running_4rc.mp4": "66311b79268bd048be7848dedec0d1699525af61fecaa0a4114641e78f983adc",
+          "cmp_lady-running_input.mp4": "698ad3988086b7d9708ff69095be4cc63e933f325a9c862da329195e587d0367",
+          "cmp_lady-running_ours_cowtracker_vggto.mp4": "2117b0b860199a367ef8270694e592439f702432cdfa29dc5a26178d65f61955",
+          "cmp_lady-running_tc3r_vggto.mp4": "c535678fd84e8514fd139e89c58183fd7361fe226865df009253ce05811d49f9",
+          "cmp_lady-running_vdpm.mp4": "412f2e29bf8543cfb283d145022c4b4f4d6c83ecbec96434267e7bd760937f2e"
+        }
+      },
+      "source_bytes": 8336321,
+      "src": "static/videos/optimized/lady-running.mp4",
+      "width": 2880
+    },
+    "libby": {
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "height": 1080,
+      "minimum_panel_ssim": 0.984504,
+      "output_bytes": 3672931,
+      "output_sha256": "aaa38f3f990ac8737447546bf04346fd704903791e7ef522a63c6d6afe197edb",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_libby_input.jpg",
+          "source": "static/videos/cmp_libby_input.mp4",
+          "ssim": {
+            "all": 0.984504,
+            "luma": 0.981641,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_libby_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_libby_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.997378,
+            "luma": 0.997677,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_libby_vdpm.jpg",
+          "source": "static/videos/cmp_libby_vdpm.mp4",
+          "ssim": {
+            "all": 0.997239,
+            "luma": 0.997779,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 1920,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_libby_4rc.jpg",
+          "source": "static/videos/cmp_libby_4rc.mp4",
+          "ssim": {
+            "all": 0.995528,
+            "luma": 0.997548,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 540
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_libby_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_libby_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.995396,
+            "luma": 0.997183,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_libby_4rc.mp4": "2c8269a832b956259b58056f0cd352d81133344ebcd95dacde092f35b30821dc",
+          "cmp_libby_input.mp4": "534461137ccb06743f26402b7e310c6ea56f04dfa4fe9982c399361cb1cd782c",
+          "cmp_libby_ours_cowtracker_vggto.mp4": "59969e94343ef8ac07433fd8221e0d36ea9b8f3af3cad9612092f5463a37e3f6",
+          "cmp_libby_tc3r_vggto.mp4": "fef9248f79dd4790c5435be88cf5ff1778cd0ef5bde72646d6ed2c9c2688271b",
+          "cmp_libby_vdpm.mp4": "15ddd5aac8eb1f9d15f1442eef82fdb675de14d38cccb1dc5caef6f528244c91"
+        }
+      },
+      "source_bytes": 3512734,
+      "src": "static/videos/optimized/libby.mp4",
+      "width": 2880
+    },
+    "more_camel": {
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 540,
+      "minimum_panel_ssim": 0.993029,
+      "output_bytes": 3019214,
+      "output_sha256": "a63766cfb7503d604599410ef71fa538b475f78dfc3249c43d37bd57372cd57b",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_camel_input.jpg",
+          "source": "static/videos/more_camel_input.mp4",
+          "ssim": {
+            "all": 0.993029,
+            "luma": 0.992393,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_camel_ours.jpg",
+          "source": "static/videos/more_camel_ours.mp4",
+          "ssim": {
+            "all": 0.996249,
+            "luma": 0.996572,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_camel_input.mp4": "a19ff84fd81cebc4df6af992ba61260596402a884a5de6ec0acf5d1d69012def",
+          "more_camel_ours.mp4": "19c680a83a0f5f8dc1fe4af852a5813acc9a5c2b0f88ab9a1d184b1d3f3ca38e"
+        }
+      },
+      "source_bytes": 2970029,
+      "src": "static/videos/optimized/more_camel.mp4",
+      "width": 1920
+    },
+    "more_horsejump-high": {
+      "duration_s": 4.166667,
+      "fps": "12",
+      "frames": 50,
+      "height": 540,
+      "minimum_panel_ssim": 0.987013,
+      "output_bytes": 1584519,
+      "output_sha256": "2a78dc92391a1167072484edf045fe4c39b01c4795d2fc490dd2c37e0e24366d",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_horsejump-high_input.jpg",
+          "source": "static/videos/more_horsejump-high_input.mp4",
+          "ssim": {
+            "all": 0.987013,
+            "luma": 0.985368,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_horsejump-high_ours.jpg",
+          "source": "static/videos/more_horsejump-high_ours.mp4",
+          "ssim": {
+            "all": 0.99746,
+            "luma": 0.997746,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_horsejump-high_input.mp4": "0cf97c2396f0d5a3ce0d5577b4935a86d984d1145095089a373c1eb178ad8af1",
+          "more_horsejump-high_ours.mp4": "a528b0db3a594c248955df999bfea3a0057b8fdff1f25a965eb6d95e1908db4b"
+        }
+      },
+      "source_bytes": 1520385,
+      "src": "static/videos/optimized/more_horsejump-high.mp4",
+      "width": 1920
+    },
+    "more_kangaroo": {
+      "duration_s": 6.583333,
+      "fps": "12",
+      "frames": 79,
+      "height": 540,
+      "minimum_panel_ssim": 0.991897,
+      "output_bytes": 1592693,
+      "output_sha256": "f6d67a496c80dbfd6270962e9f64d9d6f1687129f2264b940d12241ff9183702",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_kangaroo_input.jpg",
+          "source": "static/videos/more_kangaroo_input.mp4",
+          "ssim": {
+            "all": 0.991897,
+            "luma": 0.991316,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_kangaroo_ours.jpg",
+          "source": "static/videos/more_kangaroo_ours.mp4",
+          "ssim": {
+            "all": 0.997621,
+            "luma": 0.99815,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_kangaroo_input.mp4": "442ba1154711ce658b40f003a6504d37382272dbcc9719dff5a28b1b394aed08",
+          "more_kangaroo_ours.mp4": "2a7dd6603be28b27795c2d7df861c5267bfb5c77a5c5ba1911ca6aaa3969549a"
+        }
+      },
+      "source_bytes": 1504079,
+      "src": "static/videos/optimized/more_kangaroo.mp4",
+      "width": 1920
+    },
+    "more_kangaroo_with_occlusion_short": {
+      "duration_s": 8.333333,
+      "fps": "12",
+      "frames": 100,
+      "height": 562,
+      "minimum_panel_ssim": 0.982214,
+      "output_bytes": 8334644,
+      "output_sha256": "519a1e58dc1d8c0bada8191af84fa76d634210809ab590b04300674555536630",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_kangaroo_with_occlusion_short_input.jpg",
+          "source": "static/videos/more_kangaroo_with_occlusion_short_input.mp4",
+          "ssim": {
+            "all": 0.986321,
+            "luma": 0.983901,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 562,
+          "poster": "static/images/posters/more_kangaroo_with_occlusion_short_ours.jpg",
+          "source": "static/videos/more_kangaroo_with_occlusion_short_ours.mp4",
+          "ssim": {
+            "all": 0.982214,
+            "luma": 0.976458,
+            "scope": "all frames at native resolution"
+          },
+          "width": 1000,
+          "x": 1000,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_kangaroo_with_occlusion_short_input.mp4": "69b2cc93903b122e3cbc527cd9e734817848d09f97c2abb66d1b20752ddaec8d",
+          "more_kangaroo_with_occlusion_short_ours.mp4": "56ec0c063dc51d7e8ac58d748534688ff3ca216e52bb60b6d2b86c530ed6c26a"
+        }
+      },
+      "source_bytes": 12777107,
+      "src": "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+      "width": 2000
+    },
+    "more_motocross-bumps": {
+      "duration_s": 3.75,
+      "fps": "12",
+      "frames": 45,
+      "height": 540,
+      "minimum_panel_ssim": 0.988862,
+      "output_bytes": 962963,
+      "output_sha256": "87492250a62786a0c950a157fd83c6d2f1b64cbbbb7bffa42a91642ae02d3347",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_motocross-bumps_input.jpg",
+          "source": "static/videos/more_motocross-bumps_input.mp4",
+          "ssim": {
+            "all": 0.988862,
+            "luma": 0.986635,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_motocross-bumps_ours.jpg",
+          "source": "static/videos/more_motocross-bumps_ours.mp4",
+          "ssim": {
+            "all": 0.998659,
+            "luma": 0.998653,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_motocross-bumps_input.mp4": "9db7455dac7fdbfe67c8b22c6a0505177dabea2eb920a94e61dd350fee0212bc",
+          "more_motocross-bumps_ours.mp4": "cc442774ac5b3b41847a947eecdf37256c82b86d3fa609215504a82da40a549d"
+        }
+      },
+      "source_bytes": 1007941,
+      "src": "static/videos/optimized/more_motocross-bumps.mp4",
+      "width": 1920
+    },
+    "more_schoolgirls": {
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "minimum_panel_ssim": 0.994367,
+      "output_bytes": 2426711,
+      "output_sha256": "3614017c4d0ae42b6c65dd7e428ccd2a0109bc2cd182a5e0fb6a4f0d01ec15a9",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_schoolgirls_input.jpg",
+          "source": "static/videos/more_schoolgirls_input.mp4",
+          "ssim": {
+            "all": 0.994367,
+            "luma": 0.994772,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_schoolgirls_ours.jpg",
+          "source": "static/videos/more_schoolgirls_ours.mp4",
+          "ssim": {
+            "all": 0.997763,
+            "luma": 0.998558,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_schoolgirls_input.mp4": "de6ce79b8dbb646f259b6d45f843e0bfb0932c3c3fadc587ef2d0cd5a22ffde4",
+          "more_schoolgirls_ours.mp4": "4013994671ea2c540215378e7a9ae42ee2b712e62909f9391c10ecd233bb7af2"
+        }
+      },
+      "source_bytes": 2362828,
+      "src": "static/videos/optimized/more_schoolgirls.mp4",
+      "width": 1920
+    },
+    "more_swing-tire": {
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 540,
+      "minimum_panel_ssim": 0.993177,
+      "output_bytes": 2914362,
+      "output_sha256": "8daa6285c342b62462f47627cfc5f8dfce49f90f0142f218629f12997cf5f3a1",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_swing-tire_input.jpg",
+          "source": "static/videos/more_swing-tire_input.mp4",
+          "ssim": {
+            "all": 0.993177,
+            "luma": 0.992207,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/more_swing-tire_ours.jpg",
+          "source": "static/videos/more_swing-tire_ours.mp4",
+          "ssim": {
+            "all": 0.997512,
+            "luma": 0.997878,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "more_swing-tire_input.mp4": "e82c6e6bac94e0cee12f851b42a5f5a1d066905576e5f56d2a2d92e4a0bea896",
+          "more_swing-tire_ours.mp4": "891fc96eb948ebfc623864f8710d091578b03402ebbf81ab4d62bb8020763309"
+        }
+      },
+      "source_bytes": 2870183,
+      "src": "static/videos/optimized/more_swing-tire.mp4",
+      "width": 1920
+    },
+    "motorbike": {
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "height": 1080,
+      "minimum_panel_ssim": 0.985704,
+      "output_bytes": 2004950,
+      "output_sha256": "b1519ca094094c5f4a713121b61a940515c883da6a9aa88a82a47b47e6208de9",
+      "panels": [
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_motorbike_input.jpg",
+          "source": "static/videos/cmp_motorbike_input.mp4",
+          "ssim": {
+            "all": 0.985704,
+            "luma": 0.981941,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_motorbike_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_motorbike_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.998441,
+            "luma": 0.99825,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_motorbike_vdpm.jpg",
+          "source": "static/videos/cmp_motorbike_vdpm.mp4",
+          "ssim": {
+            "all": 0.99867,
+            "luma": 0.998591,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 1920,
+          "y": 0
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_motorbike_4rc.jpg",
+          "source": "static/videos/cmp_motorbike_4rc.mp4",
+          "ssim": {
+            "all": 0.998572,
+            "luma": 0.998974,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 0,
+          "y": 540
+        },
+        {
+          "height": 540,
+          "poster": "static/images/posters/cmp_motorbike_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.998105,
+            "luma": 0.998296,
+            "scope": "all frames at native resolution"
+          },
+          "width": 960,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_motorbike_4rc.mp4": "a542151bff6fe328cc9d2b505f5d11e1448b54f751b3ff34863935a89f720c40",
+          "cmp_motorbike_input.mp4": "da8b3dee7988b6507540b75c6481f6abd1795bbd2be4137f172025e0783a1603",
+          "cmp_motorbike_ours_cowtracker_vggto.mp4": "1575abc7e3e3826c90feda2211082c096a6eb9fbb2ef2334e57b53b51593e35e",
+          "cmp_motorbike_tc3r_vggto.mp4": "d605b9503238f78fda0998c987ba5de23af46c6fad71bb6af6f348be3f1d8f73",
+          "cmp_motorbike_vdpm.mp4": "58807dcef942c3836791d4451f905104dc0df97c79cbb74b0e584c29253e14dc"
+        }
+      },
+      "source_bytes": 1940502,
+      "src": "static/videos/optimized/motorbike.mp4",
+      "width": 2880
+    },
+    "spin": {
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 1920,
+      "minimum_panel_ssim": 0.989802,
+      "output_bytes": 17085860,
+      "output_sha256": "14f69d771512f26ca80cbfe79adfd0e97448f4a61a4f09cb1b22126de945d790",
+      "panels": [
+        {
+          "height": 960,
+          "poster": "static/images/posters/cmp_spin_input.jpg",
+          "source": "static/videos/cmp_spin_input.mp4",
+          "ssim": {
+            "all": 0.989802,
+            "luma": 0.987154,
+            "scope": "all frames at native resolution"
+          },
+          "width": 720,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 960,
+          "poster": "static/images/posters/cmp_spin_tc3r_vggto.jpg",
+          "source": "static/videos/cmp_spin_tc3r_vggto.mp4",
+          "ssim": {
+            "all": 0.996801,
+            "luma": 0.997052,
+            "scope": "all frames at native resolution"
+          },
+          "width": 720,
+          "x": 720,
+          "y": 0
+        },
+        {
+          "height": 960,
+          "poster": "static/images/posters/cmp_spin_vdpm.jpg",
+          "source": "static/videos/cmp_spin_vdpm.mp4",
+          "ssim": {
+            "all": 0.997433,
+            "luma": 0.997767,
+            "scope": "all frames at native resolution"
+          },
+          "width": 720,
+          "x": 1440,
+          "y": 0
+        },
+        {
+          "height": 960,
+          "poster": "static/images/posters/cmp_spin_4rc.jpg",
+          "source": "static/videos/cmp_spin_4rc.mp4",
+          "ssim": {
+            "all": 0.996617,
+            "luma": 0.997231,
+            "scope": "all frames at native resolution"
+          },
+          "width": 720,
+          "x": 0,
+          "y": 960
+        },
+        {
+          "height": 960,
+          "poster": "static/images/posters/cmp_spin_ours_cowtracker_vggto.jpg",
+          "source": "static/videos/cmp_spin_ours_cowtracker_vggto.mp4",
+          "ssim": {
+            "all": 0.99684,
+            "luma": 0.997196,
+            "scope": "all frames at native resolution"
+          },
+          "width": 720,
+          "x": 720,
+          "y": 960
+        }
+      ],
+      "recipe": {
+        "columns": 3,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "cmp_spin_4rc.mp4": "88ef3e2e7325c7719ccdef24e0253e7d95be10a6576d80c3ec60b13eee2ababc",
+          "cmp_spin_input.mp4": "5bb0856a070a6f93292efc91b9aa42d21fa1b16a5f76b68b9f54ad31519b1e36",
+          "cmp_spin_ours_cowtracker_vggto.mp4": "a4f2097667b7b8c378e7adb0bcc7f06d807e5e624f3b685aa769839fd19bd81c",
+          "cmp_spin_tc3r_vggto.mp4": "8608d6413185e12de10dab9b89aa36e6ab973dff95835a59d85c4aca3b7e4e91",
+          "cmp_spin_vdpm.mp4": "9bb999e052c0cb245565a32a234af6ed0afb94e8eb98690a33ae3da7586521c2"
+        }
+      },
+      "source_bytes": 16526934,
+      "src": "static/videos/optimized/spin.mp4",
+      "width": 2160
+    },
+    "teaser": {
+      "duration_s": 11.666667,
+      "fps": "30",
+      "frames": 350,
+      "height": 720,
+      "minimum_panel_ssim": 0.986904,
+      "output_bytes": 8312727,
+      "output_sha256": "dc5d9a2514b77174bb3359bd500d3b6ba954a016482dbbfaa91ee58be84c5a68",
+      "panels": [
+        {
+          "height": 720,
+          "poster": "static/images/posters/teaser_input.jpg",
+          "source": "static/videos/teaser_input.mp4",
+          "ssim": {
+            "all": 0.986904,
+            "luma": 0.984025,
+            "scope": "all frames at native resolution"
+          },
+          "width": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 720,
+          "poster": "static/images/posters/teaser_tracks.jpg",
+          "source": "static/videos/teaser_tracks.mp4",
+          "ssim": {
+            "all": 0.992007,
+            "luma": 0.990198,
+            "scope": "all frames at native resolution"
+          },
+          "width": 1280,
+          "x": 1280,
+          "y": 0
+        }
+      ],
+      "recipe": {
+        "columns": 2,
+        "crf": 21,
+        "frame_timing": "source-cfr",
+        "preset": "slow",
+        "sources": {
+          "teaser_input.mp4": "6625df7b18a7e584d6947d5b498b1211e8ed7ee87224c69ba82803ec00c6f4f2",
+          "teaser_tracks.mp4": "f5d5e254d9fb316e44c6754b052a1c3610a6ecc3618fb9406de461917a2a209b"
+        }
+      },
+      "source_bytes": 6586101,
+      "src": "static/videos/optimized/teaser.mp4",
+      "width": 2560
+    }
+  },
+  "individuals": {
+    "demo_cartwheel.mp4": {
+      "candidate_for_visual_review": true,
+      "duration_s": 7.166667,
+      "fps": "12",
+      "frames": 86,
+      "height": 360,
+      "output_bytes": 381479,
+      "output_sha256": "3f40dde6d896dfda3e8267d1476cae8474140d74ab7421492f07f2333f002cb1",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "05a14dac16ac66e40b1944d23e8898142dcabb2a641cecc35e4886df52af7634"
+      },
+      "saving_fraction": 0.29216007897070884,
+      "source": "static/videos/demo_cartwheel.mp4",
+      "source_bytes": 538934,
+      "src": "static/videos/optimized/individual/demo_cartwheel.mp4",
+      "ssim": {
+        "all": 0.990723,
+        "luma": 0.989482,
+        "scope": "all frames at native resolution"
+      },
+      "width": 202
+    },
+    "demo_drift-turn.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 4.5,
+      "fps": "12",
+      "frames": 54,
+      "height": 360,
+      "output_bytes": 590057,
+      "output_sha256": "4617c1d0757193cecb12e27e760fdd5bd4744acae229195555e12e31c99962db",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "b81c25672bfff9e0d0db36159c19dd9c2b653b6970056ee89135150f9d2a35f7"
+      },
+      "saving_fraction": -0.08182183198913151,
+      "source": "static/videos/demo_drift-turn.mp4",
+      "source_bytes": 545429,
+      "ssim": {
+        "all": 0.990264,
+        "luma": 0.987656,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_drift-turn.mp4",
+      "width": 640
+    },
+    "demo_forest.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 24.5,
+      "fps": "12",
+      "frames": 294,
+      "height": 360,
+      "output_bytes": 7312326,
+      "output_sha256": "7fe92b4ab82290850d2a637aab57a5f3bf5858beacdfd661ff25f437cd9fe3e0",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "da52f1e75f40767fc75cb4346a213712c9a9c46879d357726a548bc35e9f15c1"
+      },
+      "saving_fraction": -0.3983160527634251,
+      "source": "static/videos/demo_forest.mp4",
+      "source_bytes": 5229380,
+      "ssim": {
+        "all": 0.990488,
+        "luma": 0.990881,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_forest.mp4",
+      "width": 640
+    },
+    "demo_motocross-bumps.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 3.75,
+      "fps": "12",
+      "frames": 45,
+      "height": 360,
+      "output_bytes": 456779,
+      "output_sha256": "da4a855f3223b98f26e902f9b7c45239e38eab28974f0dafddcd251ee4ed06df",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "da03b146fe24b978198e469528f0435e86b06c5b6e05e91ab4bd40dfe3876c40"
+      },
+      "saving_fraction": 0.033607382834317856,
+      "source": "static/videos/demo_motocross-bumps.mp4",
+      "source_bytes": 472664,
+      "ssim": {
+        "all": 0.985341,
+        "luma": 0.9829,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_motocross-bumps.mp4",
+      "width": 640
+    },
+    "demo_running.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 17.166667,
+      "fps": "12",
+      "frames": 206,
+      "height": 640,
+      "output_bytes": 2896799,
+      "output_sha256": "441f5e40a4cfa90609ef4349a1fb0614fa3c73a822f5571d0aa23f6451544039",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "374312a6b489960e9868cb914032d84c491da053a2d039ba08338cc8c622adcf"
+      },
+      "saving_fraction": -0.24867354253478924,
+      "source": "static/videos/demo_running.mp4",
+      "source_bytes": 2319901,
+      "ssim": {
+        "all": 0.984747,
+        "luma": 0.980058,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_running.mp4",
+      "width": 360
+    },
+    "demo_spin.mp4": {
+      "candidate_for_visual_review": true,
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 360,
+      "output_bytes": 440443,
+      "output_sha256": "c85b5f9ca695f5f1bd8aa4c557d361d31f21f9f2bf8096967fc949d2da5c5320",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "c9d3c13eda3fe41cc29860cf563ba0e4b8c66c3360c34fbe391e59c8e00fdb52"
+      },
+      "saving_fraction": 0.16752413641896435,
+      "source": "static/videos/demo_spin.mp4",
+      "source_bytes": 529076,
+      "src": "static/videos/optimized/individual/demo_spin.mp4",
+      "ssim": {
+        "all": 0.985412,
+        "luma": 0.982466,
+        "scope": "all frames at native resolution"
+      },
+      "width": 270
+    },
+    "demo_swing-tire.mp4": {
+      "candidate_for_visual_review": true,
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 360,
+      "output_bytes": 666701,
+      "output_sha256": "8593a951cdd3d99ccfe1372849579eccf9422765e186b9aaf36eaf70d6e039a2",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "2c0e888de0d3068e04f625ad2dace9abd5f8b5ee01e07ab0c046a785e7a1ec2b"
+      },
+      "saving_fraction": 0.3616952628419502,
+      "source": "static/videos/demo_swing-tire.mp4",
+      "source_bytes": 1044487,
+      "src": "static/videos/optimized/individual/demo_swing-tire.mp4",
+      "ssim": {
+        "all": 0.990906,
+        "luma": 0.989762,
+        "scope": "all frames at native resolution"
+      },
+      "width": 640
+    },
+    "demo_swing.mp4": {
+      "candidate_for_visual_review": true,
+      "duration_s": 5.0,
+      "fps": "12",
+      "frames": 60,
+      "height": 360,
+      "output_bytes": 522518,
+      "output_sha256": "47c7fa2c6b1c3ce8825ed2011b85d1e3293f1e6b8264ce59c56e6f525bcf68f6",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "563e9df885d166d350c5a26f4df0378770af7d27bcdf5c046e20e2598555c9ad"
+      },
+      "saving_fraction": 0.2547189995179018,
+      "source": "static/videos/demo_swing.mp4",
+      "source_bytes": 701102,
+      "src": "static/videos/optimized/individual/demo_swing.mp4",
+      "ssim": {
+        "all": 0.988613,
+        "luma": 0.986738,
+        "scope": "all frames at native resolution"
+      },
+      "width": 640
+    },
+    "demo_tennis.mp4": {
+      "candidate_for_visual_review": true,
+      "duration_s": 5.833333,
+      "fps": "12",
+      "frames": 70,
+      "height": 360,
+      "output_bytes": 378894,
+      "output_sha256": "68671c73e4fd5f8ca0b24c9c10d1e4808e9d2d7e2191b496b3d3b626ef40071b",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "770e580b0ac6d01cb630769001d4c7882214197f8276854dd0d9ab3ae276e38b"
+      },
+      "saving_fraction": 0.29436019301575,
+      "source": "static/videos/demo_tennis.mp4",
+      "source_bytes": 536951,
+      "src": "static/videos/optimized/individual/demo_tennis.mp4",
+      "ssim": {
+        "all": 0.990048,
+        "luma": 0.988615,
+        "scope": "all frames at native resolution"
+      },
+      "width": 640
+    },
+    "method_expanded.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 28.333333,
+      "fps": "30",
+      "frames": 850,
+      "height": 1080,
+      "output_bytes": 5864148,
+      "output_sha256": "4ed4259a913b54f9ca55e1662eeeaa4109f8da8ded7a364a66c39402709db604",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "ab895ed384b6189ca7fbe11c09c776f7ce6cdbce63d9dddea36dabebaab516c6"
+      },
+      "saving_fraction": -0.03094732948484169,
+      "source": "static/videos/method_expanded.mp4",
+      "source_bytes": 5688116,
+      "ssim": {
+        "all": 0.997962,
+        "luma": 0.997722,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/method_expanded.mp4",
+      "width": 1920
+    },
+    "slider_basketball_3_input.mp4": {
+      "candidate_for_visual_review": true,
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 360,
+      "output_bytes": 446870,
+      "output_sha256": "bcac38a3b9a573afa55f2a2b3c30b7c69c8affaedae800bacef066b482ffad2a",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "fc3defd7a925488abb0142d5018c8fb6ab867cf5afae082dc6791f21b030cc96"
+      },
+      "saving_fraction": 0.2641680621901238,
+      "source": "static/videos/slider_basketball_3_input.mp4",
+      "source_bytes": 607299,
+      "src": "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+      "ssim": {
+        "all": 0.992731,
+        "luma": 0.990453,
+        "scope": "all frames at native resolution"
+      },
+      "width": 640
+    },
+    "slider_basketball_3_s3d_lift.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 568,
+      "output_bytes": 654747,
+      "output_sha256": "7c12b2357d4fb2f954034b44ed8b22ffe62cee16dfae3af639988cdc1d6d8fbd",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "9bf491ba511e0b4b72ba5e66bc26d3015bf702b7918721cc927f8e98032bac27"
+      },
+      "saving_fraction": -0.16248189023350945,
+      "source": "static/videos/slider_basketball_3_s3d_lift.mp4",
+      "source_bytes": 563232,
+      "ssim": {
+        "all": 0.99824,
+        "luma": 0.997703,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/slider_basketball_3_s3d_lift.mp4",
+      "width": 1008
+    },
+    "slider_basketball_3_s3d_ours.mp4": {
+      "candidate_for_visual_review": false,
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 568,
+      "output_bytes": 557751,
+      "output_sha256": "56ff98837d3a3c2feb1f33d0c62a4865920e843280ff09a1f582a78291993324",
+      "recipe": {
+        "crf": 21,
+        "preset": "slow",
+        "source_sha256": "f5ad202724604770705654ea1ea1903b67430121e4c67a2580006f8bcc655fc7"
+      },
+      "saving_fraction": -0.05623456603087562,
+      "source": "static/videos/slider_basketball_3_s3d_ours.mp4",
+      "source_bytes": 528056,
+      "ssim": {
+        "all": 0.998294,
+        "luma": 0.997706,
+        "scope": "all frames at native resolution"
+      },
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/slider_basketball_3_s3d_ours.mp4",
+      "width": 1008
+    }
+  },
+  "posters": {
+    "cmp_bmx-trees_4rc.mp4": {
+      "bytes": 107652,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a5fdc090c284d8a4a8cefa0f6648a1bb0a9421dbd9f6a5ec2e87cfb34ea19c50"
+      },
+      "src": "static/images/posters/cmp_bmx-trees_4rc.jpg"
+    },
+    "cmp_bmx-trees_input.mp4": {
+      "bytes": 49774,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a0c603b82774c1a62f2201e016d5658d10d2895fc92476f0f20b631904def688"
+      },
+      "src": "static/images/posters/cmp_bmx-trees_input.jpg"
+    },
+    "cmp_bmx-trees_ours_cowtracker_vggto.mp4": {
+      "bytes": 108355,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "5409992fbdfb549d7fa833848f83a690edf89046442e5a204c2c6e9b05b73081"
+      },
+      "src": "static/images/posters/cmp_bmx-trees_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_bmx-trees_tc3r_vggto.mp4": {
+      "bytes": 108333,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "0a8b0e05503e14f6d810f00f91edf0dd998ea54470935c83ab8a60e5d3f1a62e"
+      },
+      "src": "static/images/posters/cmp_bmx-trees_tc3r_vggto.jpg"
+    },
+    "cmp_bmx-trees_vdpm.mp4": {
+      "bytes": 115727,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "229dd7ba0a34d98065b799ecd42299594e0a86eb3cdffd67b5011343901a6129"
+      },
+      "src": "static/images/posters/cmp_bmx-trees_vdpm.jpg"
+    },
+    "cmp_car-shadow_4rc.mp4": {
+      "bytes": 65511,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "3cb7481f01a74f22979f63978e41cb78a77d7ae9b7b50b25379d19b91695f4c0"
+      },
+      "src": "static/images/posters/cmp_car-shadow_4rc.jpg"
+    },
+    "cmp_car-shadow_input.mp4": {
+      "bytes": 48480,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "10d2e5bd0d551899218a7ecd076f972c7e83a754319a663d2e257eb3645d163f"
+      },
+      "src": "static/images/posters/cmp_car-shadow_input.jpg"
+    },
+    "cmp_car-shadow_ours_cowtracker_vggto.mp4": {
+      "bytes": 68804,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "58382876a6f95f31c5aacc1eb0df4b6d2935b69eea0185a325034b16596bcc09"
+      },
+      "src": "static/images/posters/cmp_car-shadow_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_car-shadow_tc3r_vggto.mp4": {
+      "bytes": 69151,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "d76412bdfb179b3f2eba9a01acef8dac6a5d43421912384800aeb152dfd443b0"
+      },
+      "src": "static/images/posters/cmp_car-shadow_tc3r_vggto.jpg"
+    },
+    "cmp_car-shadow_vdpm.mp4": {
+      "bytes": 80786,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "b83b99b39eab7632590387892d223339536a82ba2867cb70762cbbcd4e4574aa"
+      },
+      "src": "static/images/posters/cmp_car-shadow_vdpm.jpg"
+    },
+    "cmp_crossing_4rc.mp4": {
+      "bytes": 84253,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "dcaac3beb85579b5e9d01c6252beb4a30994e21f67fb04936302aad8c7a08917"
+      },
+      "src": "static/images/posters/cmp_crossing_4rc.jpg"
+    },
+    "cmp_crossing_input.mp4": {
+      "bytes": 72836,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "5a5f98f03730ff93889693bd69c3ff942d2a3f624a3a82e47b1e76434fcce49b"
+      },
+      "src": "static/images/posters/cmp_crossing_input.jpg"
+    },
+    "cmp_crossing_ours_cowtracker_vggto.mp4": {
+      "bytes": 63755,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "dc596655696f03952642103e54fbc5fafb2dd669633803d07a7cf10a86130829"
+      },
+      "src": "static/images/posters/cmp_crossing_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_crossing_tc3r_vggto.mp4": {
+      "bytes": 63964,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a2113817736698e1d66fda95c32e62edec30f66658c594755b42080d8b7ab7f9"
+      },
+      "src": "static/images/posters/cmp_crossing_tc3r_vggto.jpg"
+    },
+    "cmp_crossing_vdpm.mp4": {
+      "bytes": 72552,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "c7ba82b4ddf1b42db54f74c740a9aced04dd1db8473c5e774b6d4c1a392c69fd"
+      },
+      "src": "static/images/posters/cmp_crossing_vdpm.jpg"
+    },
+    "cmp_lady-running_4rc.mp4": {
+      "bytes": 115673,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "66311b79268bd048be7848dedec0d1699525af61fecaa0a4114641e78f983adc"
+      },
+      "src": "static/images/posters/cmp_lady-running_4rc.jpg"
+    },
+    "cmp_lady-running_input.mp4": {
+      "bytes": 41762,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "698ad3988086b7d9708ff69095be4cc63e933f325a9c862da329195e587d0367"
+      },
+      "src": "static/images/posters/cmp_lady-running_input.jpg"
+    },
+    "cmp_lady-running_ours_cowtracker_vggto.mp4": {
+      "bytes": 105445,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "2117b0b860199a367ef8270694e592439f702432cdfa29dc5a26178d65f61955"
+      },
+      "src": "static/images/posters/cmp_lady-running_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_lady-running_tc3r_vggto.mp4": {
+      "bytes": 105398,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "c535678fd84e8514fd139e89c58183fd7361fe226865df009253ce05811d49f9"
+      },
+      "src": "static/images/posters/cmp_lady-running_tc3r_vggto.jpg"
+    },
+    "cmp_lady-running_vdpm.mp4": {
+      "bytes": 116045,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "412f2e29bf8543cfb283d145022c4b4f4d6c83ecbec96434267e7bd760937f2e"
+      },
+      "src": "static/images/posters/cmp_lady-running_vdpm.jpg"
+    },
+    "cmp_libby_4rc.mp4": {
+      "bytes": 102307,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "2c8269a832b956259b58056f0cd352d81133344ebcd95dacde092f35b30821dc"
+      },
+      "src": "static/images/posters/cmp_libby_4rc.jpg"
+    },
+    "cmp_libby_input.mp4": {
+      "bytes": 62390,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "534461137ccb06743f26402b7e310c6ea56f04dfa4fe9982c399361cb1cd782c"
+      },
+      "src": "static/images/posters/cmp_libby_input.jpg"
+    },
+    "cmp_libby_ours_cowtracker_vggto.mp4": {
+      "bytes": 95303,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "59969e94343ef8ac07433fd8221e0d36ea9b8f3af3cad9612092f5463a37e3f6"
+      },
+      "src": "static/images/posters/cmp_libby_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_libby_tc3r_vggto.mp4": {
+      "bytes": 95461,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "fef9248f79dd4790c5435be88cf5ff1778cd0ef5bde72646d6ed2c9c2688271b"
+      },
+      "src": "static/images/posters/cmp_libby_tc3r_vggto.jpg"
+    },
+    "cmp_libby_vdpm.mp4": {
+      "bytes": 112803,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "15ddd5aac8eb1f9d15f1442eef82fdb675de14d38cccb1dc5caef6f528244c91"
+      },
+      "src": "static/images/posters/cmp_libby_vdpm.jpg"
+    },
+    "cmp_motorbike_4rc.mp4": {
+      "bytes": 41374,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a542151bff6fe328cc9d2b505f5d11e1448b54f751b3ff34863935a89f720c40"
+      },
+      "src": "static/images/posters/cmp_motorbike_4rc.jpg"
+    },
+    "cmp_motorbike_input.mp4": {
+      "bytes": 49404,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "da8b3dee7988b6507540b75c6481f6abd1795bbd2be4137f172025e0783a1603"
+      },
+      "src": "static/images/posters/cmp_motorbike_input.jpg"
+    },
+    "cmp_motorbike_ours_cowtracker_vggto.mp4": {
+      "bytes": 57166,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "1575abc7e3e3826c90feda2211082c096a6eb9fbb2ef2334e57b53b51593e35e"
+      },
+      "src": "static/images/posters/cmp_motorbike_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_motorbike_tc3r_vggto.mp4": {
+      "bytes": 58010,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "d605b9503238f78fda0998c987ba5de23af46c6fad71bb6af6f348be3f1d8f73"
+      },
+      "src": "static/images/posters/cmp_motorbike_tc3r_vggto.jpg"
+    },
+    "cmp_motorbike_vdpm.mp4": {
+      "bytes": 82030,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "58807dcef942c3836791d4451f905104dc0df97c79cbb74b0e584c29253e14dc"
+      },
+      "src": "static/images/posters/cmp_motorbike_vdpm.jpg"
+    },
+    "cmp_spin_4rc.mp4": {
+      "bytes": 218015,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "88ef3e2e7325c7719ccdef24e0253e7d95be10a6576d80c3ec60b13eee2ababc"
+      },
+      "src": "static/images/posters/cmp_spin_4rc.jpg"
+    },
+    "cmp_spin_input.mp4": {
+      "bytes": 148609,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "5bb0856a070a6f93292efc91b9aa42d21fa1b16a5f76b68b9f54ad31519b1e36"
+      },
+      "src": "static/images/posters/cmp_spin_input.jpg"
+    },
+    "cmp_spin_ours_cowtracker_vggto.mp4": {
+      "bytes": 217223,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a4f2097667b7b8c378e7adb0bcc7f06d807e5e624f3b685aa769839fd19bd81c"
+      },
+      "src": "static/images/posters/cmp_spin_ours_cowtracker_vggto.jpg"
+    },
+    "cmp_spin_tc3r_vggto.mp4": {
+      "bytes": 217134,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "8608d6413185e12de10dab9b89aa36e6ab973dff95835a59d85c4aca3b7e4e91"
+      },
+      "src": "static/images/posters/cmp_spin_tc3r_vggto.jpg"
+    },
+    "cmp_spin_vdpm.mp4": {
+      "bytes": 222872,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "9bb999e052c0cb245565a32a234af6ed0afb94e8eb98690a33ae3da7586521c2"
+      },
+      "src": "static/images/posters/cmp_spin_vdpm.jpg"
+    },
+    "demo_cartwheel.mp4": {
+      "bytes": 26749,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "05a14dac16ac66e40b1944d23e8898142dcabb2a641cecc35e4886df52af7634"
+      },
+      "src": "static/images/posters/demo_cartwheel.jpg"
+    },
+    "demo_drift-turn.mp4": {
+      "bytes": 45194,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "b81c25672bfff9e0d0db36159c19dd9c2b653b6970056ee89135150f9d2a35f7"
+      },
+      "src": "static/images/posters/demo_drift-turn.jpg"
+    },
+    "demo_forest.mp4": {
+      "bytes": 110382,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "da52f1e75f40767fc75cb4346a213712c9a9c46879d357726a548bc35e9f15c1"
+      },
+      "src": "static/images/posters/demo_forest.jpg"
+    },
+    "demo_motocross-bumps.mp4": {
+      "bytes": 48110,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "da03b146fe24b978198e469528f0435e86b06c5b6e05e91ab4bd40dfe3876c40"
+      },
+      "src": "static/images/posters/demo_motocross-bumps.jpg"
+    },
+    "demo_running.mp4": {
+      "bytes": 40851,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "374312a6b489960e9868cb914032d84c491da053a2d039ba08338cc8c622adcf"
+      },
+      "src": "static/images/posters/demo_running.jpg"
+    },
+    "demo_spin.mp4": {
+      "bytes": 29435,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "c9d3c13eda3fe41cc29860cf563ba0e4b8c66c3360c34fbe391e59c8e00fdb52"
+      },
+      "src": "static/images/posters/demo_spin.jpg"
+    },
+    "demo_swing-tire.mp4": {
+      "bytes": 71685,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "2c0e888de0d3068e04f625ad2dace9abd5f8b5ee01e07ab0c046a785e7a1ec2b"
+      },
+      "src": "static/images/posters/demo_swing-tire.jpg"
+    },
+    "demo_swing.mp4": {
+      "bytes": 53710,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "563e9df885d166d350c5a26f4df0378770af7d27bcdf5c046e20e2598555c9ad"
+      },
+      "src": "static/images/posters/demo_swing.jpg"
+    },
+    "demo_tennis.mp4": {
+      "bytes": 51588,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "770e580b0ac6d01cb630769001d4c7882214197f8276854dd0d9ab3ae276e38b"
+      },
+      "src": "static/images/posters/demo_tennis.jpg"
+    },
+    "method_expanded.mp4": {
+      "bytes": 1600,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "ab895ed384b6189ca7fbe11c09c776f7ce6cdbce63d9dddea36dabebaab516c6"
+      },
+      "src": "static/images/posters/method_expanded.jpg"
+    },
+    "more_camel_input.mp4": {
+      "bytes": 75249,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a19ff84fd81cebc4df6af992ba61260596402a884a5de6ec0acf5d1d69012def"
+      },
+      "src": "static/images/posters/more_camel_input.jpg"
+    },
+    "more_camel_ours.mp4": {
+      "bytes": 86593,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "19c680a83a0f5f8dc1fe4af852a5813acc9a5c2b0f88ab9a1d184b1d3f3ca38e"
+      },
+      "src": "static/images/posters/more_camel_ours.jpg"
+    },
+    "more_horsejump-high_input.mp4": {
+      "bytes": 59331,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "0cf97c2396f0d5a3ce0d5577b4935a86d984d1145095089a373c1eb178ad8af1"
+      },
+      "src": "static/images/posters/more_horsejump-high_input.jpg"
+    },
+    "more_horsejump-high_ours.mp4": {
+      "bytes": 81252,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "a528b0db3a594c248955df999bfea3a0057b8fdff1f25a965eb6d95e1908db4b"
+      },
+      "src": "static/images/posters/more_horsejump-high_ours.jpg"
+    },
+    "more_kangaroo_input.mp4": {
+      "bytes": 61026,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "442ba1154711ce658b40f003a6504d37382272dbcc9719dff5a28b1b394aed08"
+      },
+      "src": "static/images/posters/more_kangaroo_input.jpg"
+    },
+    "more_kangaroo_ours.mp4": {
+      "bytes": 69437,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "2a7dd6603be28b27795c2d7df861c5267bfb5c77a5c5ba1911ca6aaa3969549a"
+      },
+      "src": "static/images/posters/more_kangaroo_ours.jpg"
+    },
+    "more_kangaroo_with_occlusion_short_input.mp4": {
+      "bytes": 47775,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "69b2cc93903b122e3cbc527cd9e734817848d09f97c2abb66d1b20752ddaec8d"
+      },
+      "src": "static/images/posters/more_kangaroo_with_occlusion_short_input.jpg"
+    },
+    "more_kangaroo_with_occlusion_short_ours.mp4": {
+      "bytes": 61081,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "56ec0c063dc51d7e8ac58d748534688ff3ca216e52bb60b6d2b86c530ed6c26a"
+      },
+      "src": "static/images/posters/more_kangaroo_with_occlusion_short_ours.jpg"
+    },
+    "more_motocross-bumps_input.mp4": {
+      "bytes": 48497,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "9db7455dac7fdbfe67c8b22c6a0505177dabea2eb920a94e61dd350fee0212bc"
+      },
+      "src": "static/images/posters/more_motocross-bumps_input.jpg"
+    },
+    "more_motocross-bumps_ours.mp4": {
+      "bytes": 41851,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "cc442774ac5b3b41847a947eecdf37256c82b86d3fa609215504a82da40a549d"
+      },
+      "src": "static/images/posters/more_motocross-bumps_ours.jpg"
+    },
+    "more_schoolgirls_input.mp4": {
+      "bytes": 93674,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "de6ce79b8dbb646f259b6d45f843e0bfb0932c3c3fadc587ef2d0cd5a22ffde4"
+      },
+      "src": "static/images/posters/more_schoolgirls_input.jpg"
+    },
+    "more_schoolgirls_ours.mp4": {
+      "bytes": 90220,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "4013994671ea2c540215378e7a9ae42ee2b712e62909f9391c10ecd233bb7af2"
+      },
+      "src": "static/images/posters/more_schoolgirls_ours.jpg"
+    },
+    "more_swing-tire_input.mp4": {
+      "bytes": 77406,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "e82c6e6bac94e0cee12f851b42a5f5a1d066905576e5f56d2a2d92e4a0bea896"
+      },
+      "src": "static/images/posters/more_swing-tire_input.jpg"
+    },
+    "more_swing-tire_ours.mp4": {
+      "bytes": 61940,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "891fc96eb948ebfc623864f8710d091578b03402ebbf81ab4d62bb8020763309"
+      },
+      "src": "static/images/posters/more_swing-tire_ours.jpg"
+    },
+    "slider_basketball_3_input.mp4": {
+      "bytes": 24842,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "fc3defd7a925488abb0142d5018c8fb6ab867cf5afae082dc6791f21b030cc96"
+      },
+      "src": "static/images/posters/slider_basketball_3_input.jpg"
+    },
+    "slider_basketball_3_s3d_lift.mp4": {
+      "bytes": 32902,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "9bf491ba511e0b4b72ba5e66bc26d3015bf702b7918721cc927f8e98032bac27"
+      },
+      "src": "static/images/posters/slider_basketball_3_s3d_lift.jpg"
+    },
+    "slider_basketball_3_s3d_ours.mp4": {
+      "bytes": 31551,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "f5ad202724604770705654ea1ea1903b67430121e4c67a2580006f8bcc655fc7"
+      },
+      "src": "static/images/posters/slider_basketball_3_s3d_ours.jpg"
+    },
+    "teaser_input.mp4": {
+      "bytes": 47161,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "6625df7b18a7e584d6947d5b498b1211e8ed7ee87224c69ba82803ec00c6f4f2"
+      },
+      "src": "static/images/posters/teaser_input.jpg"
+    },
+    "teaser_tracks.mp4": {
+      "bytes": 20311,
+      "recipe": {
+        "jpeg_quality": 2,
+        "max_width": 640,
+        "source_sha256": "f5d5e254d9fb316e44c6754b052a1c3610a6ecc3618fb9406de461917a2a209b"
+      },
+      "src": "static/images/posters/teaser_tracks.jpg"
+    }
+  },
+  "quality_note": "SSIM is measured on all frames; visual review remains required.",
+  "sources": {
+    "cmp_bmx-trees_4rc.mp4": {
+      "bytes": 696049,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a5fdc090c284d8a4a8cefa0f6648a1bb0a9421dbd9f6a5ec2e87cfb34ea19c50",
+      "width": 960
+    },
+    "cmp_bmx-trees_input.mp4": {
+      "bytes": 1849975,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a0c603b82774c1a62f2201e016d5658d10d2895fc92476f0f20b631904def688",
+      "width": 960
+    },
+    "cmp_bmx-trees_ours_cowtracker_vggto.mp4": {
+      "bytes": 733962,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "5409992fbdfb549d7fa833848f83a690edf89046442e5a204c2c6e9b05b73081",
+      "width": 960
+    },
+    "cmp_bmx-trees_tc3r_vggto.mp4": {
+      "bytes": 1111977,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "0a8b0e05503e14f6d810f00f91edf0dd998ea54470935c83ab8a60e5d3f1a62e",
+      "width": 960
+    },
+    "cmp_bmx-trees_vdpm.mp4": {
+      "bytes": 694938,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "229dd7ba0a34d98065b799ecd42299594e0a86eb3cdffd67b5011343901a6129",
+      "width": 960
+    },
+    "cmp_car-shadow_4rc.mp4": {
+      "bytes": 569744,
+      "codec": "h264",
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "3cb7481f01a74f22979f63978e41cb78a77d7ae9b7b50b25379d19b91695f4c0",
+      "width": 960
+    },
+    "cmp_car-shadow_input.mp4": {
+      "bytes": 593531,
+      "codec": "h264",
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "10d2e5bd0d551899218a7ecd076f972c7e83a754319a663d2e257eb3645d163f",
+      "width": 960
+    },
+    "cmp_car-shadow_ours_cowtracker_vggto.mp4": {
+      "bytes": 516868,
+      "codec": "h264",
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "58382876a6f95f31c5aacc1eb0df4b6d2935b69eea0185a325034b16596bcc09",
+      "width": 960
+    },
+    "cmp_car-shadow_tc3r_vggto.mp4": {
+      "bytes": 690469,
+      "codec": "h264",
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "d76412bdfb179b3f2eba9a01acef8dac6a5d43421912384800aeb152dfd443b0",
+      "width": 960
+    },
+    "cmp_car-shadow_vdpm.mp4": {
+      "bytes": 590960,
+      "codec": "h264",
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "b83b99b39eab7632590387892d223339536a82ba2867cb70762cbbcd4e4574aa",
+      "width": 960
+    },
+    "cmp_crossing_4rc.mp4": {
+      "bytes": 699659,
+      "codec": "h264",
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "dcaac3beb85579b5e9d01c6252beb4a30994e21f67fb04936302aad8c7a08917",
+      "width": 960
+    },
+    "cmp_crossing_input.mp4": {
+      "bytes": 519684,
+      "codec": "h264",
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "5a5f98f03730ff93889693bd69c3ff942d2a3f624a3a82e47b1e76434fcce49b",
+      "width": 960
+    },
+    "cmp_crossing_ours_cowtracker_vggto.mp4": {
+      "bytes": 568264,
+      "codec": "h264",
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "dc596655696f03952642103e54fbc5fafb2dd669633803d07a7cf10a86130829",
+      "width": 960
+    },
+    "cmp_crossing_tc3r_vggto.mp4": {
+      "bytes": 673123,
+      "codec": "h264",
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a2113817736698e1d66fda95c32e62edec30f66658c594755b42080d8b7ab7f9",
+      "width": 960
+    },
+    "cmp_crossing_vdpm.mp4": {
+      "bytes": 530618,
+      "codec": "h264",
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "c7ba82b4ddf1b42db54f74c740a9aced04dd1db8473c5e774b6d4c1a392c69fd",
+      "width": 960
+    },
+    "cmp_lady-running_4rc.mp4": {
+      "bytes": 1936610,
+      "codec": "h264",
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "66311b79268bd048be7848dedec0d1699525af61fecaa0a4114641e78f983adc",
+      "width": 960
+    },
+    "cmp_lady-running_input.mp4": {
+      "bytes": 944930,
+      "codec": "h264",
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "698ad3988086b7d9708ff69095be4cc63e933f325a9c862da329195e587d0367",
+      "width": 960
+    },
+    "cmp_lady-running_ours_cowtracker_vggto.mp4": {
+      "bytes": 1735236,
+      "codec": "h264",
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "2117b0b860199a367ef8270694e592439f702432cdfa29dc5a26178d65f61955",
+      "width": 960
+    },
+    "cmp_lady-running_tc3r_vggto.mp4": {
+      "bytes": 1881201,
+      "codec": "h264",
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "c535678fd84e8514fd139e89c58183fd7361fe226865df009253ce05811d49f9",
+      "width": 960
+    },
+    "cmp_lady-running_vdpm.mp4": {
+      "bytes": 1838344,
+      "codec": "h264",
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "412f2e29bf8543cfb283d145022c4b4f4d6c83ecbec96434267e7bd760937f2e",
+      "width": 960
+    },
+    "cmp_libby_4rc.mp4": {
+      "bytes": 575493,
+      "codec": "h264",
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "2c8269a832b956259b58056f0cd352d81133344ebcd95dacde092f35b30821dc",
+      "width": 960
+    },
+    "cmp_libby_input.mp4": {
+      "bytes": 1081928,
+      "codec": "h264",
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "534461137ccb06743f26402b7e310c6ea56f04dfa4fe9982c399361cb1cd782c",
+      "width": 960
+    },
+    "cmp_libby_ours_cowtracker_vggto.mp4": {
+      "bytes": 539416,
+      "codec": "h264",
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "59969e94343ef8ac07433fd8221e0d36ea9b8f3af3cad9612092f5463a37e3f6",
+      "width": 960
+    },
+    "cmp_libby_tc3r_vggto.mp4": {
+      "bytes": 680793,
+      "codec": "h264",
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "fef9248f79dd4790c5435be88cf5ff1778cd0ef5bde72646d6ed2c9c2688271b",
+      "width": 960
+    },
+    "cmp_libby_vdpm.mp4": {
+      "bytes": 635104,
+      "codec": "h264",
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "15ddd5aac8eb1f9d15f1442eef82fdb675de14d38cccb1dc5caef6f528244c91",
+      "width": 960
+    },
+    "cmp_motorbike_4rc.mp4": {
+      "bytes": 215202,
+      "codec": "h264",
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a542151bff6fe328cc9d2b505f5d11e1448b54f751b3ff34863935a89f720c40",
+      "width": 960
+    },
+    "cmp_motorbike_input.mp4": {
+      "bytes": 722111,
+      "codec": "h264",
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "da8b3dee7988b6507540b75c6481f6abd1795bbd2be4137f172025e0783a1603",
+      "width": 960
+    },
+    "cmp_motorbike_ours_cowtracker_vggto.mp4": {
+      "bytes": 255393,
+      "codec": "h264",
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "1575abc7e3e3826c90feda2211082c096a6eb9fbb2ef2334e57b53b51593e35e",
+      "width": 960
+    },
+    "cmp_motorbike_tc3r_vggto.mp4": {
+      "bytes": 438340,
+      "codec": "h264",
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "d605b9503238f78fda0998c987ba5de23af46c6fad71bb6af6f348be3f1d8f73",
+      "width": 960
+    },
+    "cmp_motorbike_vdpm.mp4": {
+      "bytes": 309456,
+      "codec": "h264",
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "58807dcef942c3836791d4451f905104dc0df97c79cbb74b0e584c29253e14dc",
+      "width": 960
+    },
+    "cmp_spin_4rc.mp4": {
+      "bytes": 3793183,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 960,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "88ef3e2e7325c7719ccdef24e0253e7d95be10a6576d80c3ec60b13eee2ababc",
+      "width": 720
+    },
+    "cmp_spin_input.mp4": {
+      "bytes": 4125284,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 960,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "5bb0856a070a6f93292efc91b9aa42d21fa1b16a5f76b68b9f54ad31519b1e36",
+      "width": 720
+    },
+    "cmp_spin_ours_cowtracker_vggto.mp4": {
+      "bytes": 3024512,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 960,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a4f2097667b7b8c378e7adb0bcc7f06d807e5e624f3b685aa769839fd19bd81c",
+      "width": 720
+    },
+    "cmp_spin_tc3r_vggto.mp4": {
+      "bytes": 2981254,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 960,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "8608d6413185e12de10dab9b89aa36e6ab973dff95835a59d85c4aca3b7e4e91",
+      "width": 720
+    },
+    "cmp_spin_vdpm.mp4": {
+      "bytes": 2602701,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 960,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "9bb999e052c0cb245565a32a234af6ed0afb94e8eb98690a33ae3da7586521c2",
+      "width": 720
+    },
+    "demo_cartwheel.mp4": {
+      "bytes": 538934,
+      "codec": "h264",
+      "duration_s": 7.166667,
+      "fps": "12",
+      "frames": 86,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "05a14dac16ac66e40b1944d23e8898142dcabb2a641cecc35e4886df52af7634",
+      "width": 202
+    },
+    "demo_drift-turn.mp4": {
+      "bytes": 545429,
+      "codec": "h264",
+      "duration_s": 4.5,
+      "fps": "12",
+      "frames": 54,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "b81c25672bfff9e0d0db36159c19dd9c2b653b6970056ee89135150f9d2a35f7",
+      "width": 640
+    },
+    "demo_forest.mp4": {
+      "bytes": 5229380,
+      "codec": "h264",
+      "duration_s": 24.5,
+      "fps": "12",
+      "frames": 294,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "da52f1e75f40767fc75cb4346a213712c9a9c46879d357726a548bc35e9f15c1",
+      "width": 640
+    },
+    "demo_motocross-bumps.mp4": {
+      "bytes": 472664,
+      "codec": "h264",
+      "duration_s": 3.75,
+      "fps": "12",
+      "frames": 45,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1281:1280",
+      "sha256": "da03b146fe24b978198e469528f0435e86b06c5b6e05e91ab4bd40dfe3876c40",
+      "width": 640
+    },
+    "demo_running.mp4": {
+      "bytes": 2319901,
+      "codec": "h264",
+      "duration_s": 17.166667,
+      "fps": "12",
+      "frames": 206,
+      "height": 640,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "374312a6b489960e9868cb914032d84c491da053a2d039ba08338cc8c622adcf",
+      "width": 360
+    },
+    "demo_spin.mp4": {
+      "bytes": 529076,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "c9d3c13eda3fe41cc29860cf563ba0e4b8c66c3360c34fbe391e59c8e00fdb52",
+      "width": 270
+    },
+    "demo_swing-tire.mp4": {
+      "bytes": 1044487,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "2c0e888de0d3068e04f625ad2dace9abd5f8b5ee01e07ab0c046a785e7a1ec2b",
+      "width": 640
+    },
+    "demo_swing.mp4": {
+      "bytes": 701102,
+      "codec": "h264",
+      "duration_s": 5.0,
+      "fps": "12",
+      "frames": 60,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "563e9df885d166d350c5a26f4df0378770af7d27bcdf5c046e20e2598555c9ad",
+      "width": 640
+    },
+    "demo_tennis.mp4": {
+      "bytes": 536951,
+      "codec": "h264",
+      "duration_s": 5.833333,
+      "fps": "12",
+      "frames": 70,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "770e580b0ac6d01cb630769001d4c7882214197f8276854dd0d9ab3ae276e38b",
+      "width": 640
+    },
+    "method_expanded.mp4": {
+      "bytes": 5688116,
+      "codec": "h264",
+      "duration_s": 28.333333,
+      "fps": "30",
+      "frames": 850,
+      "height": 1080,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "ab895ed384b6189ca7fbe11c09c776f7ce6cdbce63d9dddea36dabebaab516c6",
+      "width": 1920
+    },
+    "more_camel_input.mp4": {
+      "bytes": 1220553,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a19ff84fd81cebc4df6af992ba61260596402a884a5de6ec0acf5d1d69012def",
+      "width": 960
+    },
+    "more_camel_ours.mp4": {
+      "bytes": 1749476,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "19c680a83a0f5f8dc1fe4af852a5813acc9a5c2b0f88ab9a1d184b1d3f3ca38e",
+      "width": 960
+    },
+    "more_horsejump-high_input.mp4": {
+      "bytes": 811879,
+      "codec": "h264",
+      "duration_s": 4.166667,
+      "fps": "12",
+      "frames": 50,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "0cf97c2396f0d5a3ce0d5577b4935a86d984d1145095089a373c1eb178ad8af1",
+      "width": 960
+    },
+    "more_horsejump-high_ours.mp4": {
+      "bytes": 708506,
+      "codec": "h264",
+      "duration_s": 4.166667,
+      "fps": "12",
+      "frames": 50,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "a528b0db3a594c248955df999bfea3a0057b8fdff1f25a965eb6d95e1908db4b",
+      "width": 960
+    },
+    "more_kangaroo_input.mp4": {
+      "bytes": 1085909,
+      "codec": "h264",
+      "duration_s": 6.583333,
+      "fps": "12",
+      "frames": 79,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "442ba1154711ce658b40f003a6504d37382272dbcc9719dff5a28b1b394aed08",
+      "width": 960
+    },
+    "more_kangaroo_ours.mp4": {
+      "bytes": 418170,
+      "codec": "h264",
+      "duration_s": 6.583333,
+      "fps": "12",
+      "frames": 79,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "2a7dd6603be28b27795c2d7df861c5267bfb5c77a5c5ba1911ca6aaa3969549a",
+      "width": 960
+    },
+    "more_kangaroo_with_occlusion_short_input.mp4": {
+      "bytes": 1193998,
+      "codec": "h264",
+      "duration_s": 8.333333,
+      "fps": "12",
+      "frames": 100,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "69b2cc93903b122e3cbc527cd9e734817848d09f97c2abb66d1b20752ddaec8d",
+      "width": 960
+    },
+    "more_kangaroo_with_occlusion_short_ours.mp4": {
+      "bytes": 11583109,
+      "codec": "h264",
+      "duration_s": 8.333333,
+      "fps": "12",
+      "frames": 100,
+      "height": 562,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "56ec0c063dc51d7e8ac58d748534688ff3ca216e52bb60b6d2b86c530ed6c26a",
+      "width": 1000
+    },
+    "more_motocross-bumps_input.mp4": {
+      "bytes": 844915,
+      "codec": "h264",
+      "duration_s": 3.75,
+      "fps": "12",
+      "frames": 45,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "9db7455dac7fdbfe67c8b22c6a0505177dabea2eb920a94e61dd350fee0212bc",
+      "width": 960
+    },
+    "more_motocross-bumps_ours.mp4": {
+      "bytes": 163026,
+      "codec": "h264",
+      "duration_s": 3.75,
+      "fps": "12",
+      "frames": 45,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "cc442774ac5b3b41847a947eecdf37256c82b86d3fa609215504a82da40a549d",
+      "width": 960
+    },
+    "more_schoolgirls_input.mp4": {
+      "bytes": 780337,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "de6ce79b8dbb646f259b6d45f843e0bfb0932c3c3fadc587ef2d0cd5a22ffde4",
+      "width": 960
+    },
+    "more_schoolgirls_ours.mp4": {
+      "bytes": 1582491,
+      "codec": "h264",
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "4013994671ea2c540215378e7a9ae42ee2b712e62909f9391c10ecd233bb7af2",
+      "width": 960
+    },
+    "more_swing-tire_input.mp4": {
+      "bytes": 1845132,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "e82c6e6bac94e0cee12f851b42a5f5a1d066905576e5f56d2a2d92e4a0bea896",
+      "width": 960
+    },
+    "more_swing-tire_ours.mp4": {
+      "bytes": 1025051,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 540,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "891fc96eb948ebfc623864f8710d091578b03402ebbf81ab4d62bb8020763309",
+      "width": 960
+    },
+    "slider_basketball_3_input.mp4": {
+      "bytes": 607299,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 360,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "fc3defd7a925488abb0142d5018c8fb6ab867cf5afae082dc6791f21b030cc96",
+      "width": 640
+    },
+    "slider_basketball_3_s3d_lift.mp4": {
+      "bytes": 563232,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 568,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "9bf491ba511e0b4b72ba5e66bc26d3015bf702b7918721cc927f8e98032bac27",
+      "width": 1008
+    },
+    "slider_basketball_3_s3d_ours.mp4": {
+      "bytes": 528056,
+      "codec": "h264",
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "height": 568,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "f5ad202724604770705654ea1ea1903b67430121e4c67a2580006f8bcc655fc7",
+      "width": 1008
+    },
+    "teaser_input.mp4": {
+      "bytes": 3680121,
+      "codec": "h264",
+      "duration_s": 11.666667,
+      "fps": "30",
+      "frames": 350,
+      "height": 720,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "6625df7b18a7e584d6947d5b498b1211e8ed7ee87224c69ba82803ec00c6f4f2",
+      "width": 1280
+    },
+    "teaser_tracks.mp4": {
+      "bytes": 2905980,
+      "codec": "h264",
+      "duration_s": 11.666667,
+      "fps": "30",
+      "frames": 350,
+      "height": 720,
+      "pixel_format": "yuv420p",
+      "sample_aspect_ratio": "1:1",
+      "sha256": "f5d5e254d9fb316e44c6754b052a1c3610a6ecc3618fb9406de461917a2a209b",
+      "width": 1280
+    }
+  },
+  "totals": {
+    "atlas_bytes": 72038815,
+    "group_source_bytes": 72954965,
+    "individual_trial_bytes": 21169512,
+    "individual_website_bytes": 2836905,
+    "original_video_bytes": 92259592,
+    "poster_bytes": 5035760,
+    "rejected_trial_bytes": 18332607
+  },
+  "version": 1
+}

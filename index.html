@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ReLift: Dense 3D Tracking as Lifted Trajectory Repair">
+  <meta property="og:title" content="ReLift: Dense 3D Tracking as Lifted Trajectory Repair">
+  <meta name="keywords" content="3D tracking, dense tracking, 4D reconstruction, motion prior">
+  <title>ReLift: Dense 3D Tracking as Lifted Trajectory Repair</title>
+
+  <link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any">
+
+  <!-- ReLift GA4: tracking is enabled only on the public project domain. -->
+  <script src="./static/js/relift-analytics.js" data-measurement-id="G-E75FPMH63D" defer></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/media.css">
+
+  <style>
+    body { background: #fff0e6; background-image: radial-gradient(ellipse 100% 44rem at 50% 0, #ffdac5, transparent); color: #363636; }
+    .publication-name { display: block; color: #bd432d; font-size: clamp(3.5rem, 7vw, 5rem); line-height: 1.05; letter-spacing: -.035em; }
+    .publication-subtitle { display: block; margin-top: .6rem; font-size: clamp(1.5rem, 3.2vw, 2.5rem); line-height: 1.2; }
+    .publication-tldr { margin: 1.75rem auto 0; font-size: 1.05rem; line-height: 1.7; text-wrap: pretty; }
+    .publication-tldr strong { color: #a63827; }
+    .abstract-content { max-width: 1100px; margin: 0 auto; text-align: left; line-height: 1.75; }
+    .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 4px; width: 80%; margin: 0 auto; }
+    .video-grid video { width: 100%; height: auto; display: block; }
+    .video-grid-five-cols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 86%; margin: 0 auto; }
+    .video-grid-five-cols.portrait { width: 58%; }
+    .video-grid-five-cols video { width: 100%; height: auto; display: block; }
+    .video-container { text-align: center; margin: 12px auto; }
+    .video-title { font-size: clamp(0.6em, 1vw, 1em); margin-top: 5px; }
+    .video-container.ours .video-title { font-weight: 700; }
+    .video-grid-two-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 64%; margin: 0 auto; }
+    .video-grid-two-cols video { width: 100%; height: auto; display: block; }
+    .teaser-pair { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .teaser-pair video { width: 100%; height: auto; display: block; }
+    .bibtex-wrap { position: relative; }
+    .bibtex-copy { position: absolute; top: 8px; right: 8px; z-index: 1; }
+    .video-grid-five-cols + .video-grid-five-cols { margin-top: 18px; }
+    .examples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr)); gap: 1.5rem 3rem; max-width: 1100px; margin: 1.5rem auto 0; align-items: start; }
+    .examples-grid > .video-grid-two-cols { width: 100%; min-width: 0; margin: 0; }
+    .examples-grid .video-container { margin: 0; }
+    .examples-grid .video-title { font-size: clamp(.75rem, 1vw, .9rem); }
+    .citation { white-space: nowrap; font-size: .9em; }
+    #references .references-list { margin: 0 0 0 1.4rem; line-height: 1.7; font-size: .95rem; }
+    #references .references-list li { padding-left: .35rem; margin-bottom: 1rem; scroll-margin-top: 24px; }
+    #references .references-list li:last-child { margin-bottom: 0; }
+    #references .references-list li:target { background: #fff5e9; border-radius: 4px; }
+    #references .ref-title { overflow-wrap: anywhere; }
+    .citation:focus-visible { outline: 2px solid #c84430; outline-offset: 3px; }
+    @media (max-width: 800px) {
+      .video-grid, .video-grid-five-cols, .video-grid-five-cols.portrait, .video-grid-two-cols { width: 100%; }
+      .video-grid-five-cols { grid-template-columns: repeat(3, 1fr); }
+      .video-title { font-size: 0.8em; }
+    }
+    /* section cards (after the Time-to-Move page): every section below the title sits in a white rounded box */
+    body > section:not(.hero) { max-width: 1200px; width: calc(100% - 32px); margin: 0 auto 2.5rem; padding: 2.5rem; background: #fff;
+      border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,.1); }
+    body > section:not(.hero) .columns.has-text-centered:has(> h2.title) { margin: 0; }
+    body > section:not(.hero) h2.title.is-3, #BibTeX h2.title { width: 100%; text-align: left; font-size: 2rem; font-weight: 700; color: #333;
+      margin: 0 0 1.5rem; padding-bottom: .75rem; border-bottom: 3px solid #c84430; }
+    body > section.teaser-box { padding: 1rem 2.5rem; }
+    .method-video { width: 100%; display: block; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,.1); background: #fff; }
+    @media (max-width: 800px) {
+      body > section:not(.hero) { width: calc(100% - 16px); padding: 1.25rem 16px; border-radius: 10px; margin-bottom: 1.5rem; }
+      body > section:not(.hero) h2.title.is-3, #BibTeX h2.title { font-size: 1.5rem; }
+    }
+
+    /* interactive demo */
+    .demo-wrap { width: max(72%, 900px); max-width: 100%; margin: 0 auto; }
+    .demo-thumbs-wrap { width: max(72%, 900px); max-width: 100%; margin: 16px auto 4px; border: 1px solid rgba(24,29,35,.09); border-radius: 8px; background: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 28px rgba(20,24,30,.11); overflow: hidden; }
+    .demo-stage { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #fff; border: 1px solid #e5e5e5; border-radius: 8px; overflow: hidden; }
+    .demo-stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    .demo-status { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #7a7a7a; pointer-events: none; }
+    .demo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 10px; }
+    .demo-bar input[type=range] { flex: 1 1 200px; accent-color: #363636; }
+    .demo-bar .frame { font-variant-numeric: tabular-nums; color: #7a7a7a; font-size: 0.9em; min-width: 96px; }
+    .demo-bar .button { font-size: 0.85rem; }
+    .demo-bar .button.is-active { background: #363636; color: #fff; border-color: #363636; }
+    /* scene picker: the input videos as thumbnails (VGGT-Omega style); the active one plays in sync with the 3-D view */
+    /* one horizontal strip that scrolls sideways (VGGT-Omega style); the edges fade to hint at more clips */
+    .demo-thumbs { display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; width: 100%; gap: 14px; margin: 0;
+      overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; padding: 30px 34px; scrollbar-width: thin; scrollbar-color: rgba(24,29,35,.25) transparent;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
+              mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%); }
+    .demo-thumbs::-webkit-scrollbar { height: 6px; }
+    .demo-thumbs::-webkit-scrollbar-thumb { background: rgba(24,29,35,.25); border-radius: 999px; }
+    .demo-thumb { --w: 256px; --h: 144px; position: relative; flex: 0 0 auto; width: var(--w); height: var(--h); padding: 0; line-height: 0;
+      border: 1px solid rgba(24,29,35,.12); border-radius: 7px; background: #fff; cursor: pointer; overflow: hidden; appearance: none;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.78), 0 4px 9px rgba(20,24,30,.11); transform: translateZ(0) scale(1);
+      transition: border-color .18s, box-shadow .18s, transform .18s, width .18s, height .18s; }
+    .demo-thumb.portrait { --w: 81px; }
+    .demo-thumb.portrait.active { width: 144px; height: 256px; transform: translateY(-2px) scale(1); }
+    .demo-thumb.p34 { --w: 108px; } .demo-thumb.p34.active { width: 192px; height: 256px; }
+    .demo-thumb::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: .55; transition: opacity .18s;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.22)), radial-gradient(circle at 50% 45%, rgba(255,255,255,0), rgba(0,0,0,.28)); }
+    .demo-thumb::after { content: ""; position: absolute; left: 50%; bottom: 6px; z-index: 2; width: 24px; height: 2px; border-radius: 999px;
+      background: rgba(255,255,255,.88); box-shadow: 0 1px 4px rgba(0,0,0,.24); transform: translateX(-50%) scaleX(0); transition: transform .18s; }
+    .demo-thumb video { width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none; background: #fff;
+      filter: saturate(.82) contrast(.95) brightness(.84); transform: scale(1.01); transition: filter .18s, transform .18s; }
+    .demo-thumb:hover, .demo-thumb.active { border-color: rgba(24,29,35,.22); z-index: 3; transform: translateY(-2px) scale(1.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.82), 0 0 0 2px rgba(255,255,255,.95), 0 0 0 3px rgba(24,29,35,.16), 0 10px 22px rgba(20,24,30,.16); }
+    .demo-thumb:hover::before, .demo-thumb.active::before { opacity: .12; }
+    .demo-thumb:hover video, .demo-thumb.active video { filter: none; transform: scale(1.035); }
+    .demo-thumbs:has(.demo-thumb:hover) .demo-thumb.active:not(:hover):not(.portrait) { transform: translateZ(0) scale(1); }
+    .demo-thumb.active::after { transform: translateX(-50%) scaleX(1); }
+    .demo-thumb:focus-visible { outline: 2px solid rgba(24,29,35,.72); outline-offset: 4px; }
+    @media (max-width: 800px) { .demo-wrap, .demo-thumbs-wrap { width: 100%; } .demo-thumbs { width: 100%; padding: 24px 20px; }
+      .demo-thumb { --w: 160px; --h: 90px; } .demo-thumb.portrait { --w: 51px; } .demo-thumb.portrait.active { width: 90px; height: 160px; } .demo-thumb.p34 { --w: 68px; } .demo-thumb.p34.active { width: 120px; height: 160px; } }
+
+    /* correction slider */
+    .slider-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 96%; margin: 0 auto; align-items: start; }
+    @media (max-width: 800px) { .slider-row { grid-template-columns: 1fr; width: 100%; } }
+    .slider-row video { width: 100%; display: block; background: #000; }
+    .cmp { position: relative; display: none; user-select: none; touch-action: pan-y; cursor: ew-resize; }
+    .cmp.active { display: block; }
+    .cmp .va { position: absolute; inset: 0; clip-path: inset(0 0 0 50%); }
+    .cmp .line { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; box-shadow: 0 0 3px rgba(0,0,0,.5); transform: translateX(-50%); pointer-events: none; }
+    .cmp .knob { position: absolute; left: 50%; top: 50%; width: 36px; height: 36px; border-radius: 50%; background: #363636; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; transform: translate(-50%, -50%); pointer-events: none; }
+    .cmp .tag { position: absolute; top: 8px; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(0,0,0,.6); color: #fff; pointer-events: none; }
+    .cmp .tl { left: 8px; } .cmp .tr { right: 8px; }
+    .view-toggle { display: flex; justify-content: center; gap: 6px; margin-top: 8px; }
+    .view-toggle .button.is-active { background: #363636; color: #fff; border-color: #363636; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title publication-title"><span class="publication-name">ReLift</span><span class="publication-subtitle">Dense 3D Tracking as Lifted Trajectory Repair</span></h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://assafsinger94.github.io/">Assaf Singer</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/maroun-khriesh-1451b4216">Maroun Khriesh</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://rotsteinnoam.github.io/">Noam Rotstein</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://ykasten.github.io/">Yoni Kasten</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://orlitany.github.io/">Or Litany</a><sup>1,2</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technion &ndash; Israel Institute of Technology,</span>
+            <span class="author-block"><sup>2</sup>NVIDIA</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+          <nav class="publication-links" aria-label="Project resources">
+            <!-- Paper URL placeholders: https://arxiv.org/pdf/ARXIV_ID and
+                 https://arxiv.org/abs/ARXIV_ID. Replace these disabled buttons
+                 with links once the paper is public. -->
+            <button class="publication-resource" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M9 13h6M9 17h6"/>
+              </svg>
+              <span>Paper (PDF)</span>
+            </button>
+            <button class="publication-resource" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
+              </svg>
+              <span>arXiv</span>
+            </button>
+            <a class="publication-resource" href="https://github.com/ReLift3D/ReLift" target="_blank" rel="noopener noreferrer" aria-label="Code on GitHub (opens in a new tab)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+              <span>Code</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teaser-box">
+  <div class="container is-max-desktop" style="max-width: 1100px;">
+    <div class="teaser-pair" data-composite-src="static/videos/optimized/teaser.mp4" data-panel-width="1280" data-panel-height="720" data-atlas-columns="2">
+      <video class="sync-teaser" muted playsinline loop preload="none" width="1280" height="720" data-poster="static/images/posters/teaser_input.jpg" data-src="static/videos/teaser_input.mp4">
+      </video>
+      <video class="sync-teaser" muted playsinline loop preload="none" width="1280" height="720" data-poster="static/images/posters/teaser_tracks.jpg" data-src="static/videos/teaser_tracks.mp4">
+      </video>
+    </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column prose-column">
+      <p class="publication-tldr" style="margin-top: 10px; text-align: center;"><strong>TL;DR:</strong> ReLift turns 2D tracks and 3D depth estimates into accurate 3D trajectories by repairing lifting errors and completing motion through occlusion. One geometry-only model works across trackers and geometry models</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="abstract">
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Abstract</h2>
+  </div>
+  <div class="content abstract-content">
+    <p>
+      Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and
+      inferring their trajectories during occlusion. Existing methods typically learn these tasks jointly, a demanding objective given
+      the scarcity of 4D supervision. We show that strong pretrained 2D trackers and 3D geometry models provide an effective
+      foundation: lifted trajectories, with occluded segments simply interpolated, already rival dedicated 3D trackers using the same
+      geometry. However, lifted trajectories inherit correspondence and depth errors, and under occlusion, their depth comes from the
+      occluder rather than the tracked point. We introduce ReLift, an efficient feed-forward framework that recasts dense 3D tracking
+      as geometric trajectory repair and completion. At its core, a trajectory corrector alternates attention along and across
+      trajectories to preserve reliable observations, repair corrupted positions, and complete missing motion. Using only geometric
+      inputs allows us to train directly on 3D trajectories with simulated lifting errors, decoupling training from images and from
+      any specific tracker or geometry model. Concentrating 4D supervision on trajectory refinement yields a reusable model that
+      consistently improves lifted trajectories across trackers and geometry providers without retraining, so it benefits directly
+      from future advances in either component. On WorldTrack <a class="citation" href="#ref-worldtrack" aria-label="Reference 1: WorldTrack">[1]</a>, ReLift achieves state-of-the-art mean accuracy, improving on the
+      strongest baselines by 2.1 APD on all points and 3.0 on dynamic points, with faster configurations remaining competitive with
+      leading 3D trackers while running 2.7&ndash;4.4&times; faster than 4RC <a class="citation" href="#ref-4rc" aria-label="Reference 2: 4RC">[2]</a>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Interactive Demo</h2>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column prose-column">
+        <div class="content has-text-justified">
+          <p class="has-text-left" style="margin: 5px;">
+            Select a scene and drag to orbit. Inputs: CoWTracker <a class="citation" href="#ref-cowtracker" aria-label="Reference 3: CoWTracker">[3]</a> tracks (AllTracker <a class="citation" href="#ref-alltracker" aria-label="Reference 5: AllTracker">[5]</a> for swing) and VGGT-&Omega; <a class="citation" href="#ref-vggt-omega" aria-label="Reference 4: VGGT-Ω">[4]</a> geometry.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="demo-wrap">
+    <div class="demo-stage" id="stage"><div class="demo-status" id="status">Loading 3D…</div></div>
+    <div class="demo-bar">
+      <button class="button is-small is-rounded" id="play">Pause</button>
+      <input id="slider" type="range" min="0" max="0" value="0" aria-label="Frame">
+      <span class="frame" id="frame">frame 0 / 0</span>
+      <button class="button is-small is-rounded" id="tail" aria-pressed="false">Full trails</button>
+      <button class="button is-small is-rounded" id="reset">Reset view</button>
+    </div>
+  </div>
+  <div class="demo-thumbs-wrap"><div class="demo-thumbs" id="scenes" role="group" aria-label="Scene selector"></div></div>
+</section>
+
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">More Results</h2>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column prose-column">
+        <div class="content has-text-justified">
+          <p class="has-text-left" style="margin: 5px;">
+            Our 3D tracks rendered from a novel viewpoint (CoWTracker <a class="citation" href="#ref-cowtracker" aria-label="Reference 3: CoWTracker">[3]</a> + VGGT-&Omega; <a class="citation" href="#ref-vggt-omega" aria-label="Reference 4: VGGT-Ω">[4]</a>).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="examples-grid">
+  <div class="video-grid-two-cols" data-sync="more_kangaroo_with_occlusion_short" data-composite-src="static/videos/optimized/more_kangaroo_with_occlusion_short.mp4" data-panel-width="1000" data-panel-height="562" data-atlas-columns="2"><div class="video-container"><video muted loop playsinline preload="none" data-row="more_kangaroo_with_occlusion_short" data-src="static/videos/more_kangaroo_with_occlusion_short_input.mp4" width="960" height="540" data-poster="static/images/posters/more_kangaroo_with_occlusion_short_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="more_kangaroo_with_occlusion_short" data-src="static/videos/more_kangaroo_with_occlusion_short_ours.mp4" width="1000" height="562" data-poster="static/images/posters/more_kangaroo_with_occlusion_short_ours.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-two-cols" data-sync="more_horsejump-high" data-composite-src="static/videos/optimized/more_horsejump-high.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="2"><div class="video-container"><video muted loop playsinline preload="none" data-row="more_horsejump-high" data-src="static/videos/more_horsejump-high_input.mp4" width="960" height="540" data-poster="static/images/posters/more_horsejump-high_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="more_horsejump-high" data-src="static/videos/more_horsejump-high_ours.mp4" width="960" height="540" data-poster="static/images/posters/more_horsejump-high_ours.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-two-cols" data-sync="more_schoolgirls" data-composite-src="static/videos/optimized/more_schoolgirls.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="2"><div class="video-container"><video muted loop playsinline preload="none" data-row="more_schoolgirls" data-src="static/videos/more_schoolgirls_input.mp4" width="960" height="540" data-poster="static/images/posters/more_schoolgirls_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="more_schoolgirls" data-src="static/videos/more_schoolgirls_ours.mp4" width="960" height="540" data-poster="static/images/posters/more_schoolgirls_ours.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-two-cols" data-sync="more_swing-tire" data-composite-src="static/videos/optimized/more_swing-tire.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="2"><div class="video-container"><video muted loop playsinline preload="none" data-row="more_swing-tire" data-src="static/videos/more_swing-tire_input.mp4" width="960" height="540" data-poster="static/images/posters/more_swing-tire_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="more_swing-tire" data-src="static/videos/more_swing-tire_ours.mp4" width="960" height="540" data-poster="static/images/posters/more_swing-tire_ours.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-two-cols" data-sync="more_motocross-bumps" data-composite-src="static/videos/optimized/more_motocross-bumps.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="2"><div class="video-container"><video muted loop playsinline preload="none" data-row="more_motocross-bumps" data-src="static/videos/more_motocross-bumps_input.mp4" width="960" height="540" data-poster="static/images/posters/more_motocross-bumps_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="more_motocross-bumps" data-src="static/videos/more_motocross-bumps_ours.mp4" width="960" height="540" data-poster="static/images/posters/more_motocross-bumps_ours.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-two-cols" data-sync="more_camel" data-composite-src="static/videos/optimized/more_camel.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="2"><div class="video-container"><video muted loop playsinline preload="none" data-row="more_camel" data-src="static/videos/more_camel_input.mp4" width="960" height="540" data-poster="static/images/posters/more_camel_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="more_camel" data-src="static/videos/more_camel_ours.mp4" width="960" height="540" data-poster="static/images/posters/more_camel_ours.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  </div>
+</section>
+
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Method</h2>
+  </div>
+  <div class="container is-max-desktop" style="max-width: 1100px;">
+    <video class="method-video" data-src="static/videos/method_expanded.mp4" poster="static/images/method_poster.jpg" muted loop playsinline controls preload="none"
+      aria-label="ReLift inference pipeline: the input video, pretrained 2D tracker and geometry model, lifted 3D trajectories, the trajectory corrector and its architecture, and the corrected 3D trajectories" width="1920" height="1080"></video>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column prose-column">
+        <div class="content has-text-justified">
+          <p style="margin-top: 14px;">
+            Pretrained models provide 2D tracks, depth and cameras. ReLift lifts the tracks into 3D and applies attention along
+            and across trajectories to predict 3D residuals, which are added to the initial trajectories to repair errors and
+            complete occluded segments. Trained on 3D trajectories with simulated lifting errors, the corrector uses geometry
+            alone and works across trackers and geometry models without retraining.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">3D Tracking Comparison</h2>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column prose-column">
+        <div class="content has-text-justified">
+          <p class="has-text-left" style="margin: 5px;">
+            We compare on videos from DAVIS <a class="citation" href="#ref-davis" aria-label="Reference 6: DAVIS">[6]</a> and DyCheck <a class="citation" href="#ref-dycheck" aria-label="Reference 7: DyCheck">[7]</a>, rendering each method's 3D tracks from the same novel viewpoint. Ours: CoWTracker <a class="citation" href="#ref-cowtracker" aria-label="Reference 3: CoWTracker">[3]</a> + VGGT-&Omega; <a class="citation" href="#ref-vggt-omega" aria-label="Reference 4: VGGT-Ω">[4]</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="video-grid-five-cols" data-sync="lady-running" data-composite-src="static/videos/optimized/lady-running.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="3"><div class="video-container"><video muted loop playsinline preload="none" data-row="lady-running" data-src="static/videos/cmp_lady-running_input.mp4" width="960" height="540" data-poster="static/images/posters/cmp_lady-running_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="lady-running" data-src="static/videos/cmp_lady-running_tc3r_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_lady-running_tc3r_vggto.jpg"></video><h2 class="video-title">TrackCraft3R <a class="citation" href="#ref-trackcraft3r" aria-label="Reference 8: TrackCraft3R">[8]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="lady-running" data-src="static/videos/cmp_lady-running_vdpm.mp4" width="960" height="540" data-poster="static/images/posters/cmp_lady-running_vdpm.jpg"></video><h2 class="video-title">V-DPM <a class="citation" href="#ref-v-dpm" aria-label="Reference 9: V-DPM">[9]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="lady-running" data-src="static/videos/cmp_lady-running_4rc.mp4" width="960" height="540" data-poster="static/images/posters/cmp_lady-running_4rc.jpg"></video><h2 class="video-title">4RC <a class="citation" href="#ref-4rc" aria-label="Reference 2: 4RC">[2]</a></h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="lady-running" data-src="static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_lady-running_ours_cowtracker_vggto.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-five-cols" data-sync="libby" data-composite-src="static/videos/optimized/libby.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="3"><div class="video-container"><video muted loop playsinline preload="none" data-row="libby" data-src="static/videos/cmp_libby_input.mp4" width="960" height="540" data-poster="static/images/posters/cmp_libby_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="libby" data-src="static/videos/cmp_libby_tc3r_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_libby_tc3r_vggto.jpg"></video><h2 class="video-title">TrackCraft3R <a class="citation" href="#ref-trackcraft3r" aria-label="Reference 8: TrackCraft3R">[8]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="libby" data-src="static/videos/cmp_libby_vdpm.mp4" width="960" height="540" data-poster="static/images/posters/cmp_libby_vdpm.jpg"></video><h2 class="video-title">V-DPM <a class="citation" href="#ref-v-dpm" aria-label="Reference 9: V-DPM">[9]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="libby" data-src="static/videos/cmp_libby_4rc.mp4" width="960" height="540" data-poster="static/images/posters/cmp_libby_4rc.jpg"></video><h2 class="video-title">4RC <a class="citation" href="#ref-4rc" aria-label="Reference 2: 4RC">[2]</a></h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="libby" data-src="static/videos/cmp_libby_ours_cowtracker_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_libby_ours_cowtracker_vggto.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-five-cols" data-sync="motorbike" data-composite-src="static/videos/optimized/motorbike.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="3"><div class="video-container"><video muted loop playsinline preload="none" data-row="motorbike" data-src="static/videos/cmp_motorbike_input.mp4" width="960" height="540" data-poster="static/images/posters/cmp_motorbike_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="motorbike" data-src="static/videos/cmp_motorbike_tc3r_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_motorbike_tc3r_vggto.jpg"></video><h2 class="video-title">TrackCraft3R <a class="citation" href="#ref-trackcraft3r" aria-label="Reference 8: TrackCraft3R">[8]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="motorbike" data-src="static/videos/cmp_motorbike_vdpm.mp4" width="960" height="540" data-poster="static/images/posters/cmp_motorbike_vdpm.jpg"></video><h2 class="video-title">V-DPM <a class="citation" href="#ref-v-dpm" aria-label="Reference 9: V-DPM">[9]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="motorbike" data-src="static/videos/cmp_motorbike_4rc.mp4" width="960" height="540" data-poster="static/images/posters/cmp_motorbike_4rc.jpg"></video><h2 class="video-title">4RC <a class="citation" href="#ref-4rc" aria-label="Reference 2: 4RC">[2]</a></h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="motorbike" data-src="static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_motorbike_ours_cowtracker_vggto.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-five-cols" data-sync="bmx-trees" data-composite-src="static/videos/optimized/bmx-trees.mp4" data-panel-width="960" data-panel-height="540" data-atlas-columns="3"><div class="video-container"><video muted loop playsinline preload="none" data-row="bmx-trees" data-src="static/videos/cmp_bmx-trees_input.mp4" width="960" height="540" data-poster="static/images/posters/cmp_bmx-trees_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="bmx-trees" data-src="static/videos/cmp_bmx-trees_tc3r_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_bmx-trees_tc3r_vggto.jpg"></video><h2 class="video-title">TrackCraft3R <a class="citation" href="#ref-trackcraft3r" aria-label="Reference 8: TrackCraft3R">[8]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="bmx-trees" data-src="static/videos/cmp_bmx-trees_vdpm.mp4" width="960" height="540" data-poster="static/images/posters/cmp_bmx-trees_vdpm.jpg"></video><h2 class="video-title">V-DPM <a class="citation" href="#ref-v-dpm" aria-label="Reference 9: V-DPM">[9]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="bmx-trees" data-src="static/videos/cmp_bmx-trees_4rc.mp4" width="960" height="540" data-poster="static/images/posters/cmp_bmx-trees_4rc.jpg"></video><h2 class="video-title">4RC <a class="citation" href="#ref-4rc" aria-label="Reference 2: 4RC">[2]</a></h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="bmx-trees" data-src="static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4" width="960" height="540" data-poster="static/images/posters/cmp_bmx-trees_ours_cowtracker_vggto.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+  <div class="video-grid-five-cols portrait" data-sync="spin" data-composite-src="static/videos/optimized/spin.mp4" data-panel-width="720" data-panel-height="960" data-atlas-columns="3"><div class="video-container"><video muted loop playsinline preload="none" data-row="spin" data-src="static/videos/cmp_spin_input.mp4" width="720" height="960" data-poster="static/images/posters/cmp_spin_input.jpg"></video><h2 class="video-title">Input Video</h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="spin" data-src="static/videos/cmp_spin_tc3r_vggto.mp4" width="720" height="960" data-poster="static/images/posters/cmp_spin_tc3r_vggto.jpg"></video><h2 class="video-title">TrackCraft3R <a class="citation" href="#ref-trackcraft3r" aria-label="Reference 8: TrackCraft3R">[8]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="spin" data-src="static/videos/cmp_spin_vdpm.mp4" width="720" height="960" data-poster="static/images/posters/cmp_spin_vdpm.jpg"></video><h2 class="video-title">V-DPM <a class="citation" href="#ref-v-dpm" aria-label="Reference 9: V-DPM">[9]</a></h2></div><div class="video-container"><video muted loop playsinline preload="none" data-row="spin" data-src="static/videos/cmp_spin_4rc.mp4" width="720" height="960" data-poster="static/images/posters/cmp_spin_4rc.jpg"></video><h2 class="video-title">4RC <a class="citation" href="#ref-4rc" aria-label="Reference 2: 4RC">[2]</a></h2></div><div class="video-container ours"><video muted loop playsinline preload="none" data-row="spin" data-src="static/videos/cmp_spin_ours_cowtracker_vggto.mp4" width="720" height="960" data-poster="static/images/posters/cmp_spin_ours_cowtracker_vggto.jpg"></video><h2 class="video-title">ReLift (Ours)</h2></div></div>
+</section>
+
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Correcting the Lift</h2>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column prose-column">
+        <div class="content has-text-justified">
+          <p class="has-text-left" style="margin: 5px;">
+            Move the pointer across the right video: the naive lift (left of the divider) against our repaired tracks (right).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-row">
+    <div class="video-container" style="margin: 0;">
+      <video class="sync-slider" muted loop playsinline preload="none" data-src="static/videos/optimized/individual/slider_basketball_3_input.mp4" width="640" height="360" data-poster="static/images/posters/slider_basketball_3_input.jpg"></video>
+      <h2 class="video-title">Input Video</h2>
+    </div>
+    <div class="video-container" style="margin: 0;">
+      <div class="cmp active" data-kind="s3d">
+        <video class="vb sync-slider" muted loop playsinline preload="none" data-src="static/videos/slider_basketball_3_s3d_lift.mp4" width="1008" height="568" data-poster="static/images/posters/slider_basketball_3_s3d_lift.jpg"></video>
+        <video class="va sync-slider" muted loop playsinline preload="none" data-src="static/videos/slider_basketball_3_s3d_ours.mp4" width="1008" height="568" data-poster="static/images/posters/slider_basketball_3_s3d_ours.jpg"></video>
+        <div class="line"></div><div class="knob">&#8596;</div><span class="tag tl">Lift</span><span class="tag tr">Ours</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <div class="bibtex-wrap">
+    <button type="button" class="button is-small bibtex-copy" id="bibtex-copy" aria-label="Copy BibTeX">Copy</button>
+    <pre><code id="bibtex-code">@misc{singer2026reliftdense3dtracking,
+      title={{ReLift}: Dense {3D} Tracking as Lifted Trajectory Repair},
+      author={Assaf Singer and Maroun Khriesh and Noam Rotstein and Yoni Kasten and Or Litany},
+      year={2026},
+      eprint={TBD},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={TBD},
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="section references-section" id="references" aria-labelledby="references-heading">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3" id="references-heading">References</h2>
+    <ol class="references-list">
+      <li id="ref-worldtrack" data-bibtex-key="feng2025st4rtrack">
+        <span class="ref-authors">Haiwen Feng, Junyi Zhang, Qianqian Wang, Yufei Ye, Pengcheng Yu, Michael J. Black, Trevor Darrell, Angjoo Kanazawa.</span>
+        <span class="ref-title">“St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World.”</span>
+        <span class="ref-venue">ICCV 2025.</span>
+      </li>
+      <li id="ref-4rc" data-bibtex-key="luo20264rc">
+        <span class="ref-authors">Yihang Luo, Shangchen Zhou, Yushi Lan, Xingang Pan, Chen Change Loy.</span>
+        <span class="ref-title">“4RC: 4D Reconstruction via Conditional Querying Anytime and Anywhere.”</span>
+        <span class="ref-venue">ICML 2026.</span>
+      </li>
+      <li id="ref-cowtracker" data-bibtex-key="lai2026cowtracker">
+        <span class="ref-authors">Zihang Lai, Eldar Insafutdinov, Edgar Sucar, Andrea Vedaldi.</span>
+        <span class="ref-title">“CoWTracker: Tracking by Warping instead of Correlation.”</span>
+        <span class="ref-venue">CVPR 2026.</span>
+      </li>
+      <li id="ref-vggt-omega" data-bibtex-key="wang2026vggtomega">
+        <span class="ref-authors">Jianyuan Wang, Minghao Chen, Shangzhan Zhang, Nikita Karaev, Johannes Schönberger, Patrick Labatut, Piotr Bojanowski, David Novotny, Andrea Vedaldi, Christian Rupprecht.</span>
+        <span class="ref-title">“VGGT-Ω.”</span>
+        <span class="ref-venue">CVPR 2026.</span>
+      </li>
+      <li id="ref-alltracker" data-bibtex-key="harley2025alltracker">
+        <span class="ref-authors">Adam W Harley, Yang You, Xinglong Sun, Yang Zheng, Nikhil Raghuraman, Yunqi Gu, Sheldon Liang, Wen-Hsuan Chu, Achal Dave, Suya You, et al.</span>
+        <span class="ref-title">“Alltracker: Efficient dense point tracking at high resolution.”</span>
+        <span class="ref-venue">ICCV 2025.</span>
+      </li>
+      <li id="ref-davis" data-bibtex-key="perazzi2016benchmark">
+        <span class="ref-authors">Federico Perazzi, Jordi Pont-Tuset, Brian McWilliams, Luc Van Gool, Markus Gross, Alexander Sorkine-Hornung.</span>
+        <span class="ref-title">“A benchmark dataset and evaluation methodology for video object segmentation.”</span>
+        <span class="ref-venue">CVPR 2016.</span>
+      </li>
+      <li id="ref-dycheck" data-bibtex-key="gao2022monocular">
+        <span class="ref-authors">Hang Gao, Ruilong Li, Shubham Tulsiani, Bryan Russell, Angjoo Kanazawa.</span>
+        <span class="ref-title">“Monocular dynamic view synthesis: A reality check.”</span>
+        <span class="ref-venue">NeurIPS 2022.</span>
+      </li>
+      <li id="ref-trackcraft3r" data-bibtex-key="nam2026trackcraft3r">
+        <span class="ref-authors">Jisu Nam, Jahyeok Koo, Soowon Son, Jaewoo Jung, Honggyu An, Junhwa Hur, Seungryong Kim.</span>
+        <span class="ref-title">“TrackCraft3R: Repurposing Video Diffusion Transformers for Dense 3D Tracking.”</span>
+        <span class="ref-venue">arXiv:2605.12587, 2026.</span>
+      </li>
+      <li id="ref-v-dpm" data-bibtex-key="sucar2026vdpm">
+        <span class="ref-authors">Edgar Sucar, Eldar Insafutdinov, Zihang Lai, Andrea Vedaldi.</span>
+        <span class="ref-title">“V-DPM: 4D Video Reconstruction with Dynamic Point Maps.”</span>
+        <span class="ref-venue">arXiv:2601.09499, 2026.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<script src="./static/js/relift-viewer.js" defer></script>
+<script src="./static/js/relift-media-loader.js" defer></script>
+<script>
+/* ---------- BibTeX copy button (falls back to selecting the text where the clipboard API is refused) ---------- */
+(function () {
+  const btn = document.getElementById("bibtex-copy"), code = document.getElementById("bibtex-code"); if (!btn || !code) return;
+  const flash = t => { btn.textContent = t; clearTimeout(btn._t); btn._t = setTimeout(() => { btn.textContent = "Copy"; }, 1500); };
+  const select = () => { const r = document.createRange(); r.selectNodeContents(code); const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); };
+  btn.addEventListener("click", () => {
+    const text = code.textContent;
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(() => flash("Copied!"), () => { select(); flash("Press Ctrl+C"); });
+    else { select(); let ok = false; try { ok = document.execCommand("copy"); } catch (_) {} flash(ok ? "Copied!" : "Press Ctrl+C"); }
+  });
+})();
+
+/* ---------- correction slider ---------- */
+document.querySelectorAll(".cmp").forEach(function (c) {
+  const va = c.querySelector(".va"), line = c.querySelector(".line"), knob = c.querySelector(".knob");
+  function upd(x) { const r = c.getBoundingClientRect(); const p = Math.max(0, Math.min(100, (x - r.left) / r.width * 100));
+    va.style.clipPath = "inset(0 0 0 " + p + "%)"; line.style.left = p + "%"; knob.style.left = p + "%"; }
+  c.addEventListener("mousemove", e => upd(e.clientX)); c.addEventListener("touchmove", e => upd(e.touches[0].clientX), {passive: true}); c.addEventListener("click", e => upd(e.clientX));
+});
+document.querySelectorAll(".view-toggle .button").forEach(function (b) {
+  b.addEventListener("click", function () {
+    document.querySelectorAll(".view-toggle .button").forEach(x => x.classList.toggle("is-active", x === b));
+    document.querySelectorAll(".cmp").forEach(c => { const on = c.dataset.kind === b.dataset.k; c.classList.toggle("active", on); c.querySelectorAll("video").forEach(v => on ? v.play().catch(() => {}) : v.pause()); });
+  });
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* These canvases occupy the same grid cells and aspect ratios as the source videos. */
+.media-panel {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+[data-composite-src] { position: relative; }
+/* Keep the decoder attached and eligible for video frame callbacks, without
+   participating in grid layout or introducing another visible panel. */
+[data-composite-src] > video.media-decoder {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+/* Reserve each column's final width before a lazy video's metadata arrives. */
+.video-grid-two-cols > .video-container,
+.video-grid-five-cols > .video-container,
+.slider-row > .video-container {
+  width: 100%;
+  min-width: 0;
+}
+
+.method-video, .slider-row video { height: auto; }
