@@ -1,9 +1,11 @@
-# ReLift3D local performance optimization
+# ReLift3D performance optimization
 
-All work is local on `website-performance-optimization`, based on `main` at
-`db6ecdea393ae410e85bbb019fc3ab2247f14ffb`. No pushes, merges, deployment,
-or hosting changes were made. Original videos and scene data remain intact
-in this checkout, including the local archive described below.
+This report records website optimization and validation originally performed
+on `website-performance-optimization`, starting from baseline
+`db6ecdea393ae410e85bbb019fc3ab2247f14ffb`. Historical commit IDs in this report
+are preserved in the full-history backup, outside the public release history.
+Original videos and scene data remain intact in the development checkout,
+including the local archive described below.
 The supplied handoff was extracted outside the repository; its ZIP is now
 archived in the Git-ignored `tmp/unused/` directory.
 
@@ -200,8 +202,9 @@ The website and JavaScript tests work from a fresh checkout. The full
 unused historical media and require this checkout's `tmp/unused/` archive.
 That archive is intentionally excluded from Git; copy it separately when
 reproducing the complete audit elsewhere. Archived original videos can also
-be recovered from baseline commit `db6ecdea393ae410e85bbb019fc3ab2247f14ffb`;
-the archived generated atlases and posters are only in the local archive.
+be recovered from baseline commit `db6ecdea393ae410e85bbb019fc3ab2247f14ffb`
+in the full-history backup; that commit is not part of a fresh public clone.
+The archived generated atlases and posters are only in the local archive.
 
 ```sh
 python3 tools/preview.py --port 8766
