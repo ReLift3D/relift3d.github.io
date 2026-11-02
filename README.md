@@ -7,10 +7,9 @@ tracking demos.
 and Or Litany. Assaf and Maroun contributed equally.
 
 [Project website](https://relift3d.github.io/) ·
+[Paper (PDF)](https://arxiv.org/pdf/2610.42136) ·
+[arXiv](https://arxiv.org/abs/2610.42136) ·
 [Research code](https://github.com/ReLift3D/ReLift)
-
-Paper and arXiv links, along with the final citation details, will be added when
-the paper is available. The website currently keeps those links disabled.
 
 ## Local preview
 
