@@ -1,5 +1,220 @@
 # ReLift3D performance optimization
 
+## 2026-11-02 reevaluation
+
+The current page at `8db57b3` retains the initial lazy-loading savings after
+the content and layout changes. This reevaluation also found and fixed a
+remaining source of unnecessary work: a visible, paused 3D viewer continued
+redrawing. The updated viewer now renders paused scenes only when needed for
+orbit movement, seeking, controls or resizing. No videos were re-encoded, and
+media dimensions, frame timing, source selections and recorded quality values
+are unchanged by this fix.
+
+The published HTML and both media/viewer scripts were verified against the
+local baseline before editing. This includes the November 2 deployment and
+the wider comparison layout. The current median initial transfer remains
+about **87.5% below the original 70.15 MB measurement**. The measurements below
+were collected locally before publication of the viewer fix; they are not a
+production CDN benchmark.
+
+### Initial loading and measurement definitions
+
+Chrome was tested in foreground tabs at 1920×902 and 390×844, using the local
+byte-range server with `Cache-Control: no-store`. Samples were captured five
+and fifteen seconds after DOMContentLoaded. The baseline contains five
+desktop runs and one phone-width run, classified by their recorded viewport;
+the post-fix checks contain one fresh run at each width. Phone-width testing
+used desktop Chrome at DPR 1, not a physical phone.
+
+| Initial check | Completed transfer | Completed resource requests | Playing videos | 3D WebGL draws / animation callbacks |
+|---|---:|---:|---:|---:|
+| Original page, legacy instrumentation | 70,153,691 bytes | 72 | 55 | 560 / 140 |
+| Historical optimized page, legacy instrumentation | 8,736,921 bytes | 11 | 1 | 0 / 0 |
+| Current pre-fix baseline, legacy instrumentation, median | 8,743,718 bytes | 13 | 1 | 0 / 0 |
+| Post-fix desktop, canonical site totals | 8,754,395 bytes | 14 | 1 | 0 / 0 |
+| Post-fix phone width, canonical site totals | 8,752,730 bytes | 13 | 1 | 0 / 0 |
+
+These transfer totals exclude HTML and are not directly interchangeable.
+Legacy `transferBytes` includes the injected measurement script; the enhanced
+`siteTransferBytes` excludes diagnostic endpoints. The enhanced raw totals
+are 8,770,337 and 8,768,672 bytes, including 15,942 bytes for that script.
+Favicon requests also vary: the final desktop capture includes an ICO and two
+SVG requests, while the phone-width capture includes an ICO and one SVG.
+After excluding diagnostics and favicon requests consistently, the pre/post
+production-resource difference is exactly **576 bytes**, the viewer code
+change. Initial media transfer and lazy viewer initialization remain intact.
+The completed totals above were unchanged at the fifteen-second samples.
+
+Evidence: [baseline repeats](performance/current-initial-2026-11-02.json),
+[final desktop](performance/final-desktop-2026-11-02.json), and
+[final phone width](performance/final-mobile-2026-11-02.json).
+
+### Paused viewer improvement and functional checks
+
+Before the fix, a stationary paused viewer issued **6,240 WebGL draw calls and
+1,560 animation-frame callbacks over 15,999.1 ms**. After settling with the fix,
+it issued **zero additional draws or callbacks over 6,004.6 ms**, with the
+displayed frame unchanged. Paused orbit interaction still rendered: it added
+224 draw calls while moving and damping, then stopped again. Moving the viewer
+offscreen produced zero additional draws or callbacks over 5,003.8 ms.
+These are instrumented counters, not CPU, battery or GPU-time measurements.
+See [before](performance/viewer-paused-before-2026-11-02.json),
+[after](performance/viewer-paused-after-2026-11-02.json), and
+[browser interactions](performance/viewer-browser-2026-11-02.json).
+
+All nine scenes loaded in the browser. Selection actions took
+295–482 ms locally; these include UI automation and are observed upper bounds
+for those actions, not isolated decode/build benchmarks. Seeking to the last
+and second frames, full trails, orbit and resume passed. Deterministic checks
+also covered all nine scenes, exact trajectory buffers, DPR 1/2/3, paused
+redraws, hidden/offscreen suspension, loading races and cached revisits.
+Visited scene payloads remain cached in `window.SUPP`, and a pending scene
+load can still finish decoding/building after the page is hidden, although it
+does not start rendering. These existing behaviors were not changed.
+[Viewer audit](performance/viewer-audit-2026-11-02.json).
+
+All twelve synchronized groups advanced in desktop browser checks with one
+decoder each and their source aspect ratios retained.
+[Group checks](performance/groups-2026-11-02.json). Diagnostic seeks to 2.5 s
+passed for revised kangaroo, Spin, Method and the correction wipe; atlas
+panels shared a callback and had zero presentation-time spread. The wipe's
+three independent videos had zero spread when paused at the requested time
+and about 0.45 ms spread in the observed playing snapshot. The divider moved
+between approximately 25% and 75%, and Method remained manually paused after
+scrolling away and back. These are observed snapshots, not a guarantee of
+zero drift across every browser or playback session.
+[Seeking](performance/seeking-2026-11-02.json),
+[wipe and Method](performance/wipe-method-2026-11-02.json).
+
+At 390×844, Spin's lower two panels remained visible with their top at 8.97 px
+while the hidden decoder's bottom was 200.22 px above the viewport. The group
+advanced 25 shared-frame updates, and all five panels retained the same
+callback/media timestamp with zero spread. This checks that playback follows
+the visible group rather than the tiny decoder's position.
+[Mobile lower-row check](performance/mobile-lower-row-2026-11-02.json).
+
+An intentionally missing teaser composite restored both original videos,
+removed the canvases and played both sources; their observed clock spread
+was 0.24 ms. Simulating the absence of `requestVideoFrameCallback` also used
+the two original videos, with 0.128 ms observed spread. The intentional 404
+was the only reported error in the failure test; the unsupported-feature
+simulation reported none. These are Chrome failure/feature simulations,
+not Safari or Firefox tests. [Fallback checks](performance/fallback-2026-11-02.json).
+
+### Slow local connection
+
+The preview server was configured for a shared **2,000 kbps local response-body
+cap** and **150 ms added latency before response headers**. Local files were
+served uncompressed; external origins were unaffected. This is server-side
+throttling, not OS/network emulation or CPU throttling.
+
+| Snapshot after DOMContentLoaded | Completed site Resource Timing transfer | Desktop server body bytes written | Phone-width server body bytes written |
+|---|---:|---:|---:|
+| 5 seconds | 439,703 bytes | 1,259,699 bytes | 1,259,699 bytes |
+| 15 seconds | 439,703 bytes | 3,344,563 bytes | 3,324,083 bytes |
+
+The small completed-transfer total does **not** mean the page downloaded only
+0.44 MB. The teaser request was still in flight in both snapshots, so its
+partial response was absent from completed Resource Timing entries. The
+server ledger includes in-flight and aborted body writes, excludes HTML,
+headers and diagnostics, and can run ahead of browser receipt because of OS
+buffering. Ledger captures followed the corresponding browser sample by
+about 8–17 ms.
+
+The 8.31 MB teaser retained synchronized canvases but repeatedly waited for
+data; its media time reached only about 2.8 s at the fifteen-second snapshot.
+The completed captures logged 32 desktop and 30 phone-width `waiting` events;
+these event counts cover the recorded session, not a controlled stall-rate
+benchmark. The offscreen 3D viewer still performed no draws or animation
+callbacks. Slow-network playback remains a limitation despite correct
+synchronization. [Desktop](performance/slow-desktop-2026-11-02.json),
+[phone width](performance/slow-mobile-2026-11-02.json).
+
+### Current content inventory and integrity
+
+The page now contains **12 composite groups / 39 synchronized panels**, plus
+one Method video and three wipe videos: **43 static video elements**, with
+nine additional viewer thumbnail clips. Composite playback needs twelve
+decoders for those thirty-nine panels. Crossing, car-shadow and the other
+kangaroo group remain archived and undisplayed.
+
+| Complete displayed-content inventory | Size |
+|---|---:|
+| Default MP4 selection, including all viewer clips | 82.47 MB in 25 files |
+| Fallback MP4 selection | 83.68 MB in 52 files |
+| Active posters, including Method | 4.33 MB |
+| All nine scene-data files | 83.76 MB |
+
+These are complete unique file sizes across all examples/scenes, **not initial
+downloads**. Current default MP4 bytes are 1.05 MB below the historical
+15-group optimized inventory because of curation, even though the revised
+occlusion-kangaroo atlas alone adds 6.70 MB compared with its previous content.
+Against the original-source MP4 selection, current default MP4
+bytes are 2.75% smaller. Wider CSS rows do not change encoded bytes or crop
+coordinates. They do increase destination canvas area: at maximum desktop
+width, approximately 36% for landscape comparisons and 3.12× for Spin versus
+the preceding layout. That is a geometric estimate, not a measured CPU cost.
+
+The media validator passed 64 current-manifest source hashes, fifteen retained
+atlases, six reviewed individual encodes, all 64 recorded posters, and runtime
+references. Fresh FFprobe metadata and packet checks covered 85 videos;
+presentation timestamps match for every source/atlas pair, the six encodes
+and the correction wipe. No integrity, timing or aspect-ratio regression was
+found. Active per-panel SSIM records range from **0.982214 to 0.998670**; the
+lower bound belongs to the revised kangaroo result. **SSIM was not recomputed**:
+the earlier full-duration records are tied to the source/output hashes checked
+again now. JPEG validation checks sizes, dimensions and format, not pixel
+identity. [Media evidence](performance/media-audit-2026-11-02.json).
+
+### Reproduction and limits
+
+Run an untouched initial-load capture in a foreground tab, at the intended
+viewport before navigation, and read the JSON in `#__performance` after the
+five- and fifteen-second samples:
+
+```sh
+python3 tools/preview.py --port 8766 --measure
+# Open http://127.0.0.1:8766/?measure=1&run=desktop-initial-unique-label
+
+python3 tools/preview.py --port 8767 --measure --latency-ms 150 --bandwidth-kbps 2000
+# Open http://127.0.0.1:8767/?measure=1&run=slow-initial-unique-label
+
+PYTHONDONTWRITEBYTECODE=1 python3 tools/validate_preview.py
+PYTHONDONTWRITEBYTECODE=1 python3 tools/validate_assets.py
+node tools/validate_media_loader.cjs
+node tools/validate_viewer.cjs
+node tools/validate_viewer_presentation.cjs
+```
+
+Use a distinct `run` label for each intentional capture; duplicate HTML
+requests/reloads with the same label reuse its ledger. Use separate server
+ports for simultaneously open test pages, or close the earlier page before
+starting the next run. Diagnostic controls intentionally override media for
+seek/play/pause inspection, so do not use them during initial-load captures.
+The media audit requires the ignored archive, as explained below.
+
+Only connected Chrome was exercised. Safari, Firefox and physical phones were
+not tested, and a real hidden-tab transition was not observed; that lifecycle
+passed deterministic tests. Local Analytics is intentionally disabled.
+Production CDN compression, warm/cold production-cache behavior, real-device
+CPU/thermal limits and process/GPU memory were not measured. Instrumentation,
+automation and local no-store serving affect timings. No Lighthouse score or
+end-to-end production speed claim is made from these captures.
+
+The separate attempt to measure 3D scene loading on the slow connection could
+not be completed because the browser automation connection repeatedly detached
+from that test tab. No slow-network viewer time-to-ready is claimed. The
+successful slow desktop/phone-width captures above concern initial media
+loading; the successful nine-scene interaction checks used the unthrottled
+local server. The detached browser tests are not evidence of an application
+failure.
+
+## Historical development record
+
+The entries and original fifteen-group measurements below describe their
+dated development states. Use the reevaluation above for current counts,
+quality-record ranges, new measurements and remaining limits.
+
 This report records website optimization and validation originally performed
 on `website-performance-optimization`, starting from baseline
 `db6ecdea393ae410e85bbb019fc3ab2247f14ffb`. Historical commit IDs in this report
@@ -86,7 +301,7 @@ track-head diameter is reduced a further 40% from the preceding setting:
 1.44 CSS px at DPR 1 and 2.88 CSS px at DPR 2 or higher. Other scenes, cloud
 points and trails retain their previous settings.
 
-## Measured results
+## Historical measured results (2026-10-30, fifteen groups)
 
 Chrome, 1920×902 viewport, fresh foreground tabs, local HTTP byte-range server,
 local responses marked `Cache-Control: no-store`. These are approximately
@@ -118,7 +333,7 @@ Raw measurements and check results: [performance/measurements.json](performance/
 Per-file hashes, metadata, sizes and full-duration SSIM:
 [media manifest](static/videos/optimized/manifest.json).
 
-## Implementation and incremental findings
+## Historical implementation and incremental findings
 
 1. **Lazy loading and playback.** Static videos use deferred sources and
    `preload="none"`; nearby groups preload, and only visible groups play.
@@ -157,7 +372,7 @@ shifted layout; and the proposed viewer patch retained eager initialization,
 continuous animation scheduling and loading races. Those issues were addressed
 in the implementation above.
 
-## Quality, regressions and limits
+## Historical quality, regressions and limits
 
 - All 15 groups have compatible source timing. FFprobe verifies exact frame
   counts, durations, frame rates, native dimensions and pixel aspect ratios for
@@ -188,7 +403,7 @@ in the implementation above.
   matched the original dimensions. One extension messaging error occurred
   during browser tooling; final instrumented application runs reported no errors.
 
-## Validation and local preview
+## Historical validation and local preview
 
 Browser checks covered all 15 groups, all nine scenes, seek/pause/resume,
 full trails, reset, the mobile lower comparison row with its decoder above the

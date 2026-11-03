@@ -1,0 +1,21 @@
+{
+  "baseCommit": "8db57b3",
+  "candidate": "local paused-demand-rendering fix",
+  "note": "Measurement ledger from preliminary server version is deliberately omitted; only rendering counters/frame/playback used.",
+  "start": {
+    "time": 26124.300000190735,
+    "draws": 2476,
+    "rafCallbacks": 623,
+    "frame": "frame 76 / 86",
+    "playing": [],
+    "errors": []
+  },
+  "end": {
+    "time": 32128.900000095367,
+    "draws": 2476,
+    "rafCallbacks": 623,
+    "frame": "frame 76 / 86",
+    "playing": [],
+    "errors": []
+  }
+}

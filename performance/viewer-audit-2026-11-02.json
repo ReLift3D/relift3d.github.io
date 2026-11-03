@@ -1,0 +1,390 @@
+{
+  "audit_date": "2026-11-02",
+  "baseline_head": "8db57b302a0c1e490958d27b1eb8028c9edf358a",
+  "tested_viewer_sha256": "7724793d26a443c7b70424c35abae82d3c17e5dbb9987689e15f5644c9896fa5",
+  "scope": "Viewer code, deterministic Node boundary tests and source inventories. No browser/GPU measurements in this file.",
+  "production_change": "Paused stationary viewer renders on demand; playing frames, point/track sizes, geometry, camera poses, FOV and trail shaders are preserved.",
+  "browser_baseline_evidence": "performance/viewer-paused-before-2026-11-02.json",
+  "suites": [
+    {
+      "command": "node tools/validate_viewer.cjs",
+      "status": "passed_before_and_after",
+      "scenes": 9,
+      "segments": 157525
+    },
+    {
+      "command": "node tools/validate_viewer_presentation.cjs",
+      "status": "passed_before_and_after",
+      "runtime_scene_coverage_after": 9,
+      "dpr": [
+        1,
+        2,
+        3
+      ],
+      "stage_width_css_px": [
+        900,
+        390
+      ],
+      "added_coverage": [
+        "paused idle suspension",
+        "orbit damping settling",
+        "paused seek/full-trails/reset/resize/DPR redraws",
+        "paused offscreen/hidden cancellation",
+        "Play resumes video/RAF",
+        "fallback clock time origin after pause"
+      ]
+    },
+    {
+      "command": "node --check static/js/relift-viewer.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "supplemental_harness_results": {
+    "visible_paused": {
+      "baseline": {
+        "synthetic_frame_intervals": 120,
+        "additional_render_calls": 120,
+        "pending_animation_callbacks": 1
+      },
+      "after": {
+        "synthetic_frame_intervals": 120,
+        "additional_render_calls": 0,
+        "pending_animation_callbacks": 0
+      }
+    },
+    "all_scene_runtime": {
+      "status": "passed",
+      "scenes": 9,
+      "dpr": 1,
+      "stage_width_css_px": 900
+    },
+    "scene_cache": {
+      "status": "passed",
+      "unique_scene_requests": 9,
+      "cached_revisit_additional_requests": 0,
+      "previous_geometry_and_material_disposed": true,
+      "rebuilds_geometry_on_revisit": true
+    },
+    "seeking": {
+      "status": "passed",
+      "frame_index": 1,
+      "video_time_s": 0.125,
+      "video_paused": true
+    },
+    "offscreen": {
+      "status": "passed",
+      "additional_render_calls": 0,
+      "pending_animation_callbacks": 0,
+      "all_videos_paused": true
+    },
+    "hidden": {
+      "status": "passed",
+      "additional_render_calls": 0,
+      "pending_animation_callbacks": 0,
+      "all_videos_paused": true
+    },
+    "out_of_order_load": {
+      "status": "passed",
+      "requested_order": [
+        "cartwheel",
+        "forest"
+      ],
+      "completion_order": [
+        "forest",
+        "cartwheel"
+      ],
+      "displayed_scene": "forest",
+      "stale_completion_rebuilt_scene": false,
+      "pending_animation_callbacks": 1
+    },
+    "hidden_loading_completion": {
+      "status": "passed",
+      "pending_animation_callbacks": 0,
+      "all_videos_paused": true,
+      "geometry_built_while_hidden": true,
+      "interpretation": "Render/play is suppressed; pending scene decode and geometry construction still complete after hiding."
+    }
+  },
+  "scene_inventory": [
+    {
+      "name": "cartwheel",
+      "scene_file": "static/data/cartwheel.js",
+      "scene_file_bytes": 7525013,
+      "base64_characters": 7523856,
+      "decoded_binary_payload_bytes": 5642892,
+      "estimated_resident_typed_array_bytes": 9836336,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 86,
+      "fps": 12,
+      "tracks": 87,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 2000,
+        "maximum": 2000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 2.4,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 66.385534601608,
+      "effective_fov_degrees": 66.385534601608,
+      "thumbnail_src": "static/videos/optimized/individual/demo_cartwheel.mp4",
+      "thumbnail_file_bytes": 381479
+    },
+    {
+      "name": "running",
+      "scene_file": "static/data/running.js",
+      "scene_file_bytes": 10761415,
+      "base64_characters": 10759296,
+      "decoded_binary_payload_bytes": 8069472,
+      "estimated_resident_typed_array_bytes": 16452776,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 206,
+      "fps": 12,
+      "tracks": 252,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 2000,
+        "maximum": 2000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 2.4,
+      "track_head_css_px": {
+        "dpr1": 1.44,
+        "dpr2": 2.88
+      },
+      "source_fov_degrees": 62.03391892289013,
+      "effective_fov_degrees": 62.03391892289013,
+      "thumbnail_src": "static/videos/demo_running.mp4",
+      "thumbnail_file_bytes": 2319901
+    },
+    {
+      "name": "swing-tire",
+      "scene_file": "static/data/swing-tire.js",
+      "scene_file_bytes": 7495099,
+      "base64_characters": 7493952,
+      "decoded_binary_payload_bytes": 5620464,
+      "estimated_resident_typed_array_bytes": 9929216,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 84,
+      "fps": 12,
+      "tracks": 116,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 2000,
+        "maximum": 2000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 3.2,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 40.29980933898673,
+      "effective_fov_degrees": 40.29980933898673,
+      "thumbnail_src": "static/videos/optimized/individual/demo_swing-tire.mp4",
+      "thumbnail_file_bytes": 666701
+    },
+    {
+      "name": "swing",
+      "scene_file": "static/data/swing.js",
+      "scene_file_bytes": 9045125,
+      "base64_characters": 9044160,
+      "decoded_binary_payload_bytes": 6783120,
+      "estimated_resident_typed_array_bytes": 11622656,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 60,
+      "fps": 12,
+      "tracks": 92,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 5000,
+        "maximum": 5000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 3.2,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 30.6678120205566,
+      "effective_fov_degrees": 30.6678120205566,
+      "thumbnail_src": "static/videos/optimized/individual/demo_swing.mp4",
+      "thumbnail_file_bytes": 522518
+    },
+    {
+      "name": "spin",
+      "scene_file": "static/data/spin.js",
+      "scene_file_bytes": 10489776,
+      "base64_characters": 10488640,
+      "decoded_binary_payload_bytes": 7866480,
+      "estimated_resident_typed_array_bytes": 15189328,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 80,
+      "fps": 12,
+      "tracks": 451,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 5000,
+        "maximum": 5000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 4.5,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 66.0126822734544,
+      "effective_fov_degrees": 66.0126822734544,
+      "thumbnail_src": "static/videos/optimized/individual/demo_spin.mp4",
+      "thumbnail_file_bytes": 440443
+    },
+    {
+      "name": "forest",
+      "scene_file": "static/data/forest.js",
+      "scene_file_bytes": 12661107,
+      "base64_characters": 12658272,
+      "decoded_binary_payload_bytes": 9493704,
+      "estimated_resident_typed_array_bytes": 17287736,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 294,
+      "fps": 12,
+      "tracks": 86,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 2000,
+        "maximum": 2000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 2.4,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 32.96587128527776,
+      "effective_fov_degrees": 43.56093708533515,
+      "thumbnail_src": "static/videos/demo_forest.mp4",
+      "thumbnail_file_bytes": 5229380
+    },
+    {
+      "name": "tennis",
+      "scene_file": "static/data/tennis.js",
+      "scene_file_bytes": 9708583,
+      "base64_characters": 9707520,
+      "decoded_binary_payload_bytes": 7280640,
+      "estimated_resident_typed_array_bytes": 12908056,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 70,
+      "fps": 12,
+      "tracks": 192,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 5000,
+        "maximum": 5000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 2.4,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 19.222286147184683,
+      "effective_fov_degrees": 19.222286147184683,
+      "thumbnail_src": "static/videos/optimized/individual/demo_tennis.mp4",
+      "thumbnail_file_bytes": 378894
+    },
+    {
+      "name": "motocross-bumps",
+      "scene_file": "static/data/motocross-bumps.js",
+      "scene_file_bytes": 7779047,
+      "base64_characters": 7778172,
+      "decoded_binary_payload_bytes": 5833629,
+      "estimated_resident_typed_array_bytes": 9826015,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 45,
+      "fps": 12,
+      "tracks": 40,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 1862,
+        "maximum": 5000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 3.2,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 12.786461640360338,
+      "effective_fov_degrees": 14.19340713536867,
+      "thumbnail_src": "static/videos/demo_motocross-bumps.mp4",
+      "thumbnail_file_bytes": 472664
+    },
+    {
+      "name": "drift-turn",
+      "scene_file": "static/data/drift-turn.js",
+      "scene_file_bytes": 8297453,
+      "base64_characters": 8296548,
+      "decoded_binary_payload_bytes": 6222411,
+      "estimated_resident_typed_array_bytes": 10814201,
+      "estimate_excludes": "GPU copies, JS objects/metadata, cached strings, temporary arrays, shared half-float table and browser video buffers",
+      "frames": 54,
+      "fps": 12,
+      "tracks": 143,
+      "static_points": 450000,
+      "dynamic_points_per_frame": {
+        "minimum": 0,
+        "maximum": 5000
+      },
+      "background_css_px": 2.7,
+      "dynamic_css_px": 2.4,
+      "track_head_css_px": {
+        "dpr1": 2.4,
+        "dpr2": 4.8
+      },
+      "source_fov_degrees": 10.459485861142685,
+      "effective_fov_degrees": 10.459485861142685,
+      "thumbnail_src": "static/videos/demo_drift-turn.mp4",
+      "thumbnail_file_bytes": 545429
+    }
+  ],
+  "totals": {
+    "scene_file_bytes": 83762618,
+    "cached_base64_characters_after_all_scenes": 83750416,
+    "selected_thumbnail_file_bytes": 10957409
+  },
+  "findings": [
+    {
+      "id": "visible-paused-redraw",
+      "classification": "fixed_after_measured_baseline",
+      "evidence": "120 synthetic frame intervals after settling produced 120 render calls before and zero after; root browser baseline is linked separately.",
+      "impact": "Paused stationary scenes no longer redraw the full point cloud continuously.",
+      "browser_followup": "Verify paused WebGL/RAF counts, orbit damping and paused UI redraws in the real browser."
+    },
+    {
+      "id": "scene-cache-retention",
+      "classification": "confirmed_existing_storage_behavior_not_measured_heap",
+      "evidence": "window.SUPP retains every visited scene; base64 character count recorded above. Previous geometry/materials are disposed.",
+      "impact": "Visiting all nine scenes retains large encoded payloads; revisiting a scene rebuilds geometry.",
+      "next_step": "Measure browser heap and scene-switch long tasks before choosing binary data or a bounded cache."
+    },
+    {
+      "id": "hidden-scene-build",
+      "classification": "confirmed_existing_behavior",
+      "evidence": "Delayed scene completion after hiding still builds geometry, but schedules no render callbacks and leaves all videos paused.",
+      "impact": "Pending loads can perform synchronous decode/build after the user leaves.",
+      "next_step": "Only consider deferring construction if measured CPU impact warrants changing near-viewport preparation."
+    },
+    {
+      "id": "measurement-scope",
+      "classification": "limitation",
+      "evidence": "Synthetic boundaries do not measure GPU rasterization, hardware line width, physical-device thermal behavior, actual media-event delivery, or browser process memory."
+    }
+  ]
+}

@@ -865,5 +865,99 @@
   "hidden_tab_validation": {
     "lifecycle_tests": "passed",
     "real_browser_transition": "not observed; automation kept document.hidden false while switching test tabs"
+  },
+  "current_reassessment": {
+    "date": "2026-11-02",
+    "base_commit": "8db57b302a0c1e490958d27b1eb8028c9edf358a",
+    "status": "Reassessment complete; paused-viewer fix validated locally before publication. See Git history and GitHub Actions for publication status.",
+    "report": "../PERFORMANCE_REPORT.md",
+    "published_configuration_legacy_instrumentation": {
+      "sample_count": 6,
+      "desktop_1920x902_runs": 5,
+      "phone_width_390x844_runs": 1,
+      "median_transfer_bytes": 8743718.0,
+      "transfer_range_bytes": [
+        8743718,
+        8746429
+      ],
+      "median_completed_requests": 13.0,
+      "playing_videos": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_webgl_draws": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "definition": "Completed ResourceTiming entries excluding HTML, including historical diagnostic script; unthrottled no-store local server."
+    },
+    "final_candidate_enhanced_instrumentation": {
+      "desktop": {
+        "viewport": [
+          1920,
+          902
+        ],
+        "completed_site_transfer_bytes": 8754395,
+        "site_requests": 14
+      },
+      "mobile": {
+        "viewport": [
+          390,
+          844
+        ],
+        "completed_site_transfer_bytes": 8752730,
+        "site_requests": 13
+      }
+    },
+    "paused_viewer": {
+      "before": {
+        "duration_ms": 15999.099999904633,
+        "webgl_draws": 6240,
+        "animation_callbacks": 1560,
+        "frame_start": "frame 79 / 86",
+        "frame_end": "frame 79 / 86"
+      },
+      "after": {
+        "duration_ms": 6004.599999904633,
+        "webgl_draws": 0,
+        "animation_callbacks": 0,
+        "frame_start": "frame 76 / 86",
+        "frame_end": "frame 76 / 86"
+      }
+    },
+    "runtime_file_sha256": "7724793d26a443c7b70424c35abae82d3c17e5dbb9987689e15f5644c9896fa5",
+    "coverage_limits": [
+      "Chrome desktop only; viewport-sized phone simulation, not physical mobile.",
+      "No Safari or Firefox engine available through connected browser.",
+      "Slow-network viewer time-to-ready was not measured because the browser automation connection repeatedly detached from that test tab.",
+      "Real hidden-tab transition not observed; deterministic lifecycle tests pass.",
+      "No production cold/warm CDN waterfall; localhost disables analytics.",
+      "No physical mobile CPU/GPU/energy or reliable process-memory measurement."
+    ],
+    "evidence_files": [
+      "current-initial-2026-11-02.json",
+      "fallback-2026-11-02.json",
+      "final-desktop-2026-11-02.json",
+      "final-mobile-2026-11-02.json",
+      "groups-2026-11-02.json",
+      "media-audit-2026-11-02.json",
+      "mobile-lower-row-2026-11-02.json",
+      "seeking-2026-11-02.json",
+      "slow-desktop-2026-11-02.json",
+      "slow-mobile-2026-11-02.json",
+      "viewer-audit-2026-11-02.json",
+      "viewer-browser-2026-11-02.json",
+      "viewer-paused-after-2026-11-02.json",
+      "viewer-paused-before-2026-11-02.json",
+      "wipe-method-2026-11-02.json"
+    ]
   }
 }

@@ -160,9 +160,15 @@ function harness(dpr, width, {matchMedia = true} = {}) {
       constructor(fov,aspect) { this.fov=fov; this.aspect=aspect; this.position=new Vector3(); this.up=new Vector3(); cameras.push(this); }
       updateProjectionMatrix() { this.projectionUpdates=(this.projectionUpdates||0)+1; }
     },
-    OrbitControls:class {
-      constructor(camera,element) { this.camera=camera; this.element=element; this.target=new Vector3(); this.enableZoom=true; orbitControls.push(this); }
-      update() {}
+    OrbitControls:class extends Events {
+      constructor(camera,element) { super(); this.camera=camera; this.element=element; this.target=new Vector3(); this.enableZoom=true; this.dampingFrames=0; orbitControls.push(this); }
+      update() {
+        if (!this.dampingFrames) return false;
+        this.dampingFrames--;
+        this.camera.position.x+=0.01;
+        this.emit('change');
+        return true;
+      }
     },
   };
   window.THREE=THREE;
@@ -237,7 +243,7 @@ async function checkRuntime(dpr,width) {
   assert.equal(test.frames.size,1,'visible scene schedules one RAF');
   assert.equal(test.orbitControls[0].enabled,true);
   test.frame(); assert.equal(test.renderers[0].renders,1); assert.equal(test.frames.size,1);
-  for(const name of ['spin','forest','motocross-bumps']) {
+  for(const name of [...NAMES.slice(1), 'motocross-bumps']) {
     test.button(name).emit('click'); await flush();
     assertPresentation(test,name,dpr,width);
     assert.equal(test.frames.size,1,'switching scenes does not duplicate RAF loops');
@@ -272,9 +278,81 @@ async function checkRuntime(dpr,width) {
   assert.deepEqual(test.errors,[],'viewer completed without caught runtime errors');
 }
 
+async function checkPausedRendering(dpr,width) {
+  const test=harness(dpr,width);
+  test.near(true); await flush(); test.visible(true); await flush();
+  const renderer=test.renderers[0], controls=test.orbitControls[0];
+  test.elements.play.emit('click');
+  test.frame();
+  assert.equal(test.frames.size,0,'stationary paused viewer stops scheduling RAF');
+  let renders=renderer.renders;
+  for(let i=0;i<120;i++) test.frame();
+  assert.equal(renderer.renders,renders,'paused idle time performs no GPU draws');
+
+  const redrawOnce=(action,label)=>{
+    const before=renderer.renders;
+    action();
+    assert.equal(test.frames.size,1,`${label} schedules exactly one redraw`);
+    test.frame();
+    assert.equal(renderer.renders,before+1,`${label} redraws the paused scene`);
+    assert.equal(test.frames.size,0,`${label} returns to idle`);
+  };
+  redrawOnce(()=>test.elements.slider.emit('input',{target:{value:'1'}}),'paused seeking');
+  assert.equal(test.elements.frame.textContent,'frame 2 / 2');
+  assert.equal(test.videos()[0].currentTime,1.5/12,'paused seek updates the input video');
+  redrawOnce(()=>test.elements.tail.emit('click'),'full-trails toggle');
+  assert.equal(test.scenes.at(-1).children[2].material.uniforms.uTail.value,2);
+  redrawOnce(()=>test.elements.reset.emit('click'),'reset view');
+  redrawOnce(()=>test.resize(width===900?390:900),'viewport resize');
+  redrawOnce(()=>test.density(dpr===1?2:1),'display density change');
+
+  controls.dampingFrames=3;
+  controls.emit('change');
+  renders=renderer.renders;
+  for(let i=0;i<3;i++) {
+    assert.equal(test.frames.size,1,'orbit damping keeps one pending frame');
+    test.frame();
+  }
+  assert.equal(renderer.renders,renders+3,'paused orbit damping remains smooth');
+  test.frame();
+  assert.equal(test.frames.size,0,'orbit damping settles back to idle');
+  assert.equal(renderer.renders,renders+3,'settled orbit does not redraw unchanged geometry');
+
+  test.visible(false);
+  test.resize(width); controls.emit('change'); test.elements.tail.emit('click');
+  assert.equal(test.frames.size,0,'offscreen interaction/resize never schedules rendering');
+  redrawOnce(()=>test.visible(true),'returning to a paused viewer');
+  test.elements.tail.emit('click');
+  test.document.hidden=true; test.document.emit('visibilitychange');
+  assert.equal(test.frames.size,0,'hiding cancels a pending paused redraw');
+  redrawOnce(()=>{test.document.hidden=false;test.document.emit('visibilitychange');},'restoring a paused tab');
+
+  test.elements.play.emit('click'); await flush();
+  assert.equal(test.frames.size,1,'Play restarts the animation loop');
+  assert.equal(test.videos()[0].paused,false,'Play restarts the paired video');
+  test.videos()[0].currentTime=0;
+  test.frame();
+  assert.equal(test.elements.frame.textContent,'frame 1 / 2','playing follows the input video again');
+  assert.equal(test.frames.size,1,'active playback retains its animation loop');
+
+  // A rejected play() uses the existing fallback clock. A long pause must not
+  // be counted as elapsed animation time when that clock starts again.
+  test.elements.play.emit('click'); test.frame();
+  for(let i=0;i<7;i++) test.frame();
+  test.videos()[0].play=()=>Promise.reject(new Error('synthetic autoplay rejection'));
+  const label=test.elements.frame.textContent;
+  test.elements.play.emit('click'); await flush(); test.frame();
+  assert.equal(test.elements.frame.textContent,label,'fallback clock starts at resume, not the last paused draw');
+  test.visible(false);
+  assert.equal(test.frames.size,0);
+  assert.deepEqual(test.errors,[]);
+}
+
 (async()=>{
   checkHelpers();
   for(const dpr of [1,2,3]) for(const width of [900,390]) await checkRuntime(dpr,width);
+  await checkPausedRendering(1,900);
+  await checkPausedRendering(2,390);
   const fallback=harness(1,900,{matchMedia:false});
   fallback.near(true); await flush();
   fallback.window.devicePixelRatio=3;
@@ -298,5 +376,5 @@ async function checkRuntime(dpr,width) {
   legacy.visible(true); legacy.frame();
   assert.equal(legacy.renderers[0].renders,1,'legacy media queries do not block viewer initialization/playback');
   assert.deepEqual(legacy.errors,[],'legacy query path completes without caught runtime errors');
-  console.log('PASS: CSS cloud sizes, reduced track-head size, framing projection, DPR 1/2/3 at 900/390px, resize/DPR orbit preservation, modern/legacy density listeners, disabled zoom, lazy loading, and offscreen/hidden RAF suspension.');
+  console.log('PASS: all-scene presentation, DPR 1/2/3 at 900/390px, orbit preservation/damping, paused-idle suspension, seek/trails/reset/resize redraws, playback/fallback resume, modern/legacy density listeners, disabled zoom, lazy loading, and offscreen/hidden RAF suspension.');
 })().catch(error=>{ console.error(error); process.exitCode=1; });

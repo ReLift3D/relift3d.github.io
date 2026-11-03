@@ -1,0 +1,261 @@
+{
+  "commit": "8db57b3",
+  "method": "Each group scrolled into view, allowed1s to start, then observed over another1s. Actual browser action overhead extends intervals. Desktop1920x902. Decoded panel timestamps share one source video; no frame drift possible among atlas panels.",
+  "checks": [
+    {
+      "start": {
+        "frame": 1773,
+        "time": 1.085862
+      },
+      "end": {
+        "aspectRatios": [
+          "1280 / 720",
+          "1280 / 720"
+        ],
+        "decoders": 1,
+        "frame": 1805,
+        "mode": "composite",
+        "name": "teaser",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 2.138735
+      }
+    },
+    {
+      "start": {
+        "frame": 16,
+        "time": 1.29699
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "1000 / 562"
+        ],
+        "decoders": 1,
+        "frame": 29,
+        "mode": "composite",
+        "name": "more_kangaroo_with_occlusion_short",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 2.349973
+      }
+    },
+    {
+      "start": {
+        "frame": 45,
+        "time": 3.683446
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 56,
+        "mode": "composite",
+        "name": "more_horsejump-high",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 0.550166
+      }
+    },
+    {
+      "start": {
+        "frame": 72,
+        "time": 6.029426
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 84,
+        "mode": "composite",
+        "name": "more_schoolgirls",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 0.401732
+      }
+    },
+    {
+      "start": {
+        "frame": 100,
+        "time": 1.405672
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 113,
+        "mode": "composite",
+        "name": "more_swing-tire",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 2.454086
+      }
+    },
+    {
+      "start": {
+        "frame": 129,
+        "time": 3.314411
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 141,
+        "mode": "composite",
+        "name": "more_motocross-bumps",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 0.602289
+      }
+    },
+    {
+      "start": {
+        "frame": 158,
+        "time": 6.185793
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 171,
+        "mode": "composite",
+        "name": "more_camel",
+        "panels": 2,
+        "paused": false,
+        "ready": 4,
+        "time": 0.286789
+      }
+    },
+    {
+      "start": {
+        "frame": 2484,
+        "time": 2.824812
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 2497,
+        "mode": "composite",
+        "name": "lady-running",
+        "panels": 5,
+        "paused": false,
+        "ready": 4,
+        "time": 3.878563
+      }
+    },
+    {
+      "start": {
+        "frame": 2502,
+        "time": 2.515014
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 2514,
+        "mode": "composite",
+        "name": "libby",
+        "panels": 5,
+        "paused": false,
+        "ready": 4,
+        "time": 3.560888
+      }
+    },
+    {
+      "start": {
+        "frame": 69,
+        "time": 2.136427
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 82,
+        "mode": "composite",
+        "name": "motorbike",
+        "panels": 5,
+        "paused": false,
+        "ready": 4,
+        "time": 3.202093
+      }
+    },
+    {
+      "start": {
+        "frame": 72,
+        "time": 5.995385
+      },
+      "end": {
+        "aspectRatios": [
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540",
+          "960 / 540"
+        ],
+        "decoders": 1,
+        "frame": 84,
+        "mode": "composite",
+        "name": "bmx-trees",
+        "panels": 5,
+        "paused": false,
+        "ready": 4,
+        "time": 0.345021
+      }
+    },
+    {
+      "start": {
+        "frame": 73,
+        "time": 6.041613
+      },
+      "end": {
+        "aspectRatios": [
+          "720 / 960",
+          "720 / 960",
+          "720 / 960",
+          "720 / 960",
+          "720 / 960"
+        ],
+        "decoders": 1,
+        "frame": 85,
+        "mode": "composite",
+        "name": "spin",
+        "panels": 5,
+        "paused": false,
+        "ready": 4,
+        "time": 0.451841
+      }
+    }
+  ]
+}

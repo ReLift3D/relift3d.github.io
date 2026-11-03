@@ -1,0 +1,120 @@
+{
+  "wipePositionA": "left: 24.7706%;",
+  "wipePositionB": "left: 74.9235%;",
+  "wipePlaying": {
+    "name": "correction-slider",
+    "mode": "original",
+    "visible": true,
+    "rectangle": {
+      "top": 221.15625,
+      "bottom": 623.53125,
+      "width": 327,
+      "height": 402.375
+    },
+    "drawnFrames": 0,
+    "videos": [
+      {
+        "src": "http://127.0.0.1:8772/static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "plannedSrc": "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "paused": false,
+        "ready": 4,
+        "network": 1,
+        "seeking": false,
+        "time": 3.847477,
+        "duration": 7,
+        "width": 640,
+        "height": 360,
+        "quality": {
+          "totalVideoFrames": 1373,
+          "droppedVideoFrames": 0,
+          "corruptedVideoFrames": 0,
+          "creationTime": 328136.30000019073
+        },
+        "error": null,
+        "frameCallback": null
+      },
+      {
+        "src": "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_lift.mp4",
+        "plannedSrc": "static/videos/slider_basketball_3_s3d_lift.mp4",
+        "paused": false,
+        "ready": 4,
+        "network": 1,
+        "seeking": false,
+        "time": 3.847186,
+        "duration": 7,
+        "width": 1008,
+        "height": 568,
+        "quality": {
+          "totalVideoFrames": 1370,
+          "droppedVideoFrames": 0,
+          "corruptedVideoFrames": 0,
+          "creationTime": 328136.30000019073
+        },
+        "error": null,
+        "frameCallback": null
+      },
+      {
+        "src": "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_ours.mp4",
+        "plannedSrc": "static/videos/slider_basketball_3_s3d_ours.mp4",
+        "paused": false,
+        "ready": 4,
+        "network": 1,
+        "seeking": false,
+        "time": 3.847027,
+        "duration": 7,
+        "width": 1008,
+        "height": 568,
+        "quality": {
+          "totalVideoFrames": 1370,
+          "droppedVideoFrames": 0,
+          "corruptedVideoFrames": 0,
+          "creationTime": 328136.30000019073
+        },
+        "error": null,
+        "frameCallback": null
+      }
+    ],
+    "panels": [],
+    "allPanelsShareCallback": false,
+    "panelMediaTimeSpread": null,
+    "independentMediaTimeSpread": 0.0004499999999998394
+  },
+  "methodReturn": {
+    "name": "method-7",
+    "mode": "original",
+    "visible": true,
+    "rectangle": {
+      "top": 329.84375,
+      "bottom": 513.78125,
+      "width": 327,
+      "height": 183.9375
+    },
+    "drawnFrames": 0,
+    "videos": [
+      {
+        "src": "http://127.0.0.1:8772/static/videos/method_expanded.mp4",
+        "plannedSrc": "static/videos/method_expanded.mp4",
+        "paused": true,
+        "ready": 4,
+        "network": 1,
+        "seeking": false,
+        "time": 2.5,
+        "duration": 28.333333,
+        "width": 1920,
+        "height": 1080,
+        "quality": {
+          "totalVideoFrames": 106,
+          "droppedVideoFrames": 0,
+          "corruptedVideoFrames": 0,
+          "creationTime": 394134.2000002861
+        },
+        "error": null,
+        "frameCallback": null
+      }
+    ],
+    "panels": [],
+    "allPanelsShareCallback": false,
+    "panelMediaTimeSpread": null,
+    "independentMediaTimeSpread": null
+  }
+}

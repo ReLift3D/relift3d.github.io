@@ -1,0 +1,409 @@
+[
+  {
+    "name": "more_kangaroo_with_occlusion_short",
+    "group": {
+      "name": "more_kangaroo_with_occlusion_short",
+      "mode": "composite",
+      "visible": true,
+      "rectangle": {
+        "top": 365.15625,
+        "bottom": 478.4375,
+        "width": 327,
+        "height": 113.28125
+      },
+      "drawnFrames": 972,
+      "videos": [
+        {
+          "src": "http://127.0.0.1:8772/static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+          "plannedSrc": "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+          "paused": true,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.5,
+          "duration": 8.333333,
+          "width": 2000,
+          "height": 562,
+          "quality": {
+            "totalVideoFrames": 1101,
+            "droppedVideoFrames": 37,
+            "corruptedVideoFrames": 0,
+            "creationTime": 299134.30000019073
+          },
+          "error": null,
+          "frameCallback": {
+            "id": 3761,
+            "time": 298163.1,
+            "mediaTime": 2.5,
+            "presentedFrames": 1012,
+            "expectedDisplayTime": 298156.6,
+            "processingDuration": 0.003,
+            "callbacks": 976
+          }
+        }
+      ],
+      "panels": [
+        {
+          "callbackId": 3761,
+          "mediaTime": 2.5,
+          "time": 298164.10000038147,
+          "crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "destination": [
+            161,
+            91
+          ]
+        },
+        {
+          "callbackId": 3761,
+          "mediaTime": 2.5,
+          "time": 298164.10000038147,
+          "crop": [
+            1000,
+            0,
+            1000,
+            562
+          ],
+          "destination": [
+            161,
+            90
+          ]
+        }
+      ],
+      "allPanelsShareCallback": true,
+      "panelMediaTimeSpread": 0,
+      "independentMediaTimeSpread": null
+    },
+    "recentActions": [
+      {
+        "time": 296950.90000009537,
+        "action": "Show group",
+        "group": "more_kangaroo_with_occlusion_short",
+        "seekTime": 0
+      },
+      {
+        "time": 297802.90000009537,
+        "action": "Pause selected",
+        "group": "more_kangaroo_with_occlusion_short",
+        "seekTime": 0
+      },
+      {
+        "time": 298123.40000009537,
+        "action": "Seek selected",
+        "group": "more_kangaroo_with_occlusion_short",
+        "seekTime": 2.5
+      }
+    ]
+  },
+  {
+    "name": "spin",
+    "group": {
+      "name": "spin",
+      "mode": "composite",
+      "visible": true,
+      "rectangle": {
+        "top": 228.78125,
+        "bottom": 615.15625,
+        "width": 327,
+        "height": 386.375
+      },
+      "drawnFrames": 8,
+      "videos": [
+        {
+          "src": "http://127.0.0.1:8772/static/videos/optimized/spin.mp4",
+          "plannedSrc": "static/videos/optimized/spin.mp4",
+          "paused": true,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.5,
+          "duration": 6.666667,
+          "width": 2160,
+          "height": 1920,
+          "quality": {
+            "totalVideoFrames": 45,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 302134.30000019073
+          },
+          "error": null,
+          "frameCallback": {
+            "id": 3836,
+            "time": 300953.1,
+            "mediaTime": 2.5,
+            "presentedFrames": 9,
+            "expectedDisplayTime": 300940.6,
+            "processingDuration": 0.0069,
+            "callbacks": 8
+          }
+        }
+      ],
+      "panels": [
+        {
+          "callbackId": 3836,
+          "mediaTime": 2.5,
+          "time": 300966.7000002861,
+          "crop": [
+            0,
+            0,
+            720,
+            960
+          ],
+          "destination": [
+            105,
+            140
+          ]
+        },
+        {
+          "callbackId": 3836,
+          "mediaTime": 2.5,
+          "time": 300966.7000002861,
+          "crop": [
+            720,
+            0,
+            720,
+            960
+          ],
+          "destination": [
+            105,
+            140
+          ]
+        },
+        {
+          "callbackId": 3836,
+          "mediaTime": 2.5,
+          "time": 300966.80000019073,
+          "crop": [
+            1440,
+            0,
+            720,
+            960
+          ],
+          "destination": [
+            105,
+            140
+          ]
+        },
+        {
+          "callbackId": 3836,
+          "mediaTime": 2.5,
+          "time": 300966.80000019073,
+          "crop": [
+            0,
+            960,
+            720,
+            960
+          ],
+          "destination": [
+            105,
+            140
+          ]
+        },
+        {
+          "callbackId": 3836,
+          "mediaTime": 2.5,
+          "time": 300966.80000019073,
+          "crop": [
+            720,
+            960,
+            720,
+            960
+          ],
+          "destination": [
+            105,
+            140
+          ]
+        }
+      ],
+      "allPanelsShareCallback": true,
+      "panelMediaTimeSpread": 0,
+      "independentMediaTimeSpread": null
+    },
+    "recentActions": [
+      {
+        "time": 299656.2000002861,
+        "action": "Show group",
+        "group": "spin",
+        "seekTime": 2.5
+      },
+      {
+        "time": 300538.60000038147,
+        "action": "Pause selected",
+        "group": "spin",
+        "seekTime": 2.5
+      },
+      {
+        "time": 300867.40000009537,
+        "action": "Seek selected",
+        "group": "spin",
+        "seekTime": 2.5
+      }
+    ]
+  },
+  {
+    "name": "method-7",
+    "group": {
+      "name": "method-7",
+      "mode": "original",
+      "visible": true,
+      "rectangle": {
+        "top": 329.84375,
+        "bottom": 513.78125,
+        "width": 327,
+        "height": 183.9375
+      },
+      "drawnFrames": 0,
+      "videos": [
+        {
+          "src": "http://127.0.0.1:8772/static/videos/method_expanded.mp4",
+          "plannedSrc": "static/videos/method_expanded.mp4",
+          "paused": true,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.5,
+          "duration": 28.333333,
+          "width": 1920,
+          "height": 1080,
+          "quality": {
+            "totalVideoFrames": 106,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 304132.7000002861
+          },
+          "error": null,
+          "frameCallback": null
+        }
+      ],
+      "panels": [],
+      "allPanelsShareCallback": false,
+      "panelMediaTimeSpread": null,
+      "independentMediaTimeSpread": null
+    },
+    "recentActions": [
+      {
+        "time": 302376.30000019073,
+        "action": "Show group",
+        "group": "method-7",
+        "seekTime": 2.5
+      },
+      {
+        "time": 303273.80000019073,
+        "action": "Pause selected",
+        "group": "method-7",
+        "seekTime": 2.5
+      },
+      {
+        "time": 303575.40000009537,
+        "action": "Seek selected",
+        "group": "method-7",
+        "seekTime": 2.5
+      }
+    ]
+  },
+  {
+    "name": "correction-slider",
+    "group": {
+      "name": "correction-slider",
+      "mode": "original",
+      "visible": true,
+      "rectangle": {
+        "top": 221.15625,
+        "bottom": 623.53125,
+        "width": 327,
+        "height": 402.375
+      },
+      "drawnFrames": 0,
+      "videos": [
+        {
+          "src": "http://127.0.0.1:8772/static/videos/optimized/individual/slider_basketball_3_input.mp4",
+          "plannedSrc": "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+          "paused": true,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.5,
+          "duration": 7,
+          "width": 640,
+          "height": 360,
+          "quality": {
+            "totalVideoFrames": 1357,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 307131.2000002861
+          },
+          "error": null,
+          "frameCallback": null
+        },
+        {
+          "src": "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_lift.mp4",
+          "plannedSrc": "static/videos/slider_basketball_3_s3d_lift.mp4",
+          "paused": true,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.5,
+          "duration": 7,
+          "width": 1008,
+          "height": 568,
+          "quality": {
+            "totalVideoFrames": 1354,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 307131.2000002861
+          },
+          "error": null,
+          "frameCallback": null
+        },
+        {
+          "src": "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_ours.mp4",
+          "plannedSrc": "static/videos/slider_basketball_3_s3d_ours.mp4",
+          "paused": true,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.5,
+          "duration": 7,
+          "width": 1008,
+          "height": 568,
+          "quality": {
+            "totalVideoFrames": 1354,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 307131.2000002861
+          },
+          "error": null,
+          "frameCallback": null
+        }
+      ],
+      "panels": [],
+      "allPanelsShareCallback": false,
+      "panelMediaTimeSpread": null,
+      "independentMediaTimeSpread": 0
+    },
+    "recentActions": [
+      {
+        "time": 305093.30000019073,
+        "action": "Show group",
+        "group": "correction-slider",
+        "seekTime": 2.5
+      },
+      {
+        "time": 306020.90000009537,
+        "action": "Pause selected",
+        "group": "correction-slider",
+        "seekTime": 2.5
+      },
+      {
+        "time": 306284.80000019073,
+        "action": "Seek selected",
+        "group": "correction-slider",
+        "seekTime": 2.5
+      }
+    ]
+  }
+]

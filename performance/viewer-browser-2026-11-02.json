@@ -1,0 +1,145 @@
+{
+  "scenes": [
+    {
+      "name": "cartwheel",
+      "selectionActionMs": 346,
+      "frame": "frame 70 / 86",
+      "pressed": "true"
+    },
+    {
+      "name": "running",
+      "selectionActionMs": 482,
+      "frame": "frame 2 / 206",
+      "pressed": "true"
+    },
+    {
+      "name": "swing-tire",
+      "selectionActionMs": 295,
+      "frame": "frame 1 / 84",
+      "pressed": "true"
+    },
+    {
+      "name": "swing",
+      "selectionActionMs": 369,
+      "frame": "frame 2 / 60",
+      "pressed": "true"
+    },
+    {
+      "name": "spin",
+      "selectionActionMs": 432,
+      "frame": "frame 1 / 80",
+      "pressed": "true"
+    },
+    {
+      "name": "forest",
+      "selectionActionMs": 303,
+      "frame": "frame 2 / 294",
+      "pressed": "true"
+    },
+    {
+      "name": "tennis",
+      "selectionActionMs": 369,
+      "frame": "frame 2 / 70",
+      "pressed": "true"
+    },
+    {
+      "name": "motocross-bumps",
+      "selectionActionMs": 379,
+      "frame": "frame 2 / 45",
+      "pressed": "true"
+    },
+    {
+      "name": "drift-turn",
+      "selectionActionMs": 369,
+      "frame": "frame 2 / 54",
+      "pressed": "true"
+    }
+  ],
+  "seekEnd": {
+    "frame": "frame 54 / 54",
+    "playButton": true
+  },
+  "seekSecond": "frame 2 / 54",
+  "fullTrails": "true",
+  "resumedFrameStart": "frame 17 / 54",
+  "resumedFrameEnd": "frame 44 / 54",
+  "orbit": {
+    "start": {
+      "time": 187128.80000019073,
+      "draws": 22968,
+      "rafCallbacks": 5806,
+      "frame": "frame 2 / 54",
+      "playing": [
+        "http://127.0.0.1:8772/static/videos/optimized/more_kangaroo_with_occlusion_short.mp4"
+      ],
+      "errors": []
+    },
+    "after": {
+      "time": 190134,
+      "draws": 23192,
+      "rafCallbacks": 5863,
+      "frame": "frame 2 / 54",
+      "playing": [
+        "http://127.0.0.1:8772/static/videos/optimized/more_kangaroo_with_occlusion_short.mp4"
+      ],
+      "errors": []
+    },
+    "settled": {
+      "time": 192132.90000009537,
+      "draws": 23192,
+      "rafCallbacks": 5863,
+      "frame": "frame 2 / 54",
+      "playing": [
+        "http://127.0.0.1:8772/static/videos/optimized/more_kangaroo_with_occlusion_short.mp4"
+      ],
+      "errors": []
+    }
+  },
+  "seekVideo": {
+    "src": "http://127.0.0.1:8772/static/videos/demo_drift-turn.mp4",
+    "plannedSrc": "./static/videos/demo_drift-turn.mp4",
+    "paused": true,
+    "ready": 4,
+    "network": 1,
+    "seeking": false,
+    "time": 0.125,
+    "duration": 4.5,
+    "width": 640,
+    "height": 360,
+    "quality": {
+      "totalVideoFrames": 638,
+      "droppedVideoFrames": 28,
+      "corruptedVideoFrames": 0,
+      "creationTime": 192135.2000002861
+    },
+    "error": null,
+    "frameCallback": null
+  },
+  "offscreen": {
+    "start": {
+      "time": 223128.2000002861,
+      "draws": 24596,
+      "rafCallbacks": 6220,
+      "frame": "frame 44 / 54",
+      "playing": [
+        "http://127.0.0.1:8772/static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_lift.mp4",
+        "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_ours.mp4"
+      ],
+      "errors": []
+    },
+    "end": {
+      "time": 228132,
+      "draws": 24596,
+      "rafCallbacks": 6220,
+      "frame": "frame 44 / 54",
+      "playing": [
+        "http://127.0.0.1:8772/static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_lift.mp4",
+        "http://127.0.0.1:8772/static/videos/slider_basketball_3_s3d_ours.mp4"
+      ],
+      "errors": []
+    }
+  },
+  "errors": []
+}

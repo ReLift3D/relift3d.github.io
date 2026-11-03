@@ -1,0 +1,4343 @@
+{
+  "audit_date_utc": "2026-11-02T14:54:41.092949+00:00",
+  "findings": [
+    {
+      "finding": "All retained media integrity, metadata, source/atlas crops and runtime-reference checks passed.",
+      "severity": "info"
+    },
+    {
+      "finding": "All synchronized source and atlas packet presentation timestamps are freshly checked; no source timing changes are introduced by the layout.",
+      "severity": "info"
+    },
+    {
+      "finding": "SSIM values are existing full-duration records bound to verified source/output hashes, not newly computed and not a substitute for current visual review.",
+      "severity": "limitation"
+    },
+    {
+      "delta_bytes": 6697790,
+      "finding": "The active revised occlusion-kangaroo atlas is 6,697,790 bytes larger than the historical version; this is a content refresh, not CSS growth.",
+      "severity": "tradeoff"
+    },
+    {
+      "finding": "Historical report ranges/counts describe 15 groups and 64 sources before later curation. Current page uses 12 groups / 43 static video elements; the active recorded atlas-panel SSIM minimum is 0.982214.",
+      "severity": "documentation"
+    },
+    {
+      "finding": "Larger comparison canvases increase potential destination-pixel copying, especially portrait Spin; browser runtime evaluation is separate.",
+      "severity": "tradeoff"
+    }
+  ],
+  "fresh_probes": {
+    "static/videos/cmp_bmx-trees_4rc.mp4": {
+      "bytes": 696049,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a5fdc090c284d8a4a8cefa0f6648a1bb0a9421dbd9f6a5ec2e87cfb34ea19c50",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_bmx-trees_4rc.mp4"
+    },
+    "static/videos/cmp_bmx-trees_input.mp4": {
+      "bytes": 1849975,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a0c603b82774c1a62f2201e016d5658d10d2895fc92476f0f20b631904def688",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_bmx-trees_input.mp4"
+    },
+    "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4": {
+      "bytes": 733962,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "5409992fbdfb549d7fa833848f83a690edf89046442e5a204c2c6e9b05b73081",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_bmx-trees_tc3r_vggto.mp4": {
+      "bytes": 1111977,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "0a8b0e05503e14f6d810f00f91edf0dd998ea54470935c83ab8a60e5d3f1a62e",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_bmx-trees_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_bmx-trees_vdpm.mp4": {
+      "bytes": 694938,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "229dd7ba0a34d98065b799ecd42299594e0a86eb3cdffd67b5011343901a6129",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_bmx-trees_vdpm.mp4"
+    },
+    "static/videos/cmp_car-shadow_4rc.mp4": {
+      "bytes": 569744,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "3cb7481f01a74f22979f63978e41cb78a77d7ae9b7b50b25379d19b91695f4c0",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.333333",
+        "height": 540,
+        "nb_frames": "40",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 40,
+        "first_s": "0",
+        "last_s": "13/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "ae00788f344d59beef6b3f4fe6ee7a9bc2dd8829453513a1f775c69202fc1cee",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_car-shadow_4rc.mp4"
+    },
+    "static/videos/cmp_car-shadow_input.mp4": {
+      "bytes": 593531,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "10d2e5bd0d551899218a7ecd076f972c7e83a754319a663d2e257eb3645d163f",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.333333",
+        "height": 540,
+        "nb_frames": "40",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 40,
+        "first_s": "0",
+        "last_s": "13/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "ae00788f344d59beef6b3f4fe6ee7a9bc2dd8829453513a1f775c69202fc1cee",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_car-shadow_input.mp4"
+    },
+    "static/videos/cmp_car-shadow_ours_cowtracker_vggto.mp4": {
+      "bytes": 516868,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "58382876a6f95f31c5aacc1eb0df4b6d2935b69eea0185a325034b16596bcc09",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.333333",
+        "height": 540,
+        "nb_frames": "40",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 40,
+        "first_s": "0",
+        "last_s": "13/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "ae00788f344d59beef6b3f4fe6ee7a9bc2dd8829453513a1f775c69202fc1cee",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_car-shadow_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_car-shadow_tc3r_vggto.mp4": {
+      "bytes": 690469,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "d76412bdfb179b3f2eba9a01acef8dac6a5d43421912384800aeb152dfd443b0",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.333333",
+        "height": 540,
+        "nb_frames": "40",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 40,
+        "first_s": "0",
+        "last_s": "13/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "ae00788f344d59beef6b3f4fe6ee7a9bc2dd8829453513a1f775c69202fc1cee",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_car-shadow_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_car-shadow_vdpm.mp4": {
+      "bytes": 590960,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "b83b99b39eab7632590387892d223339536a82ba2867cb70762cbbcd4e4574aa",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.333333",
+        "height": 540,
+        "nb_frames": "40",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 40,
+        "first_s": "0",
+        "last_s": "13/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "ae00788f344d59beef6b3f4fe6ee7a9bc2dd8829453513a1f775c69202fc1cee",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_car-shadow_vdpm.mp4"
+    },
+    "static/videos/cmp_crossing_4rc.mp4": {
+      "bytes": 699659,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "dcaac3beb85579b5e9d01c6252beb4a30994e21f67fb04936302aad8c7a08917",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.333333",
+        "height": 540,
+        "nb_frames": "52",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 52,
+        "first_s": "0",
+        "last_s": "17/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d85259fd824374020f386dd48564b902dd8575a647f20a62b3226655c23f9d50",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_crossing_4rc.mp4"
+    },
+    "static/videos/cmp_crossing_input.mp4": {
+      "bytes": 519684,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "5a5f98f03730ff93889693bd69c3ff942d2a3f624a3a82e47b1e76434fcce49b",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.333333",
+        "height": 540,
+        "nb_frames": "52",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 52,
+        "first_s": "0",
+        "last_s": "17/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d85259fd824374020f386dd48564b902dd8575a647f20a62b3226655c23f9d50",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_crossing_input.mp4"
+    },
+    "static/videos/cmp_crossing_ours_cowtracker_vggto.mp4": {
+      "bytes": 568264,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "dc596655696f03952642103e54fbc5fafb2dd669633803d07a7cf10a86130829",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.333333",
+        "height": 540,
+        "nb_frames": "52",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 52,
+        "first_s": "0",
+        "last_s": "17/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d85259fd824374020f386dd48564b902dd8575a647f20a62b3226655c23f9d50",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_crossing_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_crossing_tc3r_vggto.mp4": {
+      "bytes": 673123,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a2113817736698e1d66fda95c32e62edec30f66658c594755b42080d8b7ab7f9",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.333333",
+        "height": 540,
+        "nb_frames": "52",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 52,
+        "first_s": "0",
+        "last_s": "17/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d85259fd824374020f386dd48564b902dd8575a647f20a62b3226655c23f9d50",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_crossing_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_crossing_vdpm.mp4": {
+      "bytes": 530618,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "c7ba82b4ddf1b42db54f74c740a9aced04dd1db8473c5e774b6d4c1a392c69fd",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.333333",
+        "height": 540,
+        "nb_frames": "52",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 52,
+        "first_s": "0",
+        "last_s": "17/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d85259fd824374020f386dd48564b902dd8575a647f20a62b3226655c23f9d50",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/cmp_crossing_vdpm.mp4"
+    },
+    "static/videos/cmp_lady-running_4rc.mp4": {
+      "bytes": 1936610,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "66311b79268bd048be7848dedec0d1699525af61fecaa0a4114641e78f983adc",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.416667",
+        "height": 540,
+        "nb_frames": "65",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 65,
+        "first_s": "0",
+        "last_s": "16/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d77b2c6c636986906163f17d32e48f83f30b58cd861cad5594c085cd5750af56",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_lady-running_4rc.mp4"
+    },
+    "static/videos/cmp_lady-running_input.mp4": {
+      "bytes": 944930,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "698ad3988086b7d9708ff69095be4cc63e933f325a9c862da329195e587d0367",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.416667",
+        "height": 540,
+        "nb_frames": "65",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 65,
+        "first_s": "0",
+        "last_s": "16/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d77b2c6c636986906163f17d32e48f83f30b58cd861cad5594c085cd5750af56",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_lady-running_input.mp4"
+    },
+    "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4": {
+      "bytes": 1735236,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "2117b0b860199a367ef8270694e592439f702432cdfa29dc5a26178d65f61955",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.416667",
+        "height": 540,
+        "nb_frames": "65",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 65,
+        "first_s": "0",
+        "last_s": "16/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d77b2c6c636986906163f17d32e48f83f30b58cd861cad5594c085cd5750af56",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_lady-running_tc3r_vggto.mp4": {
+      "bytes": 1881201,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "c535678fd84e8514fd139e89c58183fd7361fe226865df009253ce05811d49f9",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.416667",
+        "height": 540,
+        "nb_frames": "65",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 65,
+        "first_s": "0",
+        "last_s": "16/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d77b2c6c636986906163f17d32e48f83f30b58cd861cad5594c085cd5750af56",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_lady-running_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_lady-running_vdpm.mp4": {
+      "bytes": 1838344,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "412f2e29bf8543cfb283d145022c4b4f4d6c83ecbec96434267e7bd760937f2e",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.416667",
+        "height": 540,
+        "nb_frames": "65",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 65,
+        "first_s": "0",
+        "last_s": "16/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d77b2c6c636986906163f17d32e48f83f30b58cd861cad5594c085cd5750af56",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_lady-running_vdpm.mp4"
+    },
+    "static/videos/cmp_libby_4rc.mp4": {
+      "bytes": 575493,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "2c8269a832b956259b58056f0cd352d81133344ebcd95dacde092f35b30821dc",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.083333",
+        "height": 540,
+        "nb_frames": "49",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 49,
+        "first_s": "0",
+        "last_s": "4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "cbdae6d2d84cc6d8d66ffe41d735a7c088e59a395245b633f5253347422a7422",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_libby_4rc.mp4"
+    },
+    "static/videos/cmp_libby_input.mp4": {
+      "bytes": 1081928,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "534461137ccb06743f26402b7e310c6ea56f04dfa4fe9982c399361cb1cd782c",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.083333",
+        "height": 540,
+        "nb_frames": "49",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 49,
+        "first_s": "0",
+        "last_s": "4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "cbdae6d2d84cc6d8d66ffe41d735a7c088e59a395245b633f5253347422a7422",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_libby_input.mp4"
+    },
+    "static/videos/cmp_libby_ours_cowtracker_vggto.mp4": {
+      "bytes": 539416,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "59969e94343ef8ac07433fd8221e0d36ea9b8f3af3cad9612092f5463a37e3f6",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.083333",
+        "height": 540,
+        "nb_frames": "49",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 49,
+        "first_s": "0",
+        "last_s": "4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "cbdae6d2d84cc6d8d66ffe41d735a7c088e59a395245b633f5253347422a7422",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_libby_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_libby_tc3r_vggto.mp4": {
+      "bytes": 680793,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "fef9248f79dd4790c5435be88cf5ff1778cd0ef5bde72646d6ed2c9c2688271b",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.083333",
+        "height": 540,
+        "nb_frames": "49",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 49,
+        "first_s": "0",
+        "last_s": "4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "cbdae6d2d84cc6d8d66ffe41d735a7c088e59a395245b633f5253347422a7422",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_libby_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_libby_vdpm.mp4": {
+      "bytes": 635104,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "15ddd5aac8eb1f9d15f1442eef82fdb675de14d38cccb1dc5caef6f528244c91",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.083333",
+        "height": 540,
+        "nb_frames": "49",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 49,
+        "first_s": "0",
+        "last_s": "4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "cbdae6d2d84cc6d8d66ffe41d735a7c088e59a395245b633f5253347422a7422",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_libby_vdpm.mp4"
+    },
+    "static/videos/cmp_motorbike_4rc.mp4": {
+      "bytes": 215202,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a542151bff6fe328cc9d2b505f5d11e1448b54f751b3ff34863935a89f720c40",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.583333",
+        "height": 540,
+        "nb_frames": "43",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 43,
+        "first_s": "0",
+        "last_s": "7/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9c6ad411677e2e8ea9fef9db28423d6721fd46e383c81b95e4325a28d5bacc84",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_motorbike_4rc.mp4"
+    },
+    "static/videos/cmp_motorbike_input.mp4": {
+      "bytes": 722111,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "da8b3dee7988b6507540b75c6481f6abd1795bbd2be4137f172025e0783a1603",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.583333",
+        "height": 540,
+        "nb_frames": "43",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 43,
+        "first_s": "0",
+        "last_s": "7/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9c6ad411677e2e8ea9fef9db28423d6721fd46e383c81b95e4325a28d5bacc84",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_motorbike_input.mp4"
+    },
+    "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4": {
+      "bytes": 255393,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "1575abc7e3e3826c90feda2211082c096a6eb9fbb2ef2334e57b53b51593e35e",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.583333",
+        "height": 540,
+        "nb_frames": "43",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 43,
+        "first_s": "0",
+        "last_s": "7/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9c6ad411677e2e8ea9fef9db28423d6721fd46e383c81b95e4325a28d5bacc84",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_motorbike_tc3r_vggto.mp4": {
+      "bytes": 438340,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "d605b9503238f78fda0998c987ba5de23af46c6fad71bb6af6f348be3f1d8f73",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.583333",
+        "height": 540,
+        "nb_frames": "43",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 43,
+        "first_s": "0",
+        "last_s": "7/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9c6ad411677e2e8ea9fef9db28423d6721fd46e383c81b95e4325a28d5bacc84",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_motorbike_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_motorbike_vdpm.mp4": {
+      "bytes": 309456,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "58807dcef942c3836791d4451f905104dc0df97c79cbb74b0e584c29253e14dc",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.583333",
+        "height": 540,
+        "nb_frames": "43",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 43,
+        "first_s": "0",
+        "last_s": "7/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9c6ad411677e2e8ea9fef9db28423d6721fd46e383c81b95e4325a28d5bacc84",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_motorbike_vdpm.mp4"
+    },
+    "static/videos/cmp_spin_4rc.mp4": {
+      "bytes": 3793183,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "88ef3e2e7325c7719ccdef24e0253e7d95be10a6576d80c3ec60b13eee2ababc",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 960,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 720
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_spin_4rc.mp4"
+    },
+    "static/videos/cmp_spin_input.mp4": {
+      "bytes": 4125284,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "5bb0856a070a6f93292efc91b9aa42d21fa1b16a5f76b68b9f54ad31519b1e36",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 960,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 720
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_spin_input.mp4"
+    },
+    "static/videos/cmp_spin_ours_cowtracker_vggto.mp4": {
+      "bytes": 3024512,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a4f2097667b7b8c378e7adb0bcc7f06d807e5e624f3b685aa769839fd19bd81c",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 960,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 720
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_spin_ours_cowtracker_vggto.mp4"
+    },
+    "static/videos/cmp_spin_tc3r_vggto.mp4": {
+      "bytes": 2981254,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "8608d6413185e12de10dab9b89aa36e6ab973dff95835a59d85c4aca3b7e4e91",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 960,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 720
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_spin_tc3r_vggto.mp4"
+    },
+    "static/videos/cmp_spin_vdpm.mp4": {
+      "bytes": 2602701,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "9bb999e052c0cb245565a32a234af6ed0afb94e8eb98690a33ae3da7586521c2",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 960,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 720
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/cmp_spin_vdpm.mp4"
+    },
+    "static/videos/demo_cartwheel.mp4": {
+      "bytes": 538934,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "05a14dac16ac66e40b1944d23e8898142dcabb2a641cecc35e4886df52af7634",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.166667",
+        "height": 360,
+        "nb_frames": "86",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 202
+      },
+      "packet_pts": {
+        "count": 86,
+        "first_s": "0",
+        "last_s": "85/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "4c9bfb58d67beff79f793632de607a11395973e3b453e6b348541c45b414302f",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/demo_cartwheel.mp4"
+    },
+    "static/videos/demo_drift-turn.mp4": {
+      "bytes": 545429,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "b81c25672bfff9e0d0db36159c19dd9c2b653b6970056ee89135150f9d2a35f7",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.500000",
+        "height": 360,
+        "nb_frames": "54",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 54,
+        "first_s": "0",
+        "last_s": "53/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "c57dd26660ca5c2ae1f7d5a0d8cb0297994add24442eab7732a5a4b395a1898b",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/demo_drift-turn.mp4"
+    },
+    "static/videos/demo_forest.mp4": {
+      "bytes": 5229380,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "da52f1e75f40767fc75cb4346a213712c9a9c46879d357726a548bc35e9f15c1",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "24.500000",
+        "height": 360,
+        "nb_frames": "294",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 294,
+        "first_s": "0",
+        "last_s": "293/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d3b2b619c44a7ed18196c71da82d0f67f3ce79ddf7b1b306f2b02e39c4aad4c4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/demo_forest.mp4"
+    },
+    "static/videos/demo_motocross-bumps.mp4": {
+      "bytes": 472664,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "da03b146fe24b978198e469528f0435e86b06c5b6e05e91ab4bd40dfe3876c40",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.750000",
+        "height": 360,
+        "nb_frames": "45",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1281:1280",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 45,
+        "first_s": "0",
+        "last_s": "11/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "6e2ab0e09057fa950e0f6721259f51ad8d705c7c6a7c9e4e12541e6f5ef90b8e",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/demo_motocross-bumps.mp4"
+    },
+    "static/videos/demo_running.mp4": {
+      "bytes": 2319901,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "374312a6b489960e9868cb914032d84c491da053a2d039ba08338cc8c622adcf",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "17.166667",
+        "height": 640,
+        "nb_frames": "206",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 360
+      },
+      "packet_pts": {
+        "count": 206,
+        "first_s": "0",
+        "last_s": "205/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "2017faf2eb1bf336771d20f54482d5f76c10a23d2f2a7d07f99d56282c824fc8",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/demo_running.mp4"
+    },
+    "static/videos/demo_spin.mp4": {
+      "bytes": 529076,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "c9d3c13eda3fe41cc29860cf563ba0e4b8c66c3360c34fbe391e59c8e00fdb52",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 360,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 270
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/demo_spin.mp4"
+    },
+    "static/videos/demo_swing-tire.mp4": {
+      "bytes": 1044487,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "2c0e888de0d3068e04f625ad2dace9abd5f8b5ee01e07ab0c046a785e7a1ec2b",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 360,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/demo_swing-tire.mp4"
+    },
+    "static/videos/demo_swing.mp4": {
+      "bytes": 701102,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "563e9df885d166d350c5a26f4df0378770af7d27bcdf5c046e20e2598555c9ad",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.000000",
+        "height": 360,
+        "nb_frames": "60",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 60,
+        "first_s": "0",
+        "last_s": "59/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9d40b546276c2458138052c4084a626891ea0517c7b2580b422832efe701193b",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/demo_swing.mp4"
+    },
+    "static/videos/demo_tennis.mp4": {
+      "bytes": 536951,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "770e580b0ac6d01cb630769001d4c7882214197f8276854dd0d9ab3ae276e38b",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.833333",
+        "height": 360,
+        "nb_frames": "70",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 70,
+        "first_s": "0",
+        "last_s": "23/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "f9f442196ec23b0b4ee0b72476f85c823b56d923523ebcc4a821bffdfa4b102c",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/demo_tennis.mp4"
+    },
+    "static/videos/method_expanded.mp4": {
+      "bytes": 5688116,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "ab895ed384b6189ca7fbe11c09c776f7ce6cdbce63d9dddea36dabebaab516c6",
+      "metadata": {
+        "avg_frame_rate": "30/1",
+        "codec_name": "h264",
+        "duration": "28.333333",
+        "height": 1080,
+        "nb_frames": "850",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/15360",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 850,
+        "first_s": "0",
+        "last_s": "283/10",
+        "packet_durations_s": [
+          "1/30"
+        ],
+        "sha256_of_sorted_rational_seconds": "73323160e455e6ec54ee223d31fbe8f0dda7de1c8e308e0770d45ec30d7de804",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/method_expanded.mp4"
+    },
+    "static/videos/more_camel_input.mp4": {
+      "bytes": 1220553,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a19ff84fd81cebc4df6af992ba61260596402a884a5de6ec0acf5d1d69012def",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 540,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_camel_input.mp4"
+    },
+    "static/videos/more_camel_ours.mp4": {
+      "bytes": 1749476,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "19c680a83a0f5f8dc1fe4af852a5813acc9a5c2b0f88ab9a1d184b1d3f3ca38e",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 540,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_camel_ours.mp4"
+    },
+    "static/videos/more_horsejump-high_input.mp4": {
+      "bytes": 811879,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "0cf97c2396f0d5a3ce0d5577b4935a86d984d1145095089a373c1eb178ad8af1",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.166667",
+        "height": 540,
+        "nb_frames": "50",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 50,
+        "first_s": "0",
+        "last_s": "49/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "2db7585ba726e8b7ec711712dbef6ad4883286f8ea10fd04dfb9b07496e6ff5c",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_horsejump-high_input.mp4"
+    },
+    "static/videos/more_horsejump-high_ours.mp4": {
+      "bytes": 708506,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "a528b0db3a594c248955df999bfea3a0057b8fdff1f25a965eb6d95e1908db4b",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.166667",
+        "height": 540,
+        "nb_frames": "50",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 50,
+        "first_s": "0",
+        "last_s": "49/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "2db7585ba726e8b7ec711712dbef6ad4883286f8ea10fd04dfb9b07496e6ff5c",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_horsejump-high_ours.mp4"
+    },
+    "static/videos/more_kangaroo_input.mp4": {
+      "bytes": 1085909,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "442ba1154711ce658b40f003a6504d37382272dbcc9719dff5a28b1b394aed08",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.583333",
+        "height": 540,
+        "nb_frames": "79",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 79,
+        "first_s": "0",
+        "last_s": "13/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "3211ffcb3ce80e9e256b7af87d8c0a2f467efc98fbf266811f33a74dda7fb9c2",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/more_kangaroo_input.mp4"
+    },
+    "static/videos/more_kangaroo_ours.mp4": {
+      "bytes": 418170,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "2a7dd6603be28b27795c2d7df861c5267bfb5c77a5c5ba1911ca6aaa3969549a",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.583333",
+        "height": 540,
+        "nb_frames": "79",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 79,
+        "first_s": "0",
+        "last_s": "13/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "3211ffcb3ce80e9e256b7af87d8c0a2f467efc98fbf266811f33a74dda7fb9c2",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/more_kangaroo_ours.mp4"
+    },
+    "static/videos/more_kangaroo_with_occlusion_short_input.mp4": {
+      "bytes": 1193998,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "69b2cc93903b122e3cbc527cd9e734817848d09f97c2abb66d1b20752ddaec8d",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "8.333333",
+        "height": 540,
+        "nb_frames": "100",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 100,
+        "first_s": "0",
+        "last_s": "33/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "1aed8069ac475ab8aa834f283339c5064ad469723c25661fda9185c1b725bc66",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_kangaroo_with_occlusion_short_input.mp4"
+    },
+    "static/videos/more_kangaroo_with_occlusion_short_ours.mp4": {
+      "bytes": 11583109,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "56ec0c063dc51d7e8ac58d748534688ff3ca216e52bb60b6d2b86c530ed6c26a",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "8.333333",
+        "height": 562,
+        "nb_frames": "100",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1000
+      },
+      "packet_pts": {
+        "count": 100,
+        "first_s": "0",
+        "last_s": "33/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "1aed8069ac475ab8aa834f283339c5064ad469723c25661fda9185c1b725bc66",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_kangaroo_with_occlusion_short_ours.mp4"
+    },
+    "static/videos/more_motocross-bumps_input.mp4": {
+      "bytes": 844915,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "9db7455dac7fdbfe67c8b22c6a0505177dabea2eb920a94e61dd350fee0212bc",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.750000",
+        "height": 540,
+        "nb_frames": "45",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 45,
+        "first_s": "0",
+        "last_s": "11/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "6e2ab0e09057fa950e0f6721259f51ad8d705c7c6a7c9e4e12541e6f5ef90b8e",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_motocross-bumps_input.mp4"
+    },
+    "static/videos/more_motocross-bumps_ours.mp4": {
+      "bytes": 163026,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "cc442774ac5b3b41847a947eecdf37256c82b86d3fa609215504a82da40a549d",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.750000",
+        "height": 540,
+        "nb_frames": "45",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 45,
+        "first_s": "0",
+        "last_s": "11/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "6e2ab0e09057fa950e0f6721259f51ad8d705c7c6a7c9e4e12541e6f5ef90b8e",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_motocross-bumps_ours.mp4"
+    },
+    "static/videos/more_schoolgirls_input.mp4": {
+      "bytes": 780337,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "de6ce79b8dbb646f259b6d45f843e0bfb0932c3c3fadc587ef2d0cd5a22ffde4",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_schoolgirls_input.mp4"
+    },
+    "static/videos/more_schoolgirls_ours.mp4": {
+      "bytes": 1582491,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "4013994671ea2c540215378e7a9ae42ee2b712e62909f9391c10ecd233bb7af2",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_schoolgirls_ours.mp4"
+    },
+    "static/videos/more_swing-tire_input.mp4": {
+      "bytes": 1845132,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "e82c6e6bac94e0cee12f851b42a5f5a1d066905576e5f56d2a2d92e4a0bea896",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 540,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_swing-tire_input.mp4"
+    },
+    "static/videos/more_swing-tire_ours.mp4": {
+      "bytes": 1025051,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "891fc96eb948ebfc623864f8710d091578b03402ebbf81ab4d62bb8020763309",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 540,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 960
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/more_swing-tire_ours.mp4"
+    },
+    "static/videos/optimized/bmx-trees.mp4": {
+      "bytes": 5263805,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 1080,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2880
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/bmx-trees.mp4"
+    },
+    "static/videos/optimized/car-shadow.mp4": {
+      "bytes": 3064504,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.333333",
+        "height": 1080,
+        "nb_frames": "40",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2880
+      },
+      "packet_pts": {
+        "count": 40,
+        "first_s": "0",
+        "last_s": "13/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "ae00788f344d59beef6b3f4fe6ee7a9bc2dd8829453513a1f775c69202fc1cee",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/optimized/car-shadow.mp4"
+    },
+    "static/videos/optimized/crossing.mp4": {
+      "bytes": 3093836,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.333333",
+        "height": 1080,
+        "nb_frames": "52",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2880
+      },
+      "packet_pts": {
+        "count": 52,
+        "first_s": "0",
+        "last_s": "17/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d85259fd824374020f386dd48564b902dd8575a647f20a62b3226655c23f9d50",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/optimized/crossing.mp4"
+    },
+    "static/videos/optimized/individual/demo_cartwheel.mp4": {
+      "bytes": 381479,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.166667",
+        "height": 360,
+        "nb_frames": "86",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 202
+      },
+      "packet_pts": {
+        "count": 86,
+        "first_s": "0",
+        "last_s": "85/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "4c9bfb58d67beff79f793632de607a11395973e3b453e6b348541c45b414302f",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/individual/demo_cartwheel.mp4"
+    },
+    "static/videos/optimized/individual/demo_spin.mp4": {
+      "bytes": 440443,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 360,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 270
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/individual/demo_spin.mp4"
+    },
+    "static/videos/optimized/individual/demo_swing-tire.mp4": {
+      "bytes": 666701,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 360,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/individual/demo_swing-tire.mp4"
+    },
+    "static/videos/optimized/individual/demo_swing.mp4": {
+      "bytes": 522518,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.000000",
+        "height": 360,
+        "nb_frames": "60",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 60,
+        "first_s": "0",
+        "last_s": "59/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9d40b546276c2458138052c4084a626891ea0517c7b2580b422832efe701193b",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/individual/demo_swing.mp4"
+    },
+    "static/videos/optimized/individual/demo_tennis.mp4": {
+      "bytes": 378894,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.833333",
+        "height": 360,
+        "nb_frames": "70",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 70,
+        "first_s": "0",
+        "last_s": "23/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "f9f442196ec23b0b4ee0b72476f85c823b56d923523ebcc4a821bffdfa4b102c",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/individual/demo_tennis.mp4"
+    },
+    "static/videos/optimized/individual/slider_basketball_3_input.mp4": {
+      "bytes": 446870,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 360,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/individual/slider_basketball_3_input.mp4"
+    },
+    "static/videos/optimized/lady-running.mp4": {
+      "bytes": 8705096,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "5.416667",
+        "height": 1080,
+        "nb_frames": "65",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2880
+      },
+      "packet_pts": {
+        "count": 65,
+        "first_s": "0",
+        "last_s": "16/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "d77b2c6c636986906163f17d32e48f83f30b58cd861cad5594c085cd5750af56",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/lady-running.mp4"
+    },
+    "static/videos/optimized/libby.mp4": {
+      "bytes": 3672931,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.083333",
+        "height": 1080,
+        "nb_frames": "49",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2880
+      },
+      "packet_pts": {
+        "count": 49,
+        "first_s": "0",
+        "last_s": "4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "cbdae6d2d84cc6d8d66ffe41d735a7c088e59a395245b633f5253347422a7422",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/libby.mp4"
+    },
+    "static/videos/optimized/more_camel.mp4": {
+      "bytes": 3019214,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 540,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/more_camel.mp4"
+    },
+    "static/videos/optimized/more_horsejump-high.mp4": {
+      "bytes": 1584519,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "4.166667",
+        "height": 540,
+        "nb_frames": "50",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 50,
+        "first_s": "0",
+        "last_s": "49/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "2db7585ba726e8b7ec711712dbef6ad4883286f8ea10fd04dfb9b07496e6ff5c",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/more_horsejump-high.mp4"
+    },
+    "static/videos/optimized/more_kangaroo.mp4": {
+      "bytes": 1592693,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.583333",
+        "height": 540,
+        "nb_frames": "79",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 79,
+        "first_s": "0",
+        "last_s": "13/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "3211ffcb3ce80e9e256b7af87d8c0a2f467efc98fbf266811f33a74dda7fb9c2",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/optimized/more_kangaroo.mp4"
+    },
+    "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4": {
+      "bytes": 8334644,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "8.333333",
+        "height": 562,
+        "nb_frames": "100",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2000
+      },
+      "packet_pts": {
+        "count": 100,
+        "first_s": "0",
+        "last_s": "33/4",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "1aed8069ac475ab8aa834f283339c5064ad469723c25661fda9185c1b725bc66",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4"
+    },
+    "static/videos/optimized/more_motocross-bumps.mp4": {
+      "bytes": 962963,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.750000",
+        "height": 540,
+        "nb_frames": "45",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 45,
+        "first_s": "0",
+        "last_s": "11/3",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "6e2ab0e09057fa950e0f6721259f51ad8d705c7c6a7c9e4e12541e6f5ef90b8e",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/more_motocross-bumps.mp4"
+    },
+    "static/videos/optimized/more_schoolgirls.mp4": {
+      "bytes": 2426711,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 540,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/more_schoolgirls.mp4"
+    },
+    "static/videos/optimized/more_swing-tire.mp4": {
+      "bytes": 2914362,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 540,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1920
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/more_swing-tire.mp4"
+    },
+    "static/videos/optimized/motorbike.mp4": {
+      "bytes": 2004950,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "3.583333",
+        "height": 1080,
+        "nb_frames": "43",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2880
+      },
+      "packet_pts": {
+        "count": 43,
+        "first_s": "0",
+        "last_s": "7/2",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "9c6ad411677e2e8ea9fef9db28423d6721fd46e383c81b95e4325a28d5bacc84",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/motorbike.mp4"
+    },
+    "static/videos/optimized/spin.mp4": {
+      "bytes": 17085860,
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "6.666667",
+        "height": 1920,
+        "nb_frames": "80",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 2160
+      },
+      "packet_pts": {
+        "count": 80,
+        "first_s": "0",
+        "last_s": "79/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "82d8678acc9ffc54fc45fec1a809579632cdb1045ff281d9382443ea1a24dc5a",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/spin.mp4"
+    },
+    "static/videos/optimized/teaser.mp4": {
+      "bytes": 8312727,
+      "metadata": {
+        "avg_frame_rate": "30/1",
+        "codec_name": "h264",
+        "duration": "11.666667",
+        "height": 720,
+        "nb_frames": "350",
+        "pix_fmt": "yuv420p",
+        "sample_aspect_ratio": "1:1",
+        "start_time": "0.000000",
+        "time_base": "1/15360",
+        "width": 2560
+      },
+      "packet_pts": {
+        "count": 350,
+        "first_s": "0",
+        "last_s": "349/30",
+        "packet_durations_s": [
+          "1/30"
+        ],
+        "sha256_of_sorted_rational_seconds": "d501d044796e9b7fefd3bc9cb122c6260d8d5b582da45a0c0e3b181774c21fc7",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/optimized/teaser.mp4"
+    },
+    "static/videos/slider_basketball_3_input.mp4": {
+      "bytes": 607299,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "fc3defd7a925488abb0142d5018c8fb6ab867cf5afae082dc6791f21b030cc96",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 360,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 640
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "tmp/unused/static/videos/slider_basketball_3_input.mp4"
+    },
+    "static/videos/slider_basketball_3_s3d_lift.mp4": {
+      "bytes": 563232,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "9bf491ba511e0b4b72ba5e66bc26d3015bf702b7918721cc927f8e98032bac27",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 568,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1008
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/slider_basketball_3_s3d_lift.mp4"
+    },
+    "static/videos/slider_basketball_3_s3d_ours.mp4": {
+      "bytes": 528056,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "f5ad202724604770705654ea1ea1903b67430121e4c67a2580006f8bcc655fc7",
+      "metadata": {
+        "avg_frame_rate": "12/1",
+        "codec_name": "h264",
+        "duration": "7.000000",
+        "height": 568,
+        "nb_frames": "84",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/12288",
+        "width": 1008
+      },
+      "packet_pts": {
+        "count": 84,
+        "first_s": "0",
+        "last_s": "83/12",
+        "packet_durations_s": [
+          "1/12"
+        ],
+        "sha256_of_sorted_rational_seconds": "66470043b729b67d0aff9e7af4fcf52d74000edb6d3a3efb1a3f3a69602edad4",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/slider_basketball_3_s3d_ours.mp4"
+    },
+    "static/videos/teaser_input.mp4": {
+      "bytes": 3680121,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "6625df7b18a7e584d6947d5b498b1211e8ed7ee87224c69ba82803ec00c6f4f2",
+      "metadata": {
+        "avg_frame_rate": "30/1",
+        "codec_name": "h264",
+        "duration": "11.666667",
+        "height": 720,
+        "nb_frames": "350",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/15360",
+        "width": 1280
+      },
+      "packet_pts": {
+        "count": 350,
+        "first_s": "0",
+        "last_s": "349/30",
+        "packet_durations_s": [
+          "1/30"
+        ],
+        "sha256_of_sorted_rational_seconds": "d501d044796e9b7fefd3bc9cb122c6260d8d5b582da45a0c0e3b181774c21fc7",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/teaser_input.mp4"
+    },
+    "static/videos/teaser_tracks.mp4": {
+      "bytes": 2905980,
+      "fresh_metadata_matches_manifest": true,
+      "manifest_sha256": "f5d5e254d9fb316e44c6754b052a1c3610a6ecc3618fb9406de461917a2a209b",
+      "metadata": {
+        "avg_frame_rate": "30/1",
+        "codec_name": "h264",
+        "duration": "11.666667",
+        "height": 720,
+        "nb_frames": "350",
+        "pix_fmt": "yuv420p",
+        "start_time": "0.000000",
+        "time_base": "1/15360",
+        "width": 1280
+      },
+      "packet_pts": {
+        "count": 350,
+        "first_s": "0",
+        "last_s": "349/30",
+        "packet_durations_s": [
+          "1/30"
+        ],
+        "sha256_of_sorted_rational_seconds": "d501d044796e9b7fefd3bc9cb122c6260d8d5b582da45a0c0e3b181774c21fc7",
+        "strict_cfr_at_average_fps": true
+      },
+      "resolved_path": "static/videos/teaser_tracks.mp4"
+    }
+  },
+  "groups": [
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/bmx-trees.mp4",
+      "atlas_bytes": 5263805,
+      "atlas_dimensions": [
+        2880,
+        1080
+      ],
+      "displayed": true,
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "name": "bmx-trees",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.986648,
+            "luma": 0.985015,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_bmx-trees_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997365,
+            "luma": 0.998445,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_bmx-trees_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1920,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997491,
+            "luma": 0.998489,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_bmx-trees_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.995554,
+            "luma": 0.998229,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_bmx-trees_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.995312,
+            "luma": 0.99828,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.986648,
+      "source_bytes": 5086901,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/car-shadow.mp4",
+      "atlas_bytes": 3064504,
+      "atlas_dimensions": [
+        2880,
+        1080
+      ],
+      "displayed": false,
+      "duration_s": 3.333333,
+      "fps": "12",
+      "frames": 40,
+      "name": "car-shadow",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.988413,
+            "luma": 0.98598,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_car-shadow_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.996476,
+            "luma": 0.996159,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_car-shadow_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1920,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.996925,
+            "luma": 0.996719,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_car-shadow_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.995843,
+            "luma": 0.996648,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_car-shadow_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.995675,
+            "luma": 0.996319,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_car-shadow_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.988413,
+      "source_bytes": 2961572,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/crossing.mp4",
+      "atlas_bytes": 3093836,
+      "atlas_dimensions": [
+        2880,
+        1080
+      ],
+      "displayed": false,
+      "duration_s": 4.333333,
+      "fps": "12",
+      "frames": 52,
+      "name": "crossing",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.993233,
+            "luma": 0.992113,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_crossing_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.998294,
+            "luma": 0.998372,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_crossing_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1920,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.998705,
+            "luma": 0.998914,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_crossing_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997041,
+            "luma": 0.998459,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_crossing_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.996871,
+            "luma": 0.997885,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_crossing_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.993233,
+      "source_bytes": 2991348,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/lady-running.mp4",
+      "atlas_bytes": 8705096,
+      "atlas_dimensions": [
+        2880,
+        1080
+      ],
+      "displayed": true,
+      "duration_s": 5.416667,
+      "fps": "12",
+      "frames": 65,
+      "name": "lady-running",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.989102,
+            "luma": 0.988366,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_lady-running_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.996096,
+            "luma": 0.997377,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_lady-running_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1920,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.996514,
+            "luma": 0.998032,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_lady-running_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.992569,
+            "luma": 0.996686,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_lady-running_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.992637,
+            "luma": 0.996676,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.989102,
+      "source_bytes": 8336321,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/libby.mp4",
+      "atlas_bytes": 3672931,
+      "atlas_dimensions": [
+        2880,
+        1080
+      ],
+      "displayed": true,
+      "duration_s": 4.083333,
+      "fps": "12",
+      "frames": 49,
+      "name": "libby",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.984504,
+            "luma": 0.981641,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_libby_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997378,
+            "luma": 0.997677,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_libby_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1920,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997239,
+            "luma": 0.997779,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_libby_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.995528,
+            "luma": 0.997548,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_libby_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.995396,
+            "luma": 0.997183,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_libby_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.984504,
+      "source_bytes": 3512734,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_camel.mp4",
+      "atlas_bytes": 3019214,
+      "atlas_dimensions": [
+        1920,
+        540
+      ],
+      "displayed": true,
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "name": "more_camel",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.993029,
+            "luma": 0.992393,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_camel_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.996249,
+            "luma": 0.996572,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_camel_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.993029,
+      "source_bytes": 2970029,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_horsejump-high.mp4",
+      "atlas_bytes": 1584519,
+      "atlas_dimensions": [
+        1920,
+        540
+      ],
+      "displayed": true,
+      "duration_s": 4.166667,
+      "fps": "12",
+      "frames": 50,
+      "name": "more_horsejump-high",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.987013,
+            "luma": 0.985368,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_horsejump-high_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.99746,
+            "luma": 0.997746,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_horsejump-high_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.987013,
+      "source_bytes": 1520385,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_kangaroo.mp4",
+      "atlas_bytes": 1592693,
+      "atlas_dimensions": [
+        1920,
+        540
+      ],
+      "displayed": false,
+      "duration_s": 6.583333,
+      "fps": "12",
+      "frames": 79,
+      "name": "more_kangaroo",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.991897,
+            "luma": 0.991316,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_kangaroo_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997621,
+            "luma": 0.99815,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_kangaroo_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.991897,
+      "source_bytes": 1504079,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+      "atlas_bytes": 8334644,
+      "atlas_dimensions": [
+        2000,
+        562
+      ],
+      "displayed": true,
+      "duration_s": 8.333333,
+      "fps": "12",
+      "frames": 100,
+      "name": "more_kangaroo_with_occlusion_short",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.986321,
+            "luma": 0.983901,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_kangaroo_with_occlusion_short_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            1000,
+            0,
+            1000,
+            562
+          ],
+          "dimensions": [
+            1000,
+            562
+          ],
+          "recorded_ssim": {
+            "all": 0.982214,
+            "luma": 0.976458,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_kangaroo_with_occlusion_short_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.982214,
+      "source_bytes": 12777107,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_motocross-bumps.mp4",
+      "atlas_bytes": 962963,
+      "atlas_dimensions": [
+        1920,
+        540
+      ],
+      "displayed": true,
+      "duration_s": 3.75,
+      "fps": "12",
+      "frames": 45,
+      "name": "more_motocross-bumps",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.988862,
+            "luma": 0.986635,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_motocross-bumps_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.998659,
+            "luma": 0.998653,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_motocross-bumps_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.988862,
+      "source_bytes": 1007941,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_schoolgirls.mp4",
+      "atlas_bytes": 2426711,
+      "atlas_dimensions": [
+        1920,
+        540
+      ],
+      "displayed": true,
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "name": "more_schoolgirls",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.994367,
+            "luma": 0.994772,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_schoolgirls_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997763,
+            "luma": 0.998558,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_schoolgirls_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.994367,
+      "source_bytes": 2362828,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/more_swing-tire.mp4",
+      "atlas_bytes": 2914362,
+      "atlas_dimensions": [
+        1920,
+        540
+      ],
+      "displayed": true,
+      "duration_s": 7.0,
+      "fps": "12",
+      "frames": 84,
+      "name": "more_swing-tire",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.993177,
+            "luma": 0.992207,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_swing-tire_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.997512,
+            "luma": 0.997878,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/more_swing-tire_ours.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.993177,
+      "source_bytes": 2870183,
+      "source_count": 2
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/motorbike.mp4",
+      "atlas_bytes": 2004950,
+      "atlas_dimensions": [
+        2880,
+        1080
+      ],
+      "displayed": true,
+      "duration_s": 3.583333,
+      "fps": "12",
+      "frames": 43,
+      "name": "motorbike",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.985704,
+            "luma": 0.981941,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_motorbike_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.998441,
+            "luma": 0.99825,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_motorbike_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1920,
+            0,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.99867,
+            "luma": 0.998591,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_motorbike_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.998572,
+            "luma": 0.998974,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_motorbike_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            960,
+            540,
+            960,
+            540
+          ],
+          "dimensions": [
+            960,
+            540
+          ],
+          "recorded_ssim": {
+            "all": 0.998105,
+            "luma": 0.998296,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.985704,
+      "source_bytes": 1940502,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/spin.mp4",
+      "atlas_bytes": 17085860,
+      "atlas_dimensions": [
+        2160,
+        1920
+      ],
+      "displayed": true,
+      "duration_s": 6.666667,
+      "fps": "12",
+      "frames": 80,
+      "name": "spin",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            720,
+            960
+          ],
+          "dimensions": [
+            720,
+            960
+          ],
+          "recorded_ssim": {
+            "all": 0.989802,
+            "luma": 0.987154,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_spin_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            720,
+            0,
+            720,
+            960
+          ],
+          "dimensions": [
+            720,
+            960
+          ],
+          "recorded_ssim": {
+            "all": 0.996801,
+            "luma": 0.997052,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_spin_tc3r_vggto.mp4"
+        },
+        {
+          "atlas_crop": [
+            1440,
+            0,
+            720,
+            960
+          ],
+          "dimensions": [
+            720,
+            960
+          ],
+          "recorded_ssim": {
+            "all": 0.997433,
+            "luma": 0.997767,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_spin_vdpm.mp4"
+        },
+        {
+          "atlas_crop": [
+            0,
+            960,
+            720,
+            960
+          ],
+          "dimensions": [
+            720,
+            960
+          ],
+          "recorded_ssim": {
+            "all": 0.996617,
+            "luma": 0.997231,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_spin_4rc.mp4"
+        },
+        {
+          "atlas_crop": [
+            720,
+            960,
+            720,
+            960
+          ],
+          "dimensions": [
+            720,
+            960
+          ],
+          "recorded_ssim": {
+            "all": 0.99684,
+            "luma": 0.997196,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/cmp_spin_ours_cowtracker_vggto.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.989802,
+      "source_bytes": 16526934,
+      "source_count": 5
+    },
+    {
+      "all_source_and_atlas_presentation_timestamps_identical": true,
+      "atlas": "static/videos/optimized/teaser.mp4",
+      "atlas_bytes": 8312727,
+      "atlas_dimensions": [
+        2560,
+        720
+      ],
+      "displayed": true,
+      "duration_s": 11.666667,
+      "fps": "30",
+      "frames": 350,
+      "name": "teaser",
+      "panels": [
+        {
+          "atlas_crop": [
+            0,
+            0,
+            1280,
+            720
+          ],
+          "dimensions": [
+            1280,
+            720
+          ],
+          "recorded_ssim": {
+            "all": 0.986904,
+            "luma": 0.984025,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/teaser_input.mp4"
+        },
+        {
+          "atlas_crop": [
+            1280,
+            0,
+            1280,
+            720
+          ],
+          "dimensions": [
+            1280,
+            720
+          ],
+          "recorded_ssim": {
+            "all": 0.992007,
+            "luma": 0.990198,
+            "scope": "all frames at native resolution"
+          },
+          "source": "static/videos/teaser_tracks.mp4"
+        }
+      ],
+      "recorded_minimum_panel_ssim": 0.986904,
+      "source_bytes": 6586101,
+      "source_count": 2
+    }
+  ],
+  "head_commit": "8db57b302a0c1e490958d27b1eb8028c9edf358a",
+  "historical_comparison": {
+    "active_more_results_atlas_bytes": 19242413,
+    "current_12groups": {
+      "atlas_bytes": 64287782,
+      "default_video_bytes_including_viewer_clips": 82471465,
+      "group_source_bytes": 65497966,
+      "groups": 12,
+      "individual_compression_saving_bytes": 1120944
+    },
+    "current_vs_initial_optimized_default_video_change_percent": -1.2609957283538198,
+    "current_vs_initial_optimized_default_video_delta_bytes": -1053243,
+    "current_vs_same_selection_historical_atlas_change_percent": 11.630128373693815,
+    "current_vs_same_selection_historical_atlas_delta_bytes": 6697790,
+    "historical_5second_browser_measurements": {
+      "after_requests": 11,
+      "after_transfer_bytes": 8736921,
+      "before_requests": 72,
+      "before_transfer_bytes": 70153691,
+      "date": "2026-10-30",
+      "status": "Historical measurements retained as provenance; not rerun by this audit."
+    },
+    "historical_encodes_for_current_12group_selection": {
+      "atlas_bytes": 57589992,
+      "default_video_bytes_including_viewer_clips": 75773675,
+      "group_source_bytes": 54287670,
+      "groups": 12,
+      "individual_compression_saving_bytes": 1120944
+    },
+    "initial_optimized_15groups": {
+      "atlas_bytes": 65341025,
+      "default_video_bytes_including_viewer_clips": 83524708,
+      "group_source_bytes": 61744669,
+      "groups": 15,
+      "individual_compression_saving_bytes": 1120944
+    },
+    "removed_groups_historical_atlas_bytes": {
+      "car-shadow": 3064504,
+      "crossing": 3093836,
+      "more_kangaroo": 1592693
+    },
+    "source_changes_against_historical_manifest": [
+      {
+        "current_bytes": 11583109,
+        "current_dimensions": [
+          1000,
+          562
+        ],
+        "current_sha256": "56ec0c063dc51d7e8ac58d748534688ff3ca216e52bb60b6d2b86c530ed6c26a",
+        "historical_bytes": 372813,
+        "historical_dimensions": [
+          960,
+          540
+        ],
+        "historical_sha256": "2c5efc0195f0d8f06cdd711e79cf2e941c4370b4af2c5cd2726a6c31b47c118e",
+        "source": "more_kangaroo_with_occlusion_short_ours.mp4"
+      }
+    ]
+  },
+  "individual_encodes": [
+    {
+      "accepted": true,
+      "encoded_bytes": 381479,
+      "name": "demo_cartwheel.mp4",
+      "presentation_timestamps_match_source": true,
+      "recorded_ssim": {
+        "all": 0.990723,
+        "luma": 0.989482,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 157455,
+      "source_bytes": 538934,
+      "src": "static/videos/optimized/individual/demo_cartwheel.mp4",
+      "trial_path": null
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 590057,
+      "name": "demo_drift-turn.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.990264,
+        "luma": 0.987656,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": -44628,
+      "source_bytes": 545429,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_drift-turn.mp4"
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 7312326,
+      "name": "demo_forest.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.990488,
+        "luma": 0.990881,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": -2082946,
+      "source_bytes": 5229380,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_forest.mp4"
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 456779,
+      "name": "demo_motocross-bumps.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.985341,
+        "luma": 0.9829,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 15885,
+      "source_bytes": 472664,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_motocross-bumps.mp4"
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 2896799,
+      "name": "demo_running.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.984747,
+        "luma": 0.980058,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": -576898,
+      "source_bytes": 2319901,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/demo_running.mp4"
+    },
+    {
+      "accepted": true,
+      "encoded_bytes": 440443,
+      "name": "demo_spin.mp4",
+      "presentation_timestamps_match_source": true,
+      "recorded_ssim": {
+        "all": 0.985412,
+        "luma": 0.982466,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 88633,
+      "source_bytes": 529076,
+      "src": "static/videos/optimized/individual/demo_spin.mp4",
+      "trial_path": null
+    },
+    {
+      "accepted": true,
+      "encoded_bytes": 666701,
+      "name": "demo_swing-tire.mp4",
+      "presentation_timestamps_match_source": true,
+      "recorded_ssim": {
+        "all": 0.990906,
+        "luma": 0.989762,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 377786,
+      "source_bytes": 1044487,
+      "src": "static/videos/optimized/individual/demo_swing-tire.mp4",
+      "trial_path": null
+    },
+    {
+      "accepted": true,
+      "encoded_bytes": 522518,
+      "name": "demo_swing.mp4",
+      "presentation_timestamps_match_source": true,
+      "recorded_ssim": {
+        "all": 0.988613,
+        "luma": 0.986738,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 178584,
+      "source_bytes": 701102,
+      "src": "static/videos/optimized/individual/demo_swing.mp4",
+      "trial_path": null
+    },
+    {
+      "accepted": true,
+      "encoded_bytes": 378894,
+      "name": "demo_tennis.mp4",
+      "presentation_timestamps_match_source": true,
+      "recorded_ssim": {
+        "all": 0.990048,
+        "luma": 0.988615,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 158057,
+      "source_bytes": 536951,
+      "src": "static/videos/optimized/individual/demo_tennis.mp4",
+      "trial_path": null
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 5864148,
+      "name": "method_expanded.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.997962,
+        "luma": 0.997722,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": -176032,
+      "source_bytes": 5688116,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/method_expanded.mp4"
+    },
+    {
+      "accepted": true,
+      "encoded_bytes": 446870,
+      "name": "slider_basketball_3_input.mp4",
+      "presentation_timestamps_match_source": true,
+      "recorded_ssim": {
+        "all": 0.992731,
+        "luma": 0.990453,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": 160429,
+      "source_bytes": 607299,
+      "src": "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+      "trial_path": null
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 654747,
+      "name": "slider_basketball_3_s3d_lift.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.99824,
+        "luma": 0.997703,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": -91515,
+      "source_bytes": 563232,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/slider_basketball_3_s3d_lift.mp4"
+    },
+    {
+      "accepted": false,
+      "encoded_bytes": 557751,
+      "name": "slider_basketball_3_s3d_ours.mp4",
+      "presentation_timestamps_match_source": null,
+      "recorded_ssim": {
+        "all": 0.998294,
+        "luma": 0.997706,
+        "scope": "all frames at native resolution"
+      },
+      "saved_bytes": -29695,
+      "source_bytes": 528056,
+      "src": null,
+      "trial_path": "/private/tmp/relift3d-optimization/rejected-compression/slider_basketball_3_s3d_ours.mp4"
+    }
+  ],
+  "inventory": {
+    "active_group_order": [
+      "teaser",
+      "more_kangaroo_with_occlusion_short",
+      "more_horsejump-high",
+      "more_schoolgirls",
+      "more_swing-tire",
+      "more_motocross-bumps",
+      "more_camel",
+      "lady-running",
+      "libby",
+      "motorbike",
+      "bmx-trees",
+      "spin"
+    ],
+    "active_posters": {
+      "bytes": 4325400,
+      "files": 52,
+      "paths": [
+        "static/images/method_poster.jpg",
+        "static/images/posters/cmp_bmx-trees_4rc.jpg",
+        "static/images/posters/cmp_bmx-trees_input.jpg",
+        "static/images/posters/cmp_bmx-trees_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_bmx-trees_tc3r_vggto.jpg",
+        "static/images/posters/cmp_bmx-trees_vdpm.jpg",
+        "static/images/posters/cmp_lady-running_4rc.jpg",
+        "static/images/posters/cmp_lady-running_input.jpg",
+        "static/images/posters/cmp_lady-running_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_lady-running_tc3r_vggto.jpg",
+        "static/images/posters/cmp_lady-running_vdpm.jpg",
+        "static/images/posters/cmp_libby_4rc.jpg",
+        "static/images/posters/cmp_libby_input.jpg",
+        "static/images/posters/cmp_libby_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_libby_tc3r_vggto.jpg",
+        "static/images/posters/cmp_libby_vdpm.jpg",
+        "static/images/posters/cmp_motorbike_4rc.jpg",
+        "static/images/posters/cmp_motorbike_input.jpg",
+        "static/images/posters/cmp_motorbike_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_motorbike_tc3r_vggto.jpg",
+        "static/images/posters/cmp_motorbike_vdpm.jpg",
+        "static/images/posters/cmp_spin_4rc.jpg",
+        "static/images/posters/cmp_spin_input.jpg",
+        "static/images/posters/cmp_spin_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_spin_tc3r_vggto.jpg",
+        "static/images/posters/cmp_spin_vdpm.jpg",
+        "static/images/posters/demo_cartwheel.jpg",
+        "static/images/posters/demo_drift-turn.jpg",
+        "static/images/posters/demo_forest.jpg",
+        "static/images/posters/demo_motocross-bumps.jpg",
+        "static/images/posters/demo_running.jpg",
+        "static/images/posters/demo_spin.jpg",
+        "static/images/posters/demo_swing-tire.jpg",
+        "static/images/posters/demo_swing.jpg",
+        "static/images/posters/demo_tennis.jpg",
+        "static/images/posters/more_camel_input.jpg",
+        "static/images/posters/more_camel_ours.jpg",
+        "static/images/posters/more_horsejump-high_input.jpg",
+        "static/images/posters/more_horsejump-high_ours.jpg",
+        "static/images/posters/more_kangaroo_with_occlusion_short_input.jpg",
+        "static/images/posters/more_kangaroo_with_occlusion_short_ours.jpg",
+        "static/images/posters/more_motocross-bumps_input.jpg",
+        "static/images/posters/more_motocross-bumps_ours.jpg",
+        "static/images/posters/more_schoolgirls_input.jpg",
+        "static/images/posters/more_schoolgirls_ours.jpg",
+        "static/images/posters/more_swing-tire_input.jpg",
+        "static/images/posters/more_swing-tire_ours.jpg",
+        "static/images/posters/slider_basketball_3_input.jpg",
+        "static/images/posters/slider_basketball_3_s3d_lift.jpg",
+        "static/images/posters/slider_basketball_3_s3d_ours.jpg",
+        "static/images/posters/teaser_input.jpg",
+        "static/images/posters/teaser_tracks.jpg"
+      ]
+    },
+    "all_direct_and_dynamic_local_runtime_assets": {
+      "bytes": 236948453,
+      "files": 135,
+      "paths": [
+        "favicon.ico",
+        "favicon.svg",
+        "static/css/bulma.min.css",
+        "static/css/index.css",
+        "static/css/media.css",
+        "static/data/cartwheel.js",
+        "static/data/drift-turn.js",
+        "static/data/forest.js",
+        "static/data/motocross-bumps.js",
+        "static/data/running.js",
+        "static/data/spin.js",
+        "static/data/swing-tire.js",
+        "static/data/swing.js",
+        "static/data/tennis.js",
+        "static/images/method_poster.jpg",
+        "static/images/posters/cmp_bmx-trees_4rc.jpg",
+        "static/images/posters/cmp_bmx-trees_input.jpg",
+        "static/images/posters/cmp_bmx-trees_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_bmx-trees_tc3r_vggto.jpg",
+        "static/images/posters/cmp_bmx-trees_vdpm.jpg",
+        "static/images/posters/cmp_lady-running_4rc.jpg",
+        "static/images/posters/cmp_lady-running_input.jpg",
+        "static/images/posters/cmp_lady-running_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_lady-running_tc3r_vggto.jpg",
+        "static/images/posters/cmp_lady-running_vdpm.jpg",
+        "static/images/posters/cmp_libby_4rc.jpg",
+        "static/images/posters/cmp_libby_input.jpg",
+        "static/images/posters/cmp_libby_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_libby_tc3r_vggto.jpg",
+        "static/images/posters/cmp_libby_vdpm.jpg",
+        "static/images/posters/cmp_motorbike_4rc.jpg",
+        "static/images/posters/cmp_motorbike_input.jpg",
+        "static/images/posters/cmp_motorbike_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_motorbike_tc3r_vggto.jpg",
+        "static/images/posters/cmp_motorbike_vdpm.jpg",
+        "static/images/posters/cmp_spin_4rc.jpg",
+        "static/images/posters/cmp_spin_input.jpg",
+        "static/images/posters/cmp_spin_ours_cowtracker_vggto.jpg",
+        "static/images/posters/cmp_spin_tc3r_vggto.jpg",
+        "static/images/posters/cmp_spin_vdpm.jpg",
+        "static/images/posters/demo_cartwheel.jpg",
+        "static/images/posters/demo_drift-turn.jpg",
+        "static/images/posters/demo_forest.jpg",
+        "static/images/posters/demo_motocross-bumps.jpg",
+        "static/images/posters/demo_running.jpg",
+        "static/images/posters/demo_spin.jpg",
+        "static/images/posters/demo_swing-tire.jpg",
+        "static/images/posters/demo_swing.jpg",
+        "static/images/posters/demo_tennis.jpg",
+        "static/images/posters/more_camel_input.jpg",
+        "static/images/posters/more_camel_ours.jpg",
+        "static/images/posters/more_horsejump-high_input.jpg",
+        "static/images/posters/more_horsejump-high_ours.jpg",
+        "static/images/posters/more_kangaroo_with_occlusion_short_input.jpg",
+        "static/images/posters/more_kangaroo_with_occlusion_short_ours.jpg",
+        "static/images/posters/more_motocross-bumps_input.jpg",
+        "static/images/posters/more_motocross-bumps_ours.jpg",
+        "static/images/posters/more_schoolgirls_input.jpg",
+        "static/images/posters/more_schoolgirls_ours.jpg",
+        "static/images/posters/more_swing-tire_input.jpg",
+        "static/images/posters/more_swing-tire_ours.jpg",
+        "static/images/posters/slider_basketball_3_input.jpg",
+        "static/images/posters/slider_basketball_3_s3d_lift.jpg",
+        "static/images/posters/slider_basketball_3_s3d_ours.jpg",
+        "static/images/posters/teaser_input.jpg",
+        "static/images/posters/teaser_tracks.jpg",
+        "static/js/OrbitControls.js",
+        "static/js/relift-analytics.js",
+        "static/js/relift-media-loader.js",
+        "static/js/relift-viewer.js",
+        "static/js/three.min.js",
+        "static/videos/cmp_bmx-trees_4rc.mp4",
+        "static/videos/cmp_bmx-trees_input.mp4",
+        "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_bmx-trees_tc3r_vggto.mp4",
+        "static/videos/cmp_bmx-trees_vdpm.mp4",
+        "static/videos/cmp_lady-running_4rc.mp4",
+        "static/videos/cmp_lady-running_input.mp4",
+        "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_lady-running_tc3r_vggto.mp4",
+        "static/videos/cmp_lady-running_vdpm.mp4",
+        "static/videos/cmp_libby_4rc.mp4",
+        "static/videos/cmp_libby_input.mp4",
+        "static/videos/cmp_libby_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_libby_tc3r_vggto.mp4",
+        "static/videos/cmp_libby_vdpm.mp4",
+        "static/videos/cmp_motorbike_4rc.mp4",
+        "static/videos/cmp_motorbike_input.mp4",
+        "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_motorbike_tc3r_vggto.mp4",
+        "static/videos/cmp_motorbike_vdpm.mp4",
+        "static/videos/cmp_spin_4rc.mp4",
+        "static/videos/cmp_spin_input.mp4",
+        "static/videos/cmp_spin_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_spin_tc3r_vggto.mp4",
+        "static/videos/cmp_spin_vdpm.mp4",
+        "static/videos/demo_drift-turn.mp4",
+        "static/videos/demo_forest.mp4",
+        "static/videos/demo_motocross-bumps.mp4",
+        "static/videos/demo_running.mp4",
+        "static/videos/method_expanded.mp4",
+        "static/videos/more_camel_input.mp4",
+        "static/videos/more_camel_ours.mp4",
+        "static/videos/more_horsejump-high_input.mp4",
+        "static/videos/more_horsejump-high_ours.mp4",
+        "static/videos/more_kangaroo_with_occlusion_short_input.mp4",
+        "static/videos/more_kangaroo_with_occlusion_short_ours.mp4",
+        "static/videos/more_motocross-bumps_input.mp4",
+        "static/videos/more_motocross-bumps_ours.mp4",
+        "static/videos/more_schoolgirls_input.mp4",
+        "static/videos/more_schoolgirls_ours.mp4",
+        "static/videos/more_swing-tire_input.mp4",
+        "static/videos/more_swing-tire_ours.mp4",
+        "static/videos/optimized/bmx-trees.mp4",
+        "static/videos/optimized/individual/demo_cartwheel.mp4",
+        "static/videos/optimized/individual/demo_spin.mp4",
+        "static/videos/optimized/individual/demo_swing-tire.mp4",
+        "static/videos/optimized/individual/demo_swing.mp4",
+        "static/videos/optimized/individual/demo_tennis.mp4",
+        "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "static/videos/optimized/lady-running.mp4",
+        "static/videos/optimized/libby.mp4",
+        "static/videos/optimized/more_camel.mp4",
+        "static/videos/optimized/more_horsejump-high.mp4",
+        "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+        "static/videos/optimized/more_motocross-bumps.mp4",
+        "static/videos/optimized/more_schoolgirls.mp4",
+        "static/videos/optimized/more_swing-tire.mp4",
+        "static/videos/optimized/motorbike.mp4",
+        "static/videos/optimized/spin.mp4",
+        "static/videos/optimized/teaser.mp4",
+        "static/videos/slider_basketball_3_s3d_lift.mp4",
+        "static/videos/slider_basketball_3_s3d_ours.mp4",
+        "static/videos/teaser_input.mp4",
+        "static/videos/teaser_tracks.mp4"
+      ]
+    },
+    "all_runtime_assets_plus_html_bytes": 236993582,
+    "all_viewer_scene_data": {
+      "bytes": 83762618,
+      "files": 9,
+      "paths": [
+        "static/data/cartwheel.js",
+        "static/data/drift-turn.js",
+        "static/data/forest.js",
+        "static/data/motocross-bumps.js",
+        "static/data/running.js",
+        "static/data/spin.js",
+        "static/data/swing-tire.js",
+        "static/data/swing.js",
+        "static/data/tennis.js"
+      ]
+    },
+    "byte_total_definition": "Complete unique file sizes for all displayed resources, not initial network transfer; browser lazy-loading, caching, range requests and aborted requests change observed transfers. Default mode uses 12 atlases plus method/wipe and 9 viewer clips; fallback mode uses individual source panels.",
+    "counts": {
+      "accepted_individual_encodes": 6,
+      "all_generated_atlases_including_archive": 15,
+      "all_original_source_videos_including_archive": 64,
+      "all_recorded_posters_including_archive": 64,
+      "composite_fallback_video_panels": 39,
+      "composite_groups": 12,
+      "generated_atlases_in_active_static": 12,
+      "generated_atlases_in_local_archive": 3,
+      "method_video_elements": 1,
+      "original_source_videos_in_active_static": 46,
+      "original_source_videos_in_local_archive": 18,
+      "recorded_posters_in_active_static": 51,
+      "recorded_posters_in_local_archive": 13,
+      "rejected_individual_trials": 7,
+      "static_video_elements": 43,
+      "viewer_scene_data_files": 9,
+      "viewer_thumbnail_video_elements": 9,
+      "wipe_video_elements": 3
+    },
+    "default_and_fallback_mp4_union": {
+      "bytes": 147969431,
+      "files": 64,
+      "paths": [
+        "static/videos/cmp_bmx-trees_4rc.mp4",
+        "static/videos/cmp_bmx-trees_input.mp4",
+        "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_bmx-trees_tc3r_vggto.mp4",
+        "static/videos/cmp_bmx-trees_vdpm.mp4",
+        "static/videos/cmp_lady-running_4rc.mp4",
+        "static/videos/cmp_lady-running_input.mp4",
+        "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_lady-running_tc3r_vggto.mp4",
+        "static/videos/cmp_lady-running_vdpm.mp4",
+        "static/videos/cmp_libby_4rc.mp4",
+        "static/videos/cmp_libby_input.mp4",
+        "static/videos/cmp_libby_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_libby_tc3r_vggto.mp4",
+        "static/videos/cmp_libby_vdpm.mp4",
+        "static/videos/cmp_motorbike_4rc.mp4",
+        "static/videos/cmp_motorbike_input.mp4",
+        "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_motorbike_tc3r_vggto.mp4",
+        "static/videos/cmp_motorbike_vdpm.mp4",
+        "static/videos/cmp_spin_4rc.mp4",
+        "static/videos/cmp_spin_input.mp4",
+        "static/videos/cmp_spin_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_spin_tc3r_vggto.mp4",
+        "static/videos/cmp_spin_vdpm.mp4",
+        "static/videos/demo_drift-turn.mp4",
+        "static/videos/demo_forest.mp4",
+        "static/videos/demo_motocross-bumps.mp4",
+        "static/videos/demo_running.mp4",
+        "static/videos/method_expanded.mp4",
+        "static/videos/more_camel_input.mp4",
+        "static/videos/more_camel_ours.mp4",
+        "static/videos/more_horsejump-high_input.mp4",
+        "static/videos/more_horsejump-high_ours.mp4",
+        "static/videos/more_kangaroo_with_occlusion_short_input.mp4",
+        "static/videos/more_kangaroo_with_occlusion_short_ours.mp4",
+        "static/videos/more_motocross-bumps_input.mp4",
+        "static/videos/more_motocross-bumps_ours.mp4",
+        "static/videos/more_schoolgirls_input.mp4",
+        "static/videos/more_schoolgirls_ours.mp4",
+        "static/videos/more_swing-tire_input.mp4",
+        "static/videos/more_swing-tire_ours.mp4",
+        "static/videos/optimized/bmx-trees.mp4",
+        "static/videos/optimized/individual/demo_cartwheel.mp4",
+        "static/videos/optimized/individual/demo_spin.mp4",
+        "static/videos/optimized/individual/demo_swing-tire.mp4",
+        "static/videos/optimized/individual/demo_swing.mp4",
+        "static/videos/optimized/individual/demo_tennis.mp4",
+        "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "static/videos/optimized/lady-running.mp4",
+        "static/videos/optimized/libby.mp4",
+        "static/videos/optimized/more_camel.mp4",
+        "static/videos/optimized/more_horsejump-high.mp4",
+        "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+        "static/videos/optimized/more_motocross-bumps.mp4",
+        "static/videos/optimized/more_schoolgirls.mp4",
+        "static/videos/optimized/more_swing-tire.mp4",
+        "static/videos/optimized/motorbike.mp4",
+        "static/videos/optimized/spin.mp4",
+        "static/videos/optimized/teaser.mp4",
+        "static/videos/slider_basketball_3_s3d_lift.mp4",
+        "static/videos/slider_basketball_3_s3d_ours.mp4",
+        "static/videos/teaser_input.mp4",
+        "static/videos/teaser_tracks.mp4"
+      ]
+    },
+    "default_cartwheel_scene": {
+      "scene_data_bytes": 7525013,
+      "thumbnail_video_bytes": 381479,
+      "viewer_dependency_bytes": 634444
+    },
+    "default_complete_local_resource_inventory": {
+      "bytes": 171495616,
+      "definition": "Unique file sizes for every selectable scene and displayed group in this mode, including HTML and posters; excludes external Google Fonts/Analytics and is not a measured network transfer.",
+      "files": 97
+    },
+    "default_minus_same_active_selection_uncompressed_source_bytes": -2331128,
+    "default_playback_mp4": {
+      "bytes": 82471465,
+      "files": 25,
+      "paths": [
+        "static/videos/demo_drift-turn.mp4",
+        "static/videos/demo_forest.mp4",
+        "static/videos/demo_motocross-bumps.mp4",
+        "static/videos/demo_running.mp4",
+        "static/videos/method_expanded.mp4",
+        "static/videos/optimized/bmx-trees.mp4",
+        "static/videos/optimized/individual/demo_cartwheel.mp4",
+        "static/videos/optimized/individual/demo_spin.mp4",
+        "static/videos/optimized/individual/demo_swing-tire.mp4",
+        "static/videos/optimized/individual/demo_swing.mp4",
+        "static/videos/optimized/individual/demo_tennis.mp4",
+        "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "static/videos/optimized/lady-running.mp4",
+        "static/videos/optimized/libby.mp4",
+        "static/videos/optimized/more_camel.mp4",
+        "static/videos/optimized/more_horsejump-high.mp4",
+        "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4",
+        "static/videos/optimized/more_motocross-bumps.mp4",
+        "static/videos/optimized/more_schoolgirls.mp4",
+        "static/videos/optimized/more_swing-tire.mp4",
+        "static/videos/optimized/motorbike.mp4",
+        "static/videos/optimized/spin.mp4",
+        "static/videos/optimized/teaser.mp4",
+        "static/videos/slider_basketball_3_s3d_lift.mp4",
+        "static/videos/slider_basketball_3_s3d_ours.mp4"
+      ]
+    },
+    "default_vs_same_selection_uncompressed_video_change_percent": -2.748887643093645,
+    "fallback_complete_local_resource_inventory": {
+      "bytes": 172705800,
+      "definition": "Unique file sizes for every selectable scene and displayed group in this mode, including HTML and posters; excludes external Google Fonts/Analytics and is not a measured network transfer.",
+      "files": 124
+    },
+    "fallback_playback_mp4": {
+      "bytes": 83681649,
+      "files": 52,
+      "paths": [
+        "static/videos/cmp_bmx-trees_4rc.mp4",
+        "static/videos/cmp_bmx-trees_input.mp4",
+        "static/videos/cmp_bmx-trees_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_bmx-trees_tc3r_vggto.mp4",
+        "static/videos/cmp_bmx-trees_vdpm.mp4",
+        "static/videos/cmp_lady-running_4rc.mp4",
+        "static/videos/cmp_lady-running_input.mp4",
+        "static/videos/cmp_lady-running_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_lady-running_tc3r_vggto.mp4",
+        "static/videos/cmp_lady-running_vdpm.mp4",
+        "static/videos/cmp_libby_4rc.mp4",
+        "static/videos/cmp_libby_input.mp4",
+        "static/videos/cmp_libby_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_libby_tc3r_vggto.mp4",
+        "static/videos/cmp_libby_vdpm.mp4",
+        "static/videos/cmp_motorbike_4rc.mp4",
+        "static/videos/cmp_motorbike_input.mp4",
+        "static/videos/cmp_motorbike_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_motorbike_tc3r_vggto.mp4",
+        "static/videos/cmp_motorbike_vdpm.mp4",
+        "static/videos/cmp_spin_4rc.mp4",
+        "static/videos/cmp_spin_input.mp4",
+        "static/videos/cmp_spin_ours_cowtracker_vggto.mp4",
+        "static/videos/cmp_spin_tc3r_vggto.mp4",
+        "static/videos/cmp_spin_vdpm.mp4",
+        "static/videos/demo_drift-turn.mp4",
+        "static/videos/demo_forest.mp4",
+        "static/videos/demo_motocross-bumps.mp4",
+        "static/videos/demo_running.mp4",
+        "static/videos/method_expanded.mp4",
+        "static/videos/more_camel_input.mp4",
+        "static/videos/more_camel_ours.mp4",
+        "static/videos/more_horsejump-high_input.mp4",
+        "static/videos/more_horsejump-high_ours.mp4",
+        "static/videos/more_kangaroo_with_occlusion_short_input.mp4",
+        "static/videos/more_kangaroo_with_occlusion_short_ours.mp4",
+        "static/videos/more_motocross-bumps_input.mp4",
+        "static/videos/more_motocross-bumps_ours.mp4",
+        "static/videos/more_schoolgirls_input.mp4",
+        "static/videos/more_schoolgirls_ours.mp4",
+        "static/videos/more_swing-tire_input.mp4",
+        "static/videos/more_swing-tire_ours.mp4",
+        "static/videos/optimized/individual/demo_cartwheel.mp4",
+        "static/videos/optimized/individual/demo_spin.mp4",
+        "static/videos/optimized/individual/demo_swing-tire.mp4",
+        "static/videos/optimized/individual/demo_swing.mp4",
+        "static/videos/optimized/individual/demo_tennis.mp4",
+        "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "static/videos/slider_basketball_3_s3d_lift.mp4",
+        "static/videos/slider_basketball_3_s3d_ours.mp4",
+        "static/videos/teaser_input.mp4",
+        "static/videos/teaser_tracks.mp4"
+      ]
+    },
+    "largest_default_mp4_files": [
+      {
+        "bytes": 17085860,
+        "path": "static/videos/optimized/spin.mp4"
+      },
+      {
+        "bytes": 8705096,
+        "path": "static/videos/optimized/lady-running.mp4"
+      },
+      {
+        "bytes": 8334644,
+        "path": "static/videos/optimized/more_kangaroo_with_occlusion_short.mp4"
+      },
+      {
+        "bytes": 8312727,
+        "path": "static/videos/optimized/teaser.mp4"
+      },
+      {
+        "bytes": 5688116,
+        "path": "static/videos/method_expanded.mp4"
+      }
+    ],
+    "retained_not_displayed_groups": [
+      "car-shadow",
+      "crossing",
+      "more_kangaroo"
+    ],
+    "same_active_selection_uncompressed_source_video_bytes": 84802593,
+    "synchronized_decoder_reduction": {
+      "composite_decoders": 12,
+      "definition": "For the 12 synchronized groups after loading them; not simultaneous playing counts. Method, correction wipe and viewer thumbnails are separate.",
+      "fallback_source_decoders": 39,
+      "reduction_percent": 69.23076923076923
+    },
+    "viewer_lazy_dependencies": {
+      "bytes": 634444,
+      "files": 2,
+      "paths": [
+        "static/js/OrbitControls.js",
+        "static/js/three.min.js"
+      ]
+    }
+  },
+  "inventory_probe_script_elapsed_seconds": 4.899,
+  "layout_cost_analysis": {
+    "basis": "Analytical CSS geometry at maximum 1200px section width with 40px padding on each side; not browser/GPU measurements. Canvas DPR and native-resolution caps still apply.",
+    "comparison_columns_at_max_800px": 3,
+    "comparison_columns_desktop": 5,
+    "comparison_horizontal_gap_px": 6,
+    "comparison_vertical_gap_px": 10,
+    "current_comparison_row_max_width_px": 1100,
+    "landscape_comparison_panel_width_px": {
+      "after": 215.2,
+      "area_multiplier_if_aspect_ratio_preserved": 1.3584165092256906,
+      "before": 184.64
+    },
+    "more_results_auto_fit_two_pair_threshold_css_px": 888,
+    "more_results_example_horizontal_gap_px": 24,
+    "more_results_panel_width_px": {
+      "after": 266.0,
+      "area_multiplier_if_aspect_ratio_preserved": 1.0629769845562167,
+      "before": 258.0
+    },
+    "more_results_within_pair_gap_px": 6,
+    "network_media_bytes_changed_by_latest_css_commit": false,
+    "potential_cost": "Larger visible canvases copy more destination pixels, especially Spin; no additional video decoders or encoded video bytes are introduced by CSS.",
+    "previous_layout_commit": "8db57b302a0c1e490958d27b1eb8028c9edf358a^",
+    "spin_panel_width_px": {
+      "after": 215.2,
+      "area_multiplier_if_aspect_ratio_preserved": 3.1155492866541294,
+      "before": 121.91999999999999
+    }
+  },
+  "provenance": {
+    "ffprobe_version": "ffprobe version 7.1.1 Copyright (c) 2007-2025 the FFmpeg developers",
+    "historical_browser_measurements": "performance/measurements.json",
+    "historical_manifest": "tmp/media-revisions/2026-11-01/static/videos/optimized/manifest.json",
+    "historical_manifest_sha256": "0df244524b50e9d5b0859c616e025e4bced098995200ab46d4c3fb18b9742007",
+    "last_commit_changed_paths": [
+      "index.html"
+    ],
+    "manifest": "static/videos/optimized/manifest.json",
+    "manifest_sha256": "7056fb3b1d32e017925624a1532cfedbe757c94db0cd7686532abe5a8cb2a9b5",
+    "resource_byte_inventory_basis": "Committed blob sizes at HEAD 8db57b302a0c1e490958d27b1eb8028c9edf358a, avoiding parallel viewer/test changes during audit. Selected asset paths and all media files are unchanged by those parallel changes."
+  },
+  "quality": {
+    "accepted_individual_recorded_ssim_range": [
+      0.985412,
+      0.992731
+    ],
+    "active_panel_count": 39,
+    "maximum_recorded_all_ssim": 0.99867,
+    "measurement_scope": "Recorded all-frame native-resolution per-panel SSIM; source and generated hashes freshly validated by existing validator.",
+    "minimum_recorded_all_ssim": 0.982214,
+    "minimum_recorded_all_ssim_panel": {
+      "group": "more_kangaroo_with_occlusion_short",
+      "luma_ssim": 0.976458,
+      "source": "static/videos/more_kangaroo_with_occlusion_short_ours.mp4"
+    },
+    "minimum_recorded_luma_ssim": 0.976458,
+    "note": "Historical 0.984504 lower bound excludes the later revised kangaroo content. Comparing SSIM across different source content is not an apples-to-apples quality regression measurement.",
+    "poster_validation_limitation": "The manifest stores JPEG size and recipe, but not poster SHA-256. The validator checks poster file sizes, JPEG codec and dimensions; it does not prove pixel identity.",
+    "source_and_generated_video_hashes_verified": true,
+    "ssim_newly_computed": false
+  },
+  "schema_version": 1,
+  "scope": "Read-only media inventory and validation; only this JSON evidence file was written. No media re-encoding, SSIM recomputation, browser execution, or production requests.",
+  "units": "bytes (decimal MB=1,000,000bytes); timings in seconds unless stated",
+  "validation": {
+    "existing_validator": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/validate_assets.py",
+      "encoded_sha256_metadata_faststart_checks": 21,
+      "exit_code": 0,
+      "original_sha256_checks": 64,
+      "page_checks": {
+        "comparison_order": [
+          "lady-running",
+          "libby",
+          "motorbike",
+          "bmx-trees",
+          "spin"
+        ],
+        "html_atlas_groups": 12,
+        "html_video_fallbacks": 43,
+        "local_asset_references": 133,
+        "more_results_order": [
+          "more_kangaroo_with_occlusion_short",
+          "more_horsejump-high",
+          "more_schoolgirls",
+          "more_swing-tire",
+          "more_motocross-bumps",
+          "more_camel"
+        ],
+        "viewer_scenes": 9
+      },
+      "poster_size_and_dimensions_checks": 64,
+      "result": "PASS"
+    },
+    "fresh_packet_and_metadata_probes": {
+      "all15_group_pts_identical": true,
+      "all6_accepted_individual_pts_identical": true,
+      "assets": 85,
+      "correction_wipe_pts_identical": true,
+      "encoded_assets": 21,
+      "issues": [],
+      "source_assets": 64,
+      "source_metadata_matches_manifest": true
+    },
+    "metadata_and_packet_probe_method": "ffprobe stream headers and video packets only; sorted presentation timestamps compared as exact rational seconds. No newly decoded frames or new perceptual quality metrics."
+  }
+}

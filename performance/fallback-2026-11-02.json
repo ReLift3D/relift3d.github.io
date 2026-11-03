@@ -1,0 +1,127 @@
+{
+  "missingComposite": {
+    "group": {
+      "name": "teaser",
+      "mode": "original",
+      "visible": true,
+      "rectangle": {
+        "top": 627.78125,
+        "bottom": 716.9375,
+        "width": 327,
+        "height": 89.15625
+      },
+      "drawnFrames": 0,
+      "videos": [
+        {
+          "src": "http://127.0.0.1:8773/static/videos/teaser_input.mp4",
+          "plannedSrc": "static/videos/teaser_input.mp4",
+          "paused": false,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 8.616693,
+          "duration": 11.666667,
+          "width": 1280,
+          "height": 720,
+          "quality": {
+            "totalVideoFrames": 613,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 21153.5
+          },
+          "error": null,
+          "frameCallback": null
+        },
+        {
+          "src": "http://127.0.0.1:8773/static/videos/teaser_tracks.mp4",
+          "plannedSrc": "static/videos/teaser_tracks.mp4",
+          "paused": false,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 8.616453,
+          "duration": 11.666667,
+          "width": 1280,
+          "height": 720,
+          "quality": {
+            "totalVideoFrames": 613,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 21153.5
+          },
+          "error": null,
+          "frameCallback": null
+        }
+      ],
+      "panels": [],
+      "allPanelsShareCallback": false,
+      "panelMediaTimeSpread": null,
+      "independentMediaTimeSpread": 0.00023999999999979593
+    },
+    "errors": [
+      "http://127.0.0.1:8773/static/videos/optimized/intentionally-missing-performance-test.mp4"
+    ]
+  },
+  "unsupportedComposite": {
+    "group": {
+      "name": "teaser",
+      "mode": "original",
+      "visible": true,
+      "rectangle": {
+        "top": 627.78125,
+        "bottom": 716.9375,
+        "width": 327,
+        "height": 89.15625
+      },
+      "drawnFrames": 0,
+      "videos": [
+        {
+          "src": "http://127.0.0.1:8774/static/videos/teaser_input.mp4",
+          "plannedSrc": "static/videos/teaser_input.mp4",
+          "paused": false,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.836717,
+          "duration": 11.666667,
+          "width": 1280,
+          "height": 720,
+          "quality": {
+            "totalVideoFrames": 790,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 27132.39999961853
+          },
+          "error": null,
+          "frameCallback": null
+        },
+        {
+          "src": "http://127.0.0.1:8774/static/videos/teaser_tracks.mp4",
+          "plannedSrc": "static/videos/teaser_tracks.mp4",
+          "paused": false,
+          "ready": 4,
+          "network": 1,
+          "seeking": false,
+          "time": 2.836589,
+          "duration": 11.666667,
+          "width": 1280,
+          "height": 720,
+          "quality": {
+            "totalVideoFrames": 790,
+            "droppedVideoFrames": 0,
+            "corruptedVideoFrames": 0,
+            "creationTime": 27132.39999961853
+          },
+          "error": null,
+          "frameCallback": null
+        }
+      ],
+      "panels": [],
+      "allPanelsShareCallback": false,
+      "panelMediaTimeSpread": null,
+      "independentMediaTimeSpread": 0.000128000000000128
+    },
+    "errors": []
+  },
+  "method": "Ignored test fixtures replace only the teaser composite URL with an intentional404, or remove requestVideoFrameCallback before production scripts run. This is feature/failure simulation in Chrome, not Safari/Firefox coverage."
+}

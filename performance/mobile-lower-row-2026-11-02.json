@@ -1,0 +1,326 @@
+{
+  "layout": {
+    "columns": "105px 105px 105px",
+    "decoder": {
+      "bottom": -200.21875,
+      "height": 1,
+      "left": 24,
+      "right": 25,
+      "top": -201.21875,
+      "width": 1,
+      "x": 24,
+      "y": -201.21875
+    },
+    "pageWidth": 375,
+    "panels": [
+      {
+        "bottom": -25.03125,
+        "height": 164.1875,
+        "left": 24,
+        "right": 129,
+        "top": -189.21875,
+        "width": 105,
+        "x": 24,
+        "y": -189.21875
+      },
+      {
+        "bottom": -25.03125,
+        "height": 164.1875,
+        "left": 135,
+        "right": 240,
+        "top": -189.21875,
+        "width": 105,
+        "x": 135,
+        "y": -189.21875
+      },
+      {
+        "bottom": -25.03125,
+        "height": 164.1875,
+        "left": 246,
+        "right": 351,
+        "top": -189.21875,
+        "width": 105,
+        "x": 246,
+        "y": -189.21875
+      },
+      {
+        "bottom": 173.15625,
+        "height": 164.1875,
+        "left": 24,
+        "right": 129,
+        "top": 8.96875,
+        "width": 105,
+        "x": 24,
+        "y": 8.96875
+      },
+      {
+        "bottom": 173.15625,
+        "height": 164.1875,
+        "left": 135,
+        "right": 240,
+        "top": 8.96875,
+        "width": 105,
+        "x": 135,
+        "y": 8.96875
+      }
+    ],
+    "root": {
+      "bottom": 185.15625,
+      "height": 386.375,
+      "left": 24,
+      "right": 351,
+      "top": -201.21875,
+      "width": 327,
+      "x": 24,
+      "y": -201.21875
+    },
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  "start": {
+    "name": "spin",
+    "mode": "composite",
+    "visible": true,
+    "rectangle": {
+      "top": -201.21875,
+      "bottom": 185.15625,
+      "width": 327,
+      "height": 386.375
+    },
+    "drawnFrames": 555,
+    "videos": [
+      {
+        "src": "http://127.0.0.1:8772/static/videos/optimized/spin.mp4",
+        "plannedSrc": "static/videos/optimized/spin.mp4",
+        "paused": false,
+        "ready": 4,
+        "network": 1,
+        "seeking": false,
+        "time": 0.172462,
+        "duration": 6.666667,
+        "width": 2160,
+        "height": 1920,
+        "quality": {
+          "totalVideoFrames": 566,
+          "droppedVideoFrames": 1,
+          "corruptedVideoFrames": 0,
+          "creationTime": 48125.300000190735
+        },
+        "error": null,
+        "frameCallback": {
+          "id": 1111,
+          "time": 48054.3,
+          "mediaTime": 0.083333,
+          "presentedFrames": 562,
+          "expectedDisplayTime": 48054.2,
+          "processingDuration": 0.0234,
+          "callbacks": 560
+        }
+      }
+    ],
+    "panels": [
+      {
+        "callbackId": 1111,
+        "mediaTime": 0.083333,
+        "time": 48055.300000190735,
+        "crop": [
+          0,
+          0,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1111,
+        "mediaTime": 0.083333,
+        "time": 48055.5,
+        "crop": [
+          720,
+          0,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1111,
+        "mediaTime": 0.083333,
+        "time": 48055.59999990463,
+        "crop": [
+          1440,
+          0,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1111,
+        "mediaTime": 0.083333,
+        "time": 48055.699999809265,
+        "crop": [
+          0,
+          960,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1111,
+        "mediaTime": 0.083333,
+        "time": 48055.699999809265,
+        "crop": [
+          720,
+          960,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      }
+    ],
+    "allPanelsShareCallback": true,
+    "panelMediaTimeSpread": 0,
+    "independentMediaTimeSpread": null
+  },
+  "end": {
+    "name": "spin",
+    "mode": "composite",
+    "visible": true,
+    "rectangle": {
+      "top": -201.21875,
+      "bottom": 185.15625,
+      "width": 327,
+      "height": 386.375
+    },
+    "drawnFrames": 580,
+    "videos": [
+      {
+        "src": "http://127.0.0.1:8772/static/videos/optimized/spin.mp4",
+        "plannedSrc": "static/videos/optimized/spin.mp4",
+        "paused": false,
+        "ready": 4,
+        "network": 1,
+        "seeking": false,
+        "time": 2.173015,
+        "duration": 6.666667,
+        "width": 2160,
+        "height": 1920,
+        "quality": {
+          "totalVideoFrames": 590,
+          "droppedVideoFrames": 1,
+          "corruptedVideoFrames": 0,
+          "creationTime": 50125.800000190735
+        },
+        "error": null,
+        "frameCallback": {
+          "id": 1136,
+          "time": 50094.4,
+          "mediaTime": 2.166667,
+          "presentedFrames": 587,
+          "expectedDisplayTime": 50134.3,
+          "processingDuration": 0.4398,
+          "callbacks": 585
+        }
+      }
+    ],
+    "panels": [
+      {
+        "callbackId": 1136,
+        "mediaTime": 2.166667,
+        "time": 50095.40000009537,
+        "crop": [
+          0,
+          0,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1136,
+        "mediaTime": 2.166667,
+        "time": 50095.5,
+        "crop": [
+          720,
+          0,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1136,
+        "mediaTime": 2.166667,
+        "time": 50095.5,
+        "crop": [
+          1440,
+          0,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1136,
+        "mediaTime": 2.166667,
+        "time": 50095.5,
+        "crop": [
+          0,
+          960,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      },
+      {
+        "callbackId": 1136,
+        "mediaTime": 2.166667,
+        "time": 50095.59999990463,
+        "crop": [
+          720,
+          960,
+          720,
+          960
+        ],
+        "destination": [
+          105,
+          140
+        ]
+      }
+    ],
+    "allPanelsShareCallback": true,
+    "panelMediaTimeSpread": 0,
+    "independentMediaTimeSpread": null
+  }
+}

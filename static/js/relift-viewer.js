@@ -80,6 +80,7 @@
   let frame = 0, playing = true, fullTail = false, acc = 0, last = performance.now();
   let vid = null, want = 'cartwheel', switching = false, failed = false, holdSince = 0;
   let visible = false, near = false, animation = 0, selection = 0;
+  let renderNeeded = true;
   const scripts = new Map();
   const videos = new Map();
 
@@ -115,6 +116,7 @@
       controls.dampingFactor = 0.12;
       controls.enableZoom = false;
       controls.enabled = visible && !document.hidden;
+      controls.addEventListener('change', requestRender);
       scene = new THREE.Scene();
       f16 = new Float32Array(65536);
       for (let h = 0; h < 65536; h++) {
@@ -155,6 +157,7 @@
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
+    requestRender();
   }
   function b64buf(s) {
     const bin = atob(s), u = new Uint8Array(bin.length);
@@ -213,12 +216,14 @@
     for (let q = 0; q < Q; q++) { const a = (frame * Q + q) * 3, ok = isFinite(tr[a]); hp[q * 3] = ok ? tr[a] : 1e9; hp[q * 3 + 1] = ok ? tr[a + 1] : 1e9; hp[q * 3 + 2] = ok ? tr[a + 2] : 1e9; }
     if (follow) { const a = cen[cenAt], b = cen[frame]; const d = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]); camera.position.add(d); controls.target.add(d); cenAt = frame; }
     heads.geometry.attributes.position.needsUpdate = true; sl.value = frame; document.getElementById("frame").textContent = `frame ${frame + 1} / ${T}`;
+    requestRender();
   }
   function resetView() {
     const c = M.camera; let tg = med, P = PULL[cur] || 1.3;
     if (follow) { cenAt = Math.min(frame, T - 1); tg = cen[cenAt]; P = follow * size / Math.hypot(...[0, 1, 2].map(i => c.position[i] - c.target[i])); }
     const p = tg.map((v, i) => v + (c.position[i] - c.target[i]) * P);
     camera.fov = framingFov(cur, c.fov); camera.position.set(...p); camera.up.set(...c.up); controls.target.set(...tg); camera.updateProjectionMatrix(); controls.update();
+    requestRender();
   }
 
   function hydrate(video) {
@@ -245,6 +250,13 @@
   function vidOk() {
     return vid && vid.readyState >= 2 && !vid.paused && Math.abs(vid.duration * M.fps - T) < 1.5;
   }
+  function scheduleFrame() {
+    if (visible && !document.hidden && D && !animation) animation = requestAnimationFrame(loop);
+  }
+  function requestRender() {
+    renderNeeded = true;
+    scheduleFrame();
+  }
   function syncActivity() {
     const active = visible && !document.hidden;
     if (controls) controls.enabled = active;
@@ -257,12 +269,12 @@
       return;
     }
     playVid();
-    if (D && !animation) animation = requestAnimationFrame(loop);
+    requestRender();
   }
   function loop(now) {
     animation = 0;
     if (!visible || document.hidden || !D) return;
-    controls.update();
+    const cameraMoved = controls.update();
     const lag = playing && vid && (vid.seeking || vid.readyState < 2);
     holdSince = lag ? (holdSince || now) : 0;
     if (!switching && !(lag && now - holdSince < 3000)) {
@@ -281,8 +293,10 @@
       }
     }
     last = now;
-    renderer.render(scene, camera);
-    animation = requestAnimationFrame(loop);
+    if (playing || renderNeeded || cameraMoved) renderer.render(scene, camera);
+    renderNeeded = false;
+    // A paused scene only needs frames while orbit damping is still moving it.
+    if (playing || cameraMoved) scheduleFrame();
   }
 
   function ready(video) {
@@ -350,8 +364,14 @@
   playButton.addEventListener('click', () => {
     playing = !playing;
     playButton.textContent = playing ? 'Pause' : 'Play';
-    if (playing) { if (D && !switching) seekVid(frame); playVid(); }
+    if (playing) {
+      last = performance.now();
+      holdSince = 0;
+      if (D && !switching) seekVid(frame);
+      playVid();
+    }
     else if (vid) vid.pause();
+    requestRender();
   });
   sl.addEventListener('input', event => {
     playing = false;
