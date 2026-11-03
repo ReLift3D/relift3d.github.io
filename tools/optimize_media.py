@@ -6,6 +6,7 @@ The default prints a plan; --encode writes native-resolution synchronized
 atlases, first-frame posters, individual compression trials, and a manifest.
 Existing outputs are reused only when their recorded source hashes and build
 settings match. --force rebuilds generated sidecars, never source files.
+Without --crf, each output retains its recorded CRF (21 for a new output).
 Assets moved to tmp/unused remain available and are rebuilt in that location.
 The manifest continues to record their original static/... paths.
 
@@ -252,7 +253,7 @@ def make_individual(repo: Path, filename: str, source: dict, crf: int,
     info["saving_fraction"] = 1 - actual["bytes"] / source["bytes"]
     info["ssim"] = measure_ssim(original, destination)
     # This is only a review candidate, not automatic adoption or a visual guarantee.
-    info["candidate_for_visual_review"] = info["saving_fraction"] >= 0.1 and info["ssim"]["all"] >= 0.98
+    info["candidate_for_visual_review"] = info["saving_fraction"] >= 0.08 and info["ssim"]["all"] >= 0.98
     print(f"  {source['bytes']/1e6:.3f} → {actual['bytes']/1e6:.3f} MB; "
           f"SSIM {info['ssim']['all']:.6f}; candidate={info['candidate_for_visual_review']}", flush=True)
     # The caller can review suitable sidecars before changing website references.
@@ -271,14 +272,15 @@ def main() -> None:
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--encode", action="store_true")
     parser.add_argument("--force", action="store_true", help="Rebuild generated sidecars")
-    parser.add_argument("--crf", type=int, default=21)
+    parser.add_argument("--crf", type=int,
+                        help="Override CRF; otherwise retain each recorded setting (21 for new outputs)")
     parser.add_argument("--groups", nargs="*", help="Limit atlas builds to these named groups")
     parser.add_argument("--skip-posters", action="store_true")
     parser.add_argument("--skip-individuals", action="store_true")
     parser.add_argument("--trial-dir", type=Path,
                         help="External directory for rejected trials (default: ../relift3d-compression-trials)")
     args = parser.parse_args()
-    if not 0 <= args.crf <= 51:
+    if args.crf is not None and not 0 <= args.crf <= 51:
         parser.error("CRF must be between 0 and 51")
     selected = list(GROUPS) if args.groups is None else args.groups
     if any(name not in GROUPS for name in selected):
@@ -323,15 +325,19 @@ def main() -> None:
         save_progress()
 
     for name in selected:
-        manifest["groups"][name] = make_group(repo, name, GROUPS[name], sources, args.crf,
-                                             args.encode, args.force, previous.get("groups", {}).get(name, {}))
+        old = previous.get("groups", {}).get(name, {})
+        crf = args.crf if args.crf is not None else old.get("recipe", {}).get("crf", 21)
+        manifest["groups"][name] = make_group(repo, name, GROUPS[name], sources, crf,
+                                             args.encode, args.force, old)
         save_progress()
     if not args.skip_individuals:
         grouped = {filename for names in GROUPS.values() for filename in names}
         for filename in sorted(sources.keys() - grouped):
+            old = previous.get("individuals", {}).get(filename, {})
+            crf = args.crf if args.crf is not None else old.get("recipe", {}).get("crf", 21)
             manifest["individuals"][filename] = make_individual(
-                repo, filename, sources[filename], args.crf, args.encode, args.force,
-                previous.get("individuals", {}).get(filename, {}), trial_dir)
+                repo, filename, sources[filename], crf, args.encode, args.force,
+                old, trial_dir)
             save_progress()
     manifest["totals"] = {
         "original_video_bytes": sum(item["bytes"] for item in sources.values()),

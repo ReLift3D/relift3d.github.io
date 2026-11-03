@@ -1,5 +1,169 @@
 # ReLift3D performance optimization
 
+## 2026-11-03 remaining-video compression
+
+The remaining 22 default playback videos were tested for approximately 10%
+smaller files. **19 were adopted**, saving another **4,306,105 bytes (4.31 MB)**:
+8.90% across all 22 tested files, or 13.26% across the 19 changed files.
+Individual reductions range from 8.17% to 15.86%. These changes were prepared
+and measured on `modest-media-optimization`, based on `4d56c1a`.
+
+| Playback category | Files reduced | Additional bytes saved |
+|---|---:|---:|
+| Comparison and More Results synchronized videos | 8 | 2,863,261 |
+| Interactive viewer input clips | 7 | 394,623 |
+| Method animation | 1 | 855,557 |
+| Correction wipe clips | 3 | 192,664 |
+
+Kangaroo occlusion, Running and Hike remain unchanged. Kangaroo and Running
+exceeded the chosen quality-loss limit before achieving useful savings; the
+tested Hike encodes were larger. No original fallback sources, hidden archived
+groups, posters or interactive 3D assets were changed.
+
+Including the earlier three-video pass below, the **25 default playback MP4s
+total 72,967,679 bytes**, down from the published 82,471,465 bytes: **9.50 MB
+(11.52%) less**. This is a playback inventory, excluding fallback-only and
+archived videos; it is not the total repository size or initial page transfer.
+
+### Current validation and limits
+
+All selected files were encoded from original sources with H.264, the slow
+preset and faststart. Native dimensions, aspect ratios, frame rates, frame
+counts, durations and packet presentation timestamps are preserved. The lowest
+full-duration original-source SSIM among the 19 selections is **0.980103**.
+Matched stills were reviewed, including thin trajectories and Method text;
+compression remains lossy and this is not proof of pixel-identical quality.
+
+Desktop Chrome played all eight changed synchronized groups with one decoder
+per group and shared panel frame callbacks. The Method animation and all three
+wipe clips played and sought successfully. The wipe's observed playing-clock
+spread was 1.945 ms; a paused seek to 2.5 seconds aligned all three exactly.
+All nine viewer scenes loaded and played; Drift Turn's last-frame seek and
+resume passed. At 390×844, Tire Swing's More Results pair retained synchronized
+playback and the viewer's Drift Turn clip played and sought correctly.
+
+Fresh desktop initial-transfer samples at five and fifteen seconds both
+measured **7,160,025 bytes**, one playing video, zero WebGL draws and no
+application errors. This is effectively unchanged from the previous pass
+(+50 bytes of viewer source-selection code). The new savings apply when
+visitors browse lower sections. The 15-second sample recorded 20 dropped
+teaser frames; the teaser is unchanged from the earlier pass, and these short,
+variable samples do not establish improved frame rate. Slow-network buffering
+described below remains. Phone-width checks use desktop Chrome, not a physical
+phone; Safari, Firefox, CPU, battery and production CDN performance are untested.
+
+The asset, media-loader and viewer-presentation validators passed. All 64
+original source hashes are intact; the manifest validates 15 atlases and 11
+selected individual encodes. HTML and viewer changes only select the new
+individual files. The generator now preserves each output's recorded CRF when
+`--crf` is omitted (verified by an unchanged manifest when rebuilding three
+groups with different settings). New individual review candidates require at
+least 8% savings and original-source SSIM of 0.98; visual review is still needed.
+
+Compact results are in `remaining_media_optimization` in
+[measurements.json](performance/measurements.json), with per-file recipes,
+hashes and quality values in the [media manifest](static/videos/optimized/manifest.json).
+Detailed trials, previous files and browser captures are kept only in ignored
+`local-media-archive/modest-media/remaining/`; no new raw-log files were added
+to `performance/`. The archive also contains the exact pre-optimization Git
+versions of replaced files, earlier media revisions and retained original
+sources. Five newly unused originals (Method, Drift Turn, Motocross and the
+two wipe outputs) were moved into its `unused/` directory. Active playback
+fallbacks remain in the website. Ignored symlinks at the previous `tmp/` paths
+preserve offline tooling and historical evidence links. The archive's
+`ARCHIVE_INDEX.json` records baseline and newly retired source checksums.
+
+## 2026-11-03 earlier three-video compression stage
+
+Three synchronized atlases were rebuilt from original source videos using
+H.264 CRF 23 for teaser/Spin and CRF 24 for lady-running, retaining the slow
+preset and faststart. The target was roughly 15% below the published sizes of
+these three videos. This stage preceded the remaining-video pass above.
+At this stage, other videos, fallback sources, posters, HTML/CSS, playback
+code and interactive 3D assets were unchanged. These three selections remain
+part of the current local candidate.
+
+| Combined video | Published bytes | Candidate bytes | Reduction |
+|---|---:|---:|---:|
+| Teaser | 8,312,727 | 6,731,362 | 19.02% |
+| lady-running comparison | 8,705,096 | 7,070,161 | 18.78% |
+| Spin comparison | 17,085,860 | 15,104,479 | 11.60% |
+
+Together these files save **5,197,681 bytes (5.20 MB), or 15.24%** of their
+published total. This is an additional 3,005,999 bytes beyond the previous
+local CRF 22 trial. The complete default-video inventory falls from 82.47 MB
+to 77.27 MB; that is 6.30% of all default-video bytes, not a 15% reduction of the
+whole site. Only the teaser contributes to the initial-load savings.
+
+### Loading and playback
+
+Fresh 1920×902 and 390×844 foreground Chrome captures measured completed
+site transfer of **7,159,975 bytes** at both five and fifteen seconds after
+DOMContentLoaded. Compared with the published configuration's 8,741,340 bytes
+for the same local site resources, this saves **1,581,365 bytes (18.09%)**.
+The previous CRF 22 candidate measured 7,928,505 bytes. These totals exclude
+HTML and diagnostics. All current initial captures had one playing video,
+zero WebGL draws and no application errors. Tests used no-store localhost;
+these are not production CDN, CPU or battery benchmarks.
+
+At fifteen seconds, the initial desktop run recorded 18 dropped frames and
+the phone-width run recorded 5, versus 0 in the earlier published desktop
+baseline. The first desktop capture overlapped encoding work; a repeat after
+encoding finished recorded 7 dropped frames and the same 7,159,975-byte
+transfer. These variable short captures do not establish improved playback
+smoothness or isolate a compression-related regression.
+
+All three changed groups played with a single decoder and shared frame
+callbacks. Desktop paused seeks to 2.5 seconds retained zero panel timestamp
+spread. Both comparisons played in the mobile three-plus-two layout, and
+Spin's mobile seek passed. One tab open while the Spin atlas was replaced
+used the existing original-video fallback; fresh-page and subsequent desktop
+checks used the new composite successfully. That intermediate tab is excluded
+from the final composite checks.
+
+At the same 2,000 kbps local cap and 150 ms added latency, the stronger teaser
+still buffered. Its media time was 3.33 seconds at fifteen seconds after
+DOMContentLoaded, with 23 dropped frames recorded. Earlier single runs reached
+2.85 seconds for the published teaser and 3.13 seconds for CRF 22; these uncontrolled
+single-run observations do not establish a frame-rate improvement or regression.
+The current teaser averages about 4.62 Mbps, still above the slow connection's
+capacity. This change reduces transfer volume; it does not resolve slow-network
+buffering or reduce decoded resolution/decoder count.
+
+### Quality, integrity and reproduction
+
+Native panel/atlas dimensions, pixel aspect ratios, frame counts, frame rates,
+durations, packing and every presentation timestamp/packet duration match.
+All 64 original source hashes remain unchanged. Full-duration per-panel SSIM
+against original sources ranges from **0.983316 to 0.995790** for these twelve
+panels. The group minima are 0.983316 (teaser), 0.984986 (lady-running) and
+0.983863 (Spin). Spin CRF 24 was rejected: its input-panel SSIM fell to 0.978502,
+below the preferred 0.98 threshold. The selected Spin CRF 23 clears that floor.
+
+Compression remains lossy. Matched native stills and desktop/mobile-width
+page review found no obvious trajectory loss at the inspected times and
+sizes; these are not pixel-identical copies or exhaustive visual proof.
+The asset validator passed integrity, timing, crops, faststart and references.
+Safari, Firefox and physical phones remain untested.
+
+Compact results for this stage are in `stronger_media_optimization` in
+[measurements.json](performance/measurements.json); `modest_media_optimization`
+retains the superseded CRF 22 trial. Current per-panel quality, hashes and
+encoding recipes are in the [media manifest](static/videos/optimized/manifest.json).
+Detailed exports, trial videos, comparison frames and previous atlases remain
+only in ignored `tmp/modest-media/`; no new raw-log files were added to `performance/`.
+
+Rebuild the selected groups from their original sources with explicit settings:
+
+```sh
+python3 tools/optimize_media.py --encode --groups teaser spin --crf 23 --skip-posters --skip-individuals
+python3 tools/optimize_media.py --encode --groups lady-running --crf 24 --skip-posters --skip-individuals
+```
+
+Other groups retained CRF 21 at this stage; later selections are documented
+above and in the manifest. The earlier CRF 22 trial saved 2.19 MB overall and
+measured 7.93 MB initial transfer; it is superseded by this candidate.
+
 ## 2026-11-02 reevaluation
 
 The current page at `8db57b3` retains the initial lazy-loading savings after

@@ -11,12 +11,14 @@ server also works; direct file:// browsing can restrict dynamic assets.
 See PERFORMANCE_REPORT.md for local optimization results, validation commands,
 tradeoffs and reproducible media generation. All original media is retained.
 
-Unused files are preserved in tmp/unused/ (ignored by Git). MOVED_FILES.json
-records their original locations and checksums. The media tools also read
-archived originals from that directory when validating or regenerating assets.
-The complete media audit and regeneration require this local archive; copy it
-separately to run those tools in another checkout. The website itself and the
-JavaScript tests do not depend on the archive.
+Older videos, compression trials and unused originals are preserved in
+local-media-archive/ (ignored by Git). ARCHIVE_INDEX.json records baseline and
+newly retired source checksums; unused/MOVED_FILES.json covers earlier moves.
+The existing tmp/unused path is a local symlink to local-media-archive/unused,
+so media tools can still validate and regenerate from archived originals.
+The complete media audit and regeneration require this archive; copy it
+separately and recreate the tmp/unused symlink in another checkout. The website
+itself and the JavaScript tests do not depend on the archive.
 
 Browser tab icon
 ---------------

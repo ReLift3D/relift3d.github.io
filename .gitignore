@@ -2,4 +2,6 @@ __pycache__/
 *.pyc
 *.partial.mp4
 /tmp/
+# Previous media versions and compression trials; local backups only.
+/local-media-archive/
 .DS_Store

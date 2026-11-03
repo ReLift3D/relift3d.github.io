@@ -959,5 +959,1111 @@
       "viewer-paused-before-2026-11-02.json",
       "wipe-method-2026-11-02.json"
     ]
+  },
+  "modest_media_optimization": {
+    "date": "2026-11-03",
+    "base_commit": "4d56c1a46e5a6ff09534168590348ec62988830d",
+    "status": "Superseded local CRF22 trial; see stronger_media_optimization for the current candidate.",
+    "encoding": {
+      "codec": "H.264 / libx264",
+      "previous_crf": 21,
+      "selected_crf": 22,
+      "preset": "slow",
+      "same_resolution_fps_frames_and_exact_packet_timing": true,
+      "source_hashes_unchanged": 64,
+      "source_note": "Re-encoded from originals, not from the previous compressed atlases."
+    },
+    "groups": [
+      {
+        "group": "teaser",
+        "before_bytes": 8312727,
+        "after_bytes": 7499892,
+        "saved_bytes": 812835,
+        "minimum_source_ssim": 0.985268,
+        "reduction_percent": 9.7782,
+        "dimensions": [
+          2560,
+          720
+        ],
+        "fps": "30",
+        "frames": 350
+      },
+      {
+        "group": "lady-running",
+        "before_bytes": 8705096,
+        "after_bytes": 8202652,
+        "saved_bytes": 502444,
+        "minimum_source_ssim": 0.98799,
+        "reduction_percent": 5.7718,
+        "dimensions": [
+          2880,
+          1080
+        ],
+        "fps": "12",
+        "frames": 65
+      },
+      {
+        "group": "spin",
+        "before_bytes": 17085860,
+        "after_bytes": 16209457,
+        "saved_bytes": 876403,
+        "minimum_source_ssim": 0.988229,
+        "reduction_percent": 5.1294,
+        "dimensions": [
+          2160,
+          1920
+        ],
+        "fps": "12",
+        "frames": 80
+      }
+    ],
+    "total_video_bytes_saved": 2191682,
+    "initial_local_bytes_saved": 812835,
+    "initial_loading": {
+      "definition": "Completed resource transfer excluding HTML and diagnostics; same no-store local server and foreground Chrome; local subtotal excludes external font cache differences. One run per configuration.",
+      "desktop_before": [
+        {
+          "after_dcl_ms": 5005.5,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 8744051,
+          "completed_local_site_transfer_bytes": 8741340,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_total_frames": 133,
+          "teaser_dropped_frames": 0,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15005.699999809265,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 8744051,
+          "completed_local_site_transfer_bytes": 8741340,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_total_frames": 433,
+          "teaser_dropped_frames": 0,
+          "errors": []
+        }
+      ],
+      "desktop_after": [
+        {
+          "after_dcl_ms": 5007.300000190735,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7928505,
+          "completed_local_site_transfer_bytes": 7928505,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_total_frames": 130,
+          "teaser_dropped_frames": 2,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15007.200000286102,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7928505,
+          "completed_local_site_transfer_bytes": 7928505,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_total_frames": 430,
+          "teaser_dropped_frames": 2,
+          "errors": []
+        }
+      ],
+      "phone_width_after": [
+        {
+          "after_dcl_ms": 5011,
+          "viewport": [
+            390,
+            844
+          ],
+          "completed_site_transfer_bytes": 7928505,
+          "completed_local_site_transfer_bytes": 7928505,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_total_frames": 134,
+          "teaser_dropped_frames": 0,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15011.200000286102,
+          "viewport": [
+            390,
+            844
+          ],
+          "completed_site_transfer_bytes": 7928505,
+          "completed_local_site_transfer_bytes": 7928505,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_total_frames": 434,
+          "teaser_dropped_frames": 0,
+          "errors": []
+        }
+      ]
+    },
+    "playback_checks": [
+      {
+        "test": "desktop seek teaser",
+        "decoders": 1,
+        "panels": 2,
+        "media_time_s": 2.5,
+        "paused": true,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop playback lady-running",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 3.879871,
+        "paused": false,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop seek lady-running",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.5,
+        "paused": true,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop playback spin",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 6.306764,
+        "paused": false,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop seek spin",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.5,
+        "paused": true,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "mobile playback lady-running",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 1.440014,
+        "paused": false,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "mobile playback spin",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 5.667258,
+        "paused": false,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "mobile seek spin",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.5,
+        "paused": true,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      }
+    ],
+    "slow_connection": {
+      "bandwidth_kbps": 2000,
+      "latency_ms": 150,
+      "scope": "Shared cap on local response bodies; external origins unthrottled; desktop Chrome 1920x902.",
+      "before": [
+        {
+          "after_dcl_ms": 5005.800000190735,
+          "completed_site_transfer_bytes": 441368,
+          "server_site_body_bytes_written": 1261064,
+          "teaser_media_time_s": 0.800796,
+          "teaser_total_frames": 29,
+          "teaser_dropped_frames": 4,
+          "panels_share_callback": true,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15005.10000038147,
+          "completed_site_transfer_bytes": 441368,
+          "server_site_body_bytes_written": 3350024,
+          "teaser_media_time_s": 2.851362,
+          "teaser_total_frames": 90,
+          "teaser_dropped_frames": 10,
+          "panels_share_callback": true,
+          "errors": []
+        }
+      ],
+      "after": [
+        {
+          "after_dcl_ms": 5009.60000038147,
+          "completed_site_transfer_bytes": 444079,
+          "server_site_body_bytes_written": 1289736,
+          "teaser_media_time_s": 0.94338,
+          "teaser_total_frames": 33,
+          "teaser_dropped_frames": 8,
+          "panels_share_callback": true,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15009,
+          "completed_site_transfer_bytes": 444079,
+          "server_site_body_bytes_written": 3292680,
+          "teaser_media_time_s": 3.129432,
+          "teaser_total_frames": 100,
+          "teaser_dropped_frames": 17,
+          "panels_share_callback": true,
+          "errors": []
+        }
+      ],
+      "interpretation": "Both versions still buffered. The single-run media-time and dropped-frame differences are not reliable evidence of a frame-rate improvement or regression."
+    },
+    "validation": {
+      "asset_validator": "passed: 64 source hashes, 15 atlases, 6 individual sidecars, 64 posters, 133 page/viewer references",
+      "fresh_full_duration_original_panel_ssim_range": [
+        0.985268,
+        0.998222
+      ],
+      "visual_review": "Matched stills and desktop/phone-width page review found no obvious trajectory loss at inspected times; lossy changes remain, not pixel-identical.",
+      "limitations": "Chrome only, desktop phone-width simulation; no physical-device, Safari/Firefox, CPU/energy or production CDN benchmark."
+    },
+    "raw_trial_storage": "tmp/modest-media/ (ignored local files, not required at runtime)"
+  },
+  "stronger_media_optimization": {
+    "date": "2026-11-03",
+    "base_commit": "4d56c1a46e5a6ff09534168590348ec62988830d",
+    "status": "Selected optimization on modest-media-optimization; measurements collected locally before commit.",
+    "target": "Approximately 15% below the published sizes of the three selected atlases, not 15% of every video or an additional 15% below CRF 22.",
+    "encoding": {
+      "codec": "H.264 / libx264",
+      "preset": "slow",
+      "pixel_format": "yuv420p",
+      "faststart": true,
+      "original_source_reencode": true,
+      "native_dimensions_and_exact_frame_timing_preserved": true
+    },
+    "groups": [
+      {
+        "group": "teaser",
+        "crf": 23,
+        "published_bytes": 8312727,
+        "previous_crf22_bytes": 7499892,
+        "candidate_bytes": 6731362,
+        "saved_vs_published_bytes": 1581365,
+        "reduction_vs_published_percent": 19.0234,
+        "minimum_original_panel_ssim": 0.983316,
+        "dimensions": [
+          2560,
+          720
+        ],
+        "fps": "30",
+        "frames": 350
+      },
+      {
+        "group": "lady-running",
+        "crf": 24,
+        "published_bytes": 8705096,
+        "previous_crf22_bytes": 8202652,
+        "candidate_bytes": 7070161,
+        "saved_vs_published_bytes": 1634935,
+        "reduction_vs_published_percent": 18.7814,
+        "minimum_original_panel_ssim": 0.984986,
+        "dimensions": [
+          2880,
+          1080
+        ],
+        "fps": "12",
+        "frames": 65
+      },
+      {
+        "group": "spin",
+        "crf": 23,
+        "published_bytes": 17085860,
+        "previous_crf22_bytes": 16209457,
+        "candidate_bytes": 15104479,
+        "saved_vs_published_bytes": 1981381,
+        "reduction_vs_published_percent": 11.5966,
+        "minimum_original_panel_ssim": 0.983863,
+        "dimensions": [
+          2160,
+          1920
+        ],
+        "fps": "12",
+        "frames": 80
+      }
+    ],
+    "total_bytes_saved_vs_published": 5197681,
+    "selected_groups_reduction_percent": 15.240820177691658,
+    "additional_bytes_saved_vs_previous_trial": 3005999,
+    "initial_local_bytes_saved_vs_published": 1581365,
+    "initial_loading": {
+      "definition": "Completed resource transfer excluding HTML and diagnostics; no-store localhost; one foreground Chrome run per viewport; five and fifteen seconds after DOMContentLoaded.",
+      "published_baseline_local_bytes": 8741340,
+      "desktop": [
+        {
+          "after_dcl_ms": 5005.900000095367,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7159975,
+          "completed_local_site_transfer_bytes": 7159975,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_media_time_s": 3.739926,
+          "teaser_total_frames": 117,
+          "teaser_dropped_frames": 6,
+          "shared_teaser_callback": true,
+          "errors": [],
+          "server_site_body_bytes_written": 7156675
+        },
+        {
+          "after_dcl_ms": 15005.60000038147,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7159975,
+          "completed_local_site_transfer_bytes": 7159975,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_media_time_s": 2.066394,
+          "teaser_total_frames": 417,
+          "teaser_dropped_frames": 18,
+          "shared_teaser_callback": true,
+          "errors": [],
+          "server_site_body_bytes_written": 7156675
+        }
+      ],
+      "phone_width": [
+        {
+          "after_dcl_ms": 5011.199999809265,
+          "viewport": [
+            390,
+            844
+          ],
+          "completed_site_transfer_bytes": 7159975,
+          "completed_local_site_transfer_bytes": 7159975,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_media_time_s": 4.402234,
+          "teaser_total_frames": 137,
+          "teaser_dropped_frames": 0,
+          "shared_teaser_callback": true,
+          "errors": [],
+          "server_site_body_bytes_written": 7156675
+        },
+        {
+          "after_dcl_ms": 15012,
+          "viewport": [
+            390,
+            844
+          ],
+          "completed_site_transfer_bytes": 7159975,
+          "completed_local_site_transfer_bytes": 7159975,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_media_time_s": 2.731358,
+          "teaser_total_frames": 437,
+          "teaser_dropped_frames": 5,
+          "shared_teaser_callback": true,
+          "errors": [],
+          "server_site_body_bytes_written": 7156675
+        }
+      ],
+      "desktop_repeat_after_encoding_finished": [
+        {
+          "after_dcl_ms": 5006,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7159975,
+          "playing_videos": 1,
+          "teaser_total_frames": 85,
+          "teaser_dropped_frames": 6,
+          "shared_teaser_callback": true,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15004.800000190735,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7159975,
+          "playing_videos": 1,
+          "teaser_total_frames": 382,
+          "teaser_dropped_frames": 7,
+          "shared_teaser_callback": true,
+          "errors": []
+        }
+      ],
+      "frame_drop_note": "At 15 seconds: 18 desktop drops during the first capture (overlapped encoding), 7 in a desktop repeat after encoding finished, 5 in the phone-width capture, versus 0 in the earlier published desktop baseline. Variable short samples do not establish improved smoothness or isolate a compression-related regression."
+    },
+    "playback_checks": [
+      {
+        "test": "desktop seek teaser",
+        "decoders": 1,
+        "panels": 2,
+        "media_time_s": 2.5,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop playback lady-running",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.674214,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop seek lady-running",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.5,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "mobile playback spin",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.172979,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "mobile seek spin",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.5,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "mobile playback lady-running",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 4.006118,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop playback spin after replacement",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.52025,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      },
+      {
+        "test": "desktop seek spin after replacement",
+        "decoders": 1,
+        "panels": 5,
+        "media_time_s": 2.5,
+        "shared_callback": true,
+        "panel_timestamp_spread_s": 0
+      }
+    ],
+    "slow_connection": {
+      "bandwidth_kbps": 2000,
+      "latency_ms": 150,
+      "scope": "Shared cap on local response bodies; external origins unthrottled; desktop Chrome 1920x902.",
+      "samples": [
+        {
+          "after_dcl_ms": 5005.299999713898,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 553463,
+          "completed_local_site_transfer_bytes": 553463,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_media_time_s": 0.946692,
+          "teaser_total_frames": 34,
+          "teaser_dropped_frames": 5,
+          "shared_teaser_callback": true,
+          "errors": [],
+          "server_site_body_bytes_written": 1372859
+        },
+        {
+          "after_dcl_ms": 15004.799999713898,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 553463,
+          "completed_local_site_transfer_bytes": 553463,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "teaser_media_time_s": 3.331105,
+          "teaser_total_frames": 109,
+          "teaser_dropped_frames": 23,
+          "shared_teaser_callback": true,
+          "errors": [],
+          "server_site_body_bytes_written": 3449531
+        }
+      ],
+      "interpretation": "Teaser still buffered. The single-run media-time and dropped-frame counters are not a reliable frame-rate comparison; completed ResourceTiming excludes the in-flight teaser response."
+    },
+    "quality": {
+      "original_panel_ssim_range": [
+        0.983316,
+        0.99579
+      ],
+      "visual_review": "Matched native stills and desktop/mobile-width page inspection; no obvious trajectory loss at inspected times. Lossy changes remain possible, not pixel-identical.",
+      "rejected_trial": {
+        "group": "spin",
+        "crf": 24,
+        "minimum_original_panel_ssim": 0.978502,
+        "reason": "Below the preferred 0.98 original-panel quality threshold; selected CRF 23 instead."
+      }
+    },
+    "validation": "Asset validator passed 64 original hashes, 15 atlases, 6 individual encodes, 64 posters and 133 references; exact source/candidate packet PTS and durations matched.",
+    "limits": "Chrome only, phone-width simulation; no physical-device, Safari/Firefox, CPU/energy or production CDN benchmark.",
+    "inflight_replacement_note": "One tab open during atlas replacement used the existing original-video fallback for Spin. Fresh-page and subsequent desktop composite checks passed; that intermediate tab is excluded from the final composite checks.",
+    "raw_trial_storage": "local-media-archive/modest-media/stronger/ (ignored local files)"
+  },
+  "remaining_media_optimization": {
+    "date": "2026-11-03",
+    "base_commit": "4d56c1a46e5a6ff09534168590348ec62988830d",
+    "status": "Selected optimization on modest-media-optimization; measurements collected locally before commit.",
+    "target": "Approximately 10% smaller remaining default playback MP4s, retaining native dimensions and timing; quality takes precedence over a uniform reduction.",
+    "tested_files": 22,
+    "adopted_files": 19,
+    "additional_saved_bytes": 4306105,
+    "tested_before_bytes": 48367782,
+    "tested_after_bytes": 44061677,
+    "tested_reduction_percent": 8.9028,
+    "adopted": [
+      {
+        "kind": "groups",
+        "name": "bmx-trees",
+        "previous_path": "static/videos/optimized/bmx-trees.mp4",
+        "src": "static/videos/optimized/bmx-trees.mp4",
+        "before_bytes": 5263805,
+        "after_bytes": 4528305,
+        "saved_bytes": 735500,
+        "crf": 23,
+        "minimum_original_ssim": 0.982339
+      },
+      {
+        "kind": "groups",
+        "name": "libby",
+        "previous_path": "static/videos/optimized/libby.mp4",
+        "src": "static/videos/optimized/libby.mp4",
+        "before_bytes": 3672931,
+        "after_bytes": 3152056,
+        "saved_bytes": 520875,
+        "crf": 23,
+        "minimum_original_ssim": 0.980103
+      },
+      {
+        "kind": "groups",
+        "name": "motorbike",
+        "previous_path": "static/videos/optimized/motorbike.mp4",
+        "src": "static/videos/optimized/motorbike.mp4",
+        "before_bytes": 2004950,
+        "after_bytes": 1718264,
+        "saved_bytes": 286686,
+        "crf": 23,
+        "minimum_original_ssim": 0.981455
+      },
+      {
+        "kind": "groups",
+        "name": "more_camel",
+        "previous_path": "static/videos/optimized/more_camel.mp4",
+        "src": "static/videos/optimized/more_camel.mp4",
+        "before_bytes": 3019214,
+        "after_bytes": 2602270,
+        "saved_bytes": 416944,
+        "crf": 23,
+        "minimum_original_ssim": 0.989779
+      },
+      {
+        "kind": "groups",
+        "name": "more_horsejump-high",
+        "previous_path": "static/videos/optimized/more_horsejump-high.mp4",
+        "src": "static/videos/optimized/more_horsejump-high.mp4",
+        "before_bytes": 1584519,
+        "after_bytes": 1455019,
+        "saved_bytes": 129500,
+        "crf": 22,
+        "minimum_original_ssim": 0.985604
+      },
+      {
+        "kind": "groups",
+        "name": "more_motocross-bumps",
+        "previous_path": "static/videos/optimized/more_motocross-bumps.mp4",
+        "src": "static/videos/optimized/more_motocross-bumps.mp4",
+        "before_bytes": 962963,
+        "after_bytes": 880091,
+        "saved_bytes": 82872,
+        "crf": 22,
+        "minimum_original_ssim": 0.987669
+      },
+      {
+        "kind": "groups",
+        "name": "more_schoolgirls",
+        "previous_path": "static/videos/optimized/more_schoolgirls.mp4",
+        "src": "static/videos/optimized/more_schoolgirls.mp4",
+        "before_bytes": 2426711,
+        "after_bytes": 2145895,
+        "saved_bytes": 280816,
+        "crf": 23,
+        "minimum_original_ssim": 0.991979
+      },
+      {
+        "kind": "groups",
+        "name": "more_swing-tire",
+        "previous_path": "static/videos/optimized/more_swing-tire.mp4",
+        "src": "static/videos/optimized/more_swing-tire.mp4",
+        "before_bytes": 2914362,
+        "after_bytes": 2504294,
+        "saved_bytes": 410068,
+        "crf": 23,
+        "minimum_original_ssim": 0.988765
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_cartwheel.mp4",
+        "previous_path": "static/videos/optimized/individual/demo_cartwheel.mp4",
+        "src": "static/videos/optimized/individual/demo_cartwheel.mp4",
+        "before_bytes": 381479,
+        "after_bytes": 332151,
+        "saved_bytes": 49328,
+        "crf": 22,
+        "minimum_original_ssim": 0.987762
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_drift-turn.mp4",
+        "previous_path": "static/videos/demo_drift-turn.mp4",
+        "src": "static/videos/optimized/individual/demo_drift-turn.mp4",
+        "before_bytes": 545429,
+        "after_bytes": 498911,
+        "saved_bytes": 46518,
+        "crf": 23,
+        "minimum_original_ssim": 0.987359
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_motocross-bumps.mp4",
+        "previous_path": "static/videos/demo_motocross-bumps.mp4",
+        "src": "static/videos/optimized/individual/demo_motocross-bumps.mp4",
+        "before_bytes": 472664,
+        "after_bytes": 409204,
+        "saved_bytes": 63460,
+        "crf": 22,
+        "minimum_original_ssim": 0.983319
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_spin.mp4",
+        "previous_path": "static/videos/optimized/individual/demo_spin.mp4",
+        "src": "static/videos/optimized/individual/demo_spin.mp4",
+        "before_bytes": 440443,
+        "after_bytes": 395121,
+        "saved_bytes": 45322,
+        "crf": 22,
+        "minimum_original_ssim": 0.982689
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_swing-tire.mp4",
+        "previous_path": "static/videos/optimized/individual/demo_swing-tire.mp4",
+        "src": "static/videos/optimized/individual/demo_swing-tire.mp4",
+        "before_bytes": 666701,
+        "after_bytes": 591741,
+        "saved_bytes": 74960,
+        "crf": 23,
+        "minimum_original_ssim": 0.987769
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_swing.mp4",
+        "previous_path": "static/videos/optimized/individual/demo_swing.mp4",
+        "src": "static/videos/optimized/individual/demo_swing.mp4",
+        "before_bytes": 522518,
+        "after_bytes": 439632,
+        "saved_bytes": 82886,
+        "crf": 23,
+        "minimum_original_ssim": 0.984627
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_tennis.mp4",
+        "previous_path": "static/videos/optimized/individual/demo_tennis.mp4",
+        "src": "static/videos/optimized/individual/demo_tennis.mp4",
+        "before_bytes": 378894,
+        "after_bytes": 346745,
+        "saved_bytes": 32149,
+        "crf": 22,
+        "minimum_original_ssim": 0.988552
+      },
+      {
+        "kind": "individuals",
+        "name": "method_expanded.mp4",
+        "previous_path": "static/videos/method_expanded.mp4",
+        "src": "static/videos/optimized/individual/method_expanded.mp4",
+        "before_bytes": 5688116,
+        "after_bytes": 4832559,
+        "saved_bytes": 855557,
+        "crf": 23,
+        "minimum_original_ssim": 0.997
+      },
+      {
+        "kind": "individuals",
+        "name": "slider_basketball_3_input.mp4",
+        "previous_path": "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "src": "static/videos/optimized/individual/slider_basketball_3_input.mp4",
+        "before_bytes": 446870,
+        "after_bytes": 381181,
+        "saved_bytes": 65689,
+        "crf": 22,
+        "minimum_original_ssim": 0.991096
+      },
+      {
+        "kind": "individuals",
+        "name": "slider_basketball_3_s3d_lift.mp4",
+        "previous_path": "static/videos/slider_basketball_3_s3d_lift.mp4",
+        "src": "static/videos/optimized/individual/slider_basketball_3_s3d_lift.mp4",
+        "before_bytes": 563232,
+        "after_bytes": 502403,
+        "saved_bytes": 60829,
+        "crf": 25,
+        "minimum_original_ssim": 0.996425
+      },
+      {
+        "kind": "individuals",
+        "name": "slider_basketball_3_s3d_ours.mp4",
+        "previous_path": "static/videos/slider_basketball_3_s3d_ours.mp4",
+        "src": "static/videos/optimized/individual/slider_basketball_3_s3d_ours.mp4",
+        "before_bytes": 528056,
+        "after_bytes": 461910,
+        "saved_bytes": 66146,
+        "crf": 24,
+        "minimum_original_ssim": 0.997227
+      }
+    ],
+    "unchanged": [
+      {
+        "kind": "groups",
+        "name": "more_kangaroo_with_occlusion_short",
+        "current_bytes": 8334644,
+        "reason": "Keep current CRF21/slow: CRF22/slow and CRF21/slower do not meet both the 8% saving and 0.98 minimum original-panel SSIM thresholds."
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_forest.mp4",
+        "current_bytes": 5229380,
+        "reason": "No tested candidate reached 8% reduction with original SSIM >= 0.98."
+      },
+      {
+        "kind": "individuals",
+        "name": "demo_running.mp4",
+        "current_bytes": 2319901,
+        "reason": "Quality floor reached before a sufficient size reduction."
+      }
+    ],
+    "all_default_playback_inventory": {
+      "files": 25,
+      "published_bytes": 82471465,
+      "current_bytes": 72967679,
+      "saved_bytes": 9503786,
+      "reduction_percent": 11.5237,
+      "definition": "12 active synchronized atlases plus 13 individual playback videos; excludes fallback-only and archived videos."
+    },
+    "encoding": {
+      "codec": "H.264 / libx264",
+      "preset": "slow",
+      "pixel_format": "yuv420p",
+      "faststart": true,
+      "original_source_reencode": true,
+      "native_dimensions_and_exact_frame_timing_preserved": true,
+      "minimum_original_ssim": 0.980103
+    },
+    "initial_loading": {
+      "definition": "Completed resource transfer excluding HTML and diagnostics; no-store localhost; fresh foreground desktop Chrome at five and fifteen seconds after DOMContentLoaded.",
+      "samples": [
+        {
+          "after_dcl_ms": 5010.300000190735,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7160025,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "animation_callbacks": 0,
+          "teaser_dropped_frames": 8,
+          "errors": []
+        },
+        {
+          "after_dcl_ms": 15009.699999809265,
+          "viewport": [
+            1920,
+            902
+          ],
+          "completed_site_transfer_bytes": 7160025,
+          "playing_videos": 1,
+          "webgl_draws": 0,
+          "animation_callbacks": 0,
+          "teaser_dropped_frames": 20,
+          "errors": []
+        }
+      ],
+      "difference_from_previous_pass_bytes": 50,
+      "interpretation": "Initial teaser unchanged; latest video savings apply to lower sections. The 15-second sample recorded 20 teaser drops; no frame-rate improvement claim."
+    },
+    "playback_checks": [
+      {
+        "test": "desktop playback",
+        "group": "more_horsejump-high",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "more_schoolgirls",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "more_swing-tire",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "more_motocross-bumps",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "more_camel",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "libby",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "motorbike",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop playback",
+        "group": "bmx-trees",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "desktop seek",
+        "group": "bmx-trees",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": false,
+        "shared_panel_callback": true,
+        "panel_timestamp_spread_s": 0,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "playback",
+        "group": "method-7",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": false,
+        "panel_timestamp_spread_s": null,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "seek",
+        "group": "method-7",
+        "decoder_count": 1,
+        "all_ready": true,
+        "all_playing": false,
+        "shared_panel_callback": false,
+        "panel_timestamp_spread_s": null,
+        "independent_video_time_spread_s": null
+      },
+      {
+        "test": "playback",
+        "group": "correction-slider",
+        "decoder_count": 3,
+        "all_ready": true,
+        "all_playing": true,
+        "shared_panel_callback": false,
+        "panel_timestamp_spread_s": null,
+        "independent_video_time_spread_s": 0.0019450000000000855
+      },
+      {
+        "test": "seek",
+        "group": "correction-slider",
+        "decoder_count": 3,
+        "all_ready": true,
+        "all_playing": false,
+        "shared_panel_callback": false,
+        "panel_timestamp_spread_s": null,
+        "independent_video_time_spread_s": 0
+      }
+    ],
+    "viewer_checks": [
+      {
+        "scene": "cartwheel",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "running",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "swing-tire",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "swing",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "spin",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "forest",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "tennis",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "motocross-bumps",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      },
+      {
+        "scene": "drift-turn",
+        "ready": 4,
+        "playing": true,
+        "error": null
+      }
+    ],
+    "viewer_seek_resume": "Desktop Drift Turn seek to frame54/54, video4.458333s, paused; resume returned to playing without error.",
+    "phone_width_checks": {
+      "viewport": [
+        390,
+        844
+      ],
+      "tire_swing_shared_callback": true,
+      "tire_swing_panel_time_spread_s": 0,
+      "drift_turn_playing": true,
+      "drift_turn_seek": {
+        "frame": "frame 54 / 54",
+        "video": {
+          "error": null,
+          "paused": true,
+          "ready": 4,
+          "time": 4.458333
+        }
+      }
+    },
+    "validation": [
+      "64 original source hashes intact; 15 atlases, 11 accepted individual encodes, 64 posters and 133 references validated.",
+      "Media-loader lifecycle and viewer-presentation checks passed.",
+      "Exact source/candidate timing and faststart verified; matched stills inspected.",
+      "Omitting --crf preserves recorded per-output CRF; three-group reuse check left manifest hash unchanged."
+    ],
+    "limits": "Lossy compression; Chrome desktop and phone-width simulation only. No new slow-network benchmark (teaser unchanged), physical-phone, Safari/Firefox, CPU/energy or production CDN test.",
+    "raw_trial_storage": "local-media-archive/modest-media/remaining/ (ignored local files)",
+    "local_archive": {
+      "directory": "local-media-archive/",
+      "git_ignored": true,
+      "contents": "Exact Git baseline copies of replaced files, prior encodes and trials, earlier media revisions, and retired originals.",
+      "retired_originals": [
+        "demo_drift-turn.mp4",
+        "demo_motocross-bumps.mp4",
+        "method_expanded.mp4",
+        "slider_basketball_3_s3d_lift.mp4",
+        "slider_basketball_3_s3d_ours.mp4"
+      ],
+      "compatibility": "Ignored tmp/ paths symlink to consolidated archive directories; active runtime fallback sources remain in the site."
+    }
   }
 }

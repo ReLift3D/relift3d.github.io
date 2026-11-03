@@ -35,14 +35,18 @@ node tools/validate_viewer_presentation.cjs
 ```
 
 The complete media audit additionally requires `ffprobe` and the separately
-preserved `tmp/unused/` archive:
+preserved `local-media-archive/unused/` sources, accessible through the local
+`tmp/unused/` compatibility symlink:
 
 ```sh
 python3 tools/validate_assets.py
 ```
 
-That archive is intentionally excluded from Git. The website and JavaScript
-checks work without it. See [PERFORMANCE_REPORT.md](PERFORMANCE_REPORT.md) for
+Previous video versions, trial encodes and retired originals are kept in
+`local-media-archive/`, explicitly excluded by `.gitignore`. The website and
+JavaScript checks work without it. When transferring the archive to another
+checkout, also recreate `tmp/unused` pointing to `../local-media-archive/unused`.
+See [PERFORMANCE_REPORT.md](PERFORMANCE_REPORT.md) for
 measurements and media regeneration details, and [README.txt](README.txt) for
 favicon and analytics maintenance notes.
 

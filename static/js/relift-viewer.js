@@ -67,8 +67,8 @@
   const playButton = document.getElementById('play');
   const tailButton = document.getElementById('tail');
   const NAMES = ['cartwheel', 'running', 'swing-tire', 'swing', 'spin', 'forest', 'tennis', 'motocross-bumps', 'drift-turn'];
-  // Native-resolution CRF21 sidecars validated in the media manifest.
-  const COMPRESSED = new Set(['cartwheel', 'spin', 'swing-tire', 'swing', 'tennis']);
+  // Native-resolution sidecars with per-clip settings validated in the media manifest.
+  const COMPRESSED = new Set(['cartwheel', 'swing-tire', 'swing', 'spin', 'tennis', 'motocross-bumps', 'drift-turn']);
   const PORTRAIT = new Set(['cartwheel', 'running']), P34 = new Set(['spin']);
   const TAIL = 20;
   const FOLLOW = {running: 6};

@@ -243,15 +243,21 @@ def main() -> None:
             require(panel["x"] + panel["width"] <= entry["width"] and
                     panel["y"] + panel["height"] <= entry["height"], f"Crop outside atlas: {name}")
     accepted = {filename: entry for filename, entry in manifest["individuals"].items() if entry.get("src")}
-    require(len(accepted) == 6, f"Expected six reviewed sidecars, found {len(accepted)}")
+    grouped_sources = {Path(panel["source"]).name for group in manifest["groups"].values()
+                       for panel in group["panels"]}
+    require(set(manifest["individuals"]) == set(originals) - grouped_sources,
+            "Individual encode records do not cover exactly the ungrouped source videos")
     for filename, entry in accepted.items():
         source = originals[filename]
         require(entry["candidate_for_visual_review"], f"Rejected trial has a website src: {filename}")
+        require(entry["recipe"]["source_sha256"] == source["sha256"],
+                f"Individual encode uses an outdated source: {filename}")
         validate_encoded(resolve_asset(repo, entry["src"]), entry, source, source["width"], source["height"])
     generated = set(find_assets(repo, "static/videos/optimized", "*.mp4", recursive=True))
     expected = {entry["src"] for entry in list(manifest["groups"].values()) + list(accepted.values())}
     require(generated == expected, "Unexpected or missing generated website MP4s; rejected trials belong outside the repository")
-    print("PASS: 15 atlases and 6 reviewed encodes preserve resolution, FPS, frames, duration, SAR and faststart")
+    print(f"PASS: {len(manifest['groups'])} atlases and {len(accepted)} reviewed encodes "
+          "preserve resolution, FPS, frames, duration, SAR and faststart")
 
     require(set(manifest["posters"]) == set(originals), "Poster set differs from original videos")
     for filename, entry in manifest["posters"].items():
